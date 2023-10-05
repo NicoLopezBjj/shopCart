@@ -47,3 +47,72 @@ li:hover {
 .btnBlanco:hover {
     background-color: rgb(232, 231, 231, 0.7) !important;
 }
+
+/* SINGIN.HTML */
+
+.ancho{
+    width: 25rem;
+    align-items: center;
+}
+
+.btnVerde{
+    background-color: #003D29 !important;
+    color: white !important;
+}
+
+.input{
+    border-radius: 5%;
+    border: 1px solid rgb(191, 190, 190);
+}
+
+.borde{
+    border: 1px solid rgb(160, 158, 158);
+    border-radius: 2%;
+}
+
+.btnBlanco{
+    background-color: white;
+    border: 1px solid rgb(144, 144, 144,0.7);
+    border-radius: 0.375rem;
+}
+
+
+
+.styled-paragraph {
+    /* position: relative; */
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}
+
+.styled-paragraph::before,
+.styled-paragraph::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    height: 0.3px;
+    background-color: rgb(206, 205, 205);
+}
+
+.styled-paragraph::before {
+    margin-right: 1em;
+}
+
+.styled-paragraph::after {
+    margin-left: 1em;
+}
+
+/* signUP HTML */
+.achicar{
+    font-size: small !important;
+}
+
+.alerta{
+    color: blue !important;
+    font-size: large;
+}
+
+.linea{
+    color: gray;
+}
