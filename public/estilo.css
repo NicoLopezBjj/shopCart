@@ -1,0 +1,49 @@
+.size{
+    font-size: 20px;
+}
+
+.fondoVerde{
+    background-color:#003D29;
+}
+
+.shopCart{
+    width: 150px;
+    height: 40px;
+}
+
+/* HOVERS */
+
+.hoverCategoria:hover{
+    text-decoration: underline blue 3px;
+    text-underline-offset: 0.5em;
+}
+
+.hoverAzul:hover{
+    color: blue;
+}
+
+.hoverNav:hover{
+    opacity: 70%;
+}
+
+.hoverVerde:hover{
+    background-color: rgba(33, 33, 35) !important;
+}
+
+.hoverEnlace:hover {
+    color: rgb(226, 43, 76) !important;
+}
+
+.footerText:hover {
+    color: rgb(226, 43, 76);
+}
+
+li:hover {
+    color: rgb(248, 61, 61);
+    transform: translateX(8px);
+    transition: 0.5s;
+}
+
+.btnBlanco:hover {
+    background-color: rgb(232, 231, 231, 0.7) !important;
+}
