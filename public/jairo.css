@@ -90,11 +90,105 @@ img.categoria-imagen:hover{
     transform-style: preserve-3d;
 }
 
-
-
 /*OTROS ESTILOS*/
 
+/*Elija por marca / choose-by-brand*/
 
+
+.choose-by-brand{
+    padding-bottom: 80px;
+}
+
+.contenedor-choose-by-brand{
+    overflow: hidden;
+    width: 100%;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-choose .title{
+    text-transform: capitalize;
+    color: #333;
+}
+
+.title-choose .mb-40{
+    margin-bottom: 40px;
+}
+
+.title-choose h3{
+    margin-top: 20px;
+    font-family: Eina02, sans-serif;
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 700;
+    color: #333;
+}
+
+.choose-by-brand-items{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 23px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.choose-by-brand-card{
+    position: relative;
+    z-index: 0;
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: #f5f6f6;
+    transition: all 200ms ease;
+}
+
+.choose-by-brand-contenedor-imagen{
+    position: relative;
+    margin-right: 18px;
+}
+
+.choose-imagen{
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+img{
+    border-color: initial;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.brand-title{
+    margin-top: 0px;
+    margin-bottom: 13px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.delivery-item{
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 500;
+}
+
+
+/*Animacion de div*/
+
+.choose-by-brand-card{
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.choose-by-brand-card:hover{
+    border-color: black;
+}
 
 
 
