@@ -48,6 +48,38 @@ li:hover {
     background-color: rgb(232, 231, 231, 0.7) !important;
 }
 
+/* HERO */
+
+.topGreen{
+    border-right: 1px white solid;
+}
+
+.colorVerde{
+    color: #003D29 !important;
+}
+
+.tamaño{
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.heroBoton{
+    background-color: #003D29 !important;
+    color:white !important;
+    border-radius: 15% !important;
+    font-weight: bold !important;
+    width: 15%;
+    font-size: large !important;
+}
+
+.hero{
+    background-image: url(Img/Hero\ TPfinal.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
 /* SINGIN.HTML */
 
 .ancho{
@@ -115,4 +147,37 @@ li:hover {
 
 .linea{
     color: gray;
+}
+
+/* Footer */
+
+.bord{
+    border: 1px solid rgb(201, 201, 201); 
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 10%;
+}
+
+.sinMarcador{
+    list-style: none;
+}
+
+li{
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.icons{
+    font-size: x-large;
+    color:rgb(226, 43, 76);
+    cursor: pointer;
+}
+
+.footerText{
+    cursor: pointer;
+}
+
+.bordeOnly{
+    border-right: 1px black solid;
 }
