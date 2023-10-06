@@ -96,7 +96,7 @@ img.categoria-imagen:hover{
 
 
 .choose-by-brand{
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
 }
 
 .contenedor-choose-by-brand{
@@ -113,11 +113,11 @@ img.categoria-imagen:hover{
 }
 
 .title-choose .mb-40{
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .title-choose h3{
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-family: Eina02, sans-serif;
     font-size: 28px;
     line-height: 100%;
@@ -138,7 +138,7 @@ img.categoria-imagen:hover{
     position: relative;
     z-index: 0;
     display: flex;
-    padding: 20px;
+    padding: 1.25rem;
     justify-content: flex-start;
     align-items: center;
     border-width: 1px;
@@ -149,7 +149,7 @@ img.categoria-imagen:hover{
 
 .choose-by-brand-contenedor-imagen{
     position: relative;
-    margin-right: 18px;
+    margin-right: 1.125rem;
 }
 
 .choose-imagen{
@@ -167,13 +167,13 @@ img{
     margin-top: 0px;
     margin-bottom: 13px;
     font-family: Inter, sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 600;
 }
 
 .delivery-item{
     margin-bottom: 0px;
-    font-size: 13px;
+    font-size: 0.8125em;
     line-height: 13px;
     font-weight: 500;
 }
@@ -189,6 +189,8 @@ img{
 .choose-by-brand-card:hover{
     border-color: black;
 }
+
+
 
 
 
