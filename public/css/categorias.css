@@ -1,0 +1,101 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1em;
+    line-height: 1.25rem;
+}
+
+/*----- Cards Categorias -----*/
+.shop-categorias{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+}
+
+.contenedor-categorias{
+    overflow: hidden;
+    width: 100%;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    
+}
+
+.titulo-categorias{
+    box-sizing: border-box;
+}
+
+.titulo-categorias h3 {
+    margin-top: 1.25em; 
+    margin-bottom: 0.625em; 
+    font-family: Eina02, sans-serif;
+    font-size: 1.75em; 
+    line-height: 100%;
+    font-weight: 700;
+    transform-style: preserve-3d;
+    text-transform: capitalize;
+    margin-bottom: 2.5rem; 
+}
+
+.shop-categorias-cards{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 23px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    box-sizing: border-box;
+}
+
+.shop-categoria-card{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.categoria-title-item{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.categoria-title-item h3{
+    margin-top: 1.25rem;
+    margin-bottom: 10px;
+    line-height: 100%;
+    box-sizing: border-box;
+    
+}
+/*Animaciones en el hover*/
+img.categoria-imagen{
+    transition: transform 0.3s ease-in-out;
+}
+
+img.categoria-imagen:hover{
+    transform: scale3d(1.2, 1.2 ,1) ;
+    transform-style: preserve-3d;
+}
+
+
+img.categoria-imagen{
+    transition: transform 0.3s ease-in-out;
+}
+
+img.categoria-imagen:hover{
+    transform: scale3d(1.2, 1.2 ,1) ;
+    transform-style: preserve-3d;
+}
