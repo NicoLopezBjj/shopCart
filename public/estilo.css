@@ -74,7 +74,7 @@ li:hover {
 
 .hero{
     background-image: url(Img/Hero\ TPfinal.jpg);
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
 }
