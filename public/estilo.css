@@ -80,6 +80,25 @@ li:hover {
 }
 
 
+/* Section Sillon */
+.imgSillon{
+    background-image: url(Img/FotoSillones.png);
+    height: 100vh !important;
+    width: 100% !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.fondo{
+    background-color: #003D29 !important;
+    color: white;
+}
+
+.derecha{
+    text-align: end !important;
+}
+
+
 /* SINGIN.HTML */
 
 .ancho{
