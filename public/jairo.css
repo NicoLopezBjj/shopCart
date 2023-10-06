@@ -1,4 +1,6 @@
 
+/*CATEGORIAS ESTILOS */
+
 *{
     box-sizing: border-box;
 }
@@ -22,8 +24,6 @@ body{
     margin-right: auto;
     margin-left: auto;
     padding-right: 2.5rem;
-    padding-left: 2.5rem;
-    
 }
 
 .titulo-categorias{
@@ -45,7 +45,7 @@ body{
 .shop-categorias-cards{
     display: grid;
     grid-auto-columns: 1fr;
-    grid-column-gap: 23px;
+    grid-column-gap: 28px;
     grid-row-gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -56,13 +56,13 @@ body{
     position: relative;
     z-index: 0;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 0.8em;
 }
 
 .categoria-title-item{
     position: absolute;
     left: 0%;
-    top: 0%;
+    top: 5%;
     right: auto;
     bottom: auto;
     z-index: 1;
@@ -91,11 +91,10 @@ img.categoria-imagen:hover{
 }
 
 
-img.categoria-imagen{
-    transition: transform 0.3s ease-in-out;
-}
 
-img.categoria-imagen:hover{
-    transform: scale3d(1.2, 1.2 ,1) ;
-    transform-style: preserve-3d;
-}
+/*OTROS ESTILOS*/
+
+
+
+
+
