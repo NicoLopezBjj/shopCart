@@ -23,7 +23,7 @@ body{
     max-width: 85rem;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 2.5rem;
+    
 }
 
 .titulo-categorias{
@@ -45,7 +45,7 @@ body{
 .shop-categorias-cards{
     display: grid;
     grid-auto-columns: 1fr;
-    grid-column-gap: 28px;
+    grid-column-gap: 34px;
     grid-row-gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -92,6 +92,12 @@ img.categoria-imagen:hover{
 
 /*OTROS ESTILOS*/
 
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+
 /*Elija por marca / choose-by-brand*/
 
 
@@ -119,7 +125,7 @@ img.categoria-imagen:hover{
 .title-choose h3{
     margin-top: 1.25rem;
     font-family: Eina02, sans-serif;
-    font-size: 28px;
+    font-size: 1.75em;
     line-height: 100%;
     font-weight: 700;
     color: #333;
@@ -189,8 +195,165 @@ img{
 .choose-by-brand-card:hover{
     border-color: black;
 }
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+/* Section Descuento */
+.section-descuentos{
+    padding-bottom: 5rem;
+    
+}
 
 
+.contenedor-descuentos{
+    overflow: hidden;
+    width: 100%;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+
+}
 
 
+.titulo-descuento{
+    color: #231f1e;
+    text-transform: capitalize;
+}
 
+
+.titulo-descuento{
+    margin-top: 1.25rem;
+    font-family: Eina02, sans-serif;
+    font-size: 1.75em;
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.mb40{
+    margin-bottom: 2.5rem;
+}
+
+
+/**/
+
+.contenedor-descuentos-cards{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.descuento-card{
+    background-color: rgb(61, 38, 21);
+    z-index: 0;
+    border-radius: 10px;
+    background-color: #f2e4d9;
+    
+}
+
+.contenido-descuento{
+    padding: 1.875rem;
+
+}
+
+.descuento-titulo{
+    text-transform: capitalize;
+    margin-top: 0px;
+    font-size: 22px;
+}
+
+.contenido-descuento h3{
+    margin-bottom: 10px;
+    line-height: 100%;
+    font-weight: 700;    
+}
+
+.precio-descuento {
+    color: rgb(234, 187, 67);
+}
+.precio-descuento{
+    font-family: Eina04, sans-serif;
+    color: #cb9917;
+    font-size: 3.25em;
+    line-height: 52px;
+    font-weight: 700;
+}
+
+.mb-20 {
+    margin-bottom: 1.25rem;
+}
+
+.text-span-2{
+    position: relative;
+    top: -16px;
+    font-size: 1.9375rem;
+    line-height: 41px;
+}
+
+.descuento-descripcion{
+    max-width: 385px;
+    margin-bottom: 0px;
+    color: #231f1e;
+    font-size: 1em;
+    line-height: 160%;
+    font-weight: 500;
+}
+
+/**/
+.contenedor-imagen-descuento{
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contenedor-imagen-descuento img{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.imagen-descuento {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*Card 2 colores de fuente y fondo*/
+.descuento-card.rosado {
+    background-color: #f9dcdc;
+}
+.red{
+    color: #961f1f;
+}
+
+
+/*Card 3 colores de fuente y fondo */
+.descuento-card .color3{
+    background-color: #f2e4d9;
+}
+
+.color-two{
+    color: #94623c;
+}
+
+/*Card 4 colores de fuente y fondo*/
+
+.color4{
+    background-color: #d2f7ec;
+}
+.color-verde{
+    color: #003d29;
+}
+
+img.imagen-descuento {
+    transition: transform 0.3s ease-in-out;
+}
+
+img.imagen-descuento:hover{
+    transform: scale3d(1.2,1.2,1) ;
+    transform-style: preserve-3d;
+}
