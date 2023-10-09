@@ -49,7 +49,9 @@ li:hover {
 }
 
 /* HERO */
-
+.hero-texto{
+    margin-left: 16em;
+}
 .topGreen{
     border-right: 1px white solid;
 }
@@ -63,13 +65,18 @@ li:hover {
     font-weight: bold;
 }
 
-.heroBoton{
+.heroBoton{ 
+    border: none;
     background-color: #003D29 !important;
     color:white !important;
-    border-radius: 15% !important;
+    border-radius: 2em !important;
     font-weight: bold !important;
-    width: 15%;
+    width: 10em;
+    padding: 0.8em 1em 0.8em 1em;
     font-size: large !important;
+}
+.heroBoton:hover{
+    background-color: #231F1E !important;
 }
 
 .hero{

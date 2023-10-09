@@ -54,9 +54,12 @@
 
     <section class="hero"> 
         <div class="d-flex flex-column justify-content-center text-align-center h-100 mb-5 ms-5">
-            <h1 class="colorVerde tamaño">Compras y grandes <br> almacenes</h1>
+            <div class="hero-texto">
+                 <h1 class="colorVerde tamaño">Compras y grandes <br> almacenes</h1>
             <p class="colorVerde">Ir de compras es para mi un pasatiempo un tanto relajante, que a<br> veces supone un problema para mi cuenta bancaria.</p>
-            <button class="btn heroBoton ">Aprenda más</button>
+            <button class="heroBoton ">Aprenda más</button>
+            </div>
+           
         </div>
     </section>
 
@@ -64,14 +67,49 @@
     <!-- CATEGORIAS -->
     <%- include ('categorias.ejs') -%>
     <!-- CARD MEJORES OFERTAS -->
-    <%- include ('partials/card.ejs') -%>
+    <div class="margin-all">
+        <h1 class="mejores-ofertas">¡Las mejores ofertas de hoy para ti!</h1>
+        <div class="cards-margin">
+            <%- include ('partials/card.ejs') -%>
+            <%- include ('partials/card.ejs') -%>
+            <%- include ('partials/card.ejs') -%>
+        </div>
+        
+       </div>
     <!-- Choose-by-brand -->
     <%- include ('elijapormarca.ejs') -%>
 
     <!-- Descuentos -->
     <%- include ('descuentos.ejs') -%>
+
+    <!-- productos populares -->
+    <div class="margin-all">
+
+    <h1 class="mejores-ofertas">Productos mas populares de la semana</h1>
+    <div class="cards-margin">
+        <%- include ('partials/card.ejs') -%>
+        <%- include ('partials/card.ejs') -%>
+        <%- include ('partials/card.ejs') -%>
+    </div>
+   </div>
+    <!-- sillon descuento -->
     <%- include ('sillondescuento.ejs') -%>
 
+    <!-- tarjetas descuentos -->
+    <%- include ('tarjetas-off.ejs') -%>
+
+     <!-- productosmas -->
+     <div class="margin-all">
+    <h1 class="mejores-ofertas">Productos mas vendidos</h1>
+    <div class="cards-margin">
+        <%- include ('partials/card.ejs') -%>
+        <%- include ('partials/card.ejs') -%>
+        <%- include ('partials/card.ejs') -%>
+    </div>
+   </div>
+
+    <!-- dos cards grandes -->
+    <%- include ('dos-cards.ejs') -%>
 
     <!-- FOOTER -->
 
