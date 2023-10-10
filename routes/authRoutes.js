@@ -20,11 +20,11 @@ router.post('/signup',async (req,res)=>{
         const user= await User.create({email,password,nombre})
         res.status(201).json(user)
         console.log(user)
-        res.redirect('home')
     }catch(err){
         console.log(err)
         res.status(400)
     }
 })
+
 
 module.exports=router
