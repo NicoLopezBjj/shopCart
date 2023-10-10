@@ -8,6 +8,15 @@
     display: flex;
 }
 
+
+/* NAVBAR */
+.green-back{
+    background-color: #003D29 !important;
+}
+
+
+
+
 /* Card productos */
 .mejores-ofertas{
     font-size: 1.8em;

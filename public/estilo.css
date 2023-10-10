@@ -1,9 +1,12 @@
+
 .size{
     font-size: 20px;
 }
 
 .fondoVerde{
     background-color:#003D29;
+    width: 70% !important; 
+    margin: auto !important;
 }
 
 .shopCart{
@@ -90,19 +93,45 @@ li:hover {
 /* Section Sillon */
 .imgSillon{
     background-image: url(Img/FotoSillones.png);
-    height: 100vh !important;
+    height: 80vh !important;
     width: 100% !important;
     background-size: cover;
     background-position: center;
+    
+    display: flex; 
+    align-items: center; 
 }
 
 .fondo{
     background-color: #003D29 !important;
-    color: white;
+    color: white; 
+    width: 35em;
+    margin-left: 67em;
+    
+}
+.fondo h1{
+    font-size: 3em;
+}
+.fondo p{
+    font-size: 1.2em;
 }
 
-.derecha{
-    text-align: end !important;
+.btn-nav{
+    font-weight: 500;
+    border: 1px solid #ffffff;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+border-radius: 15em;
+background-color: #003D29;
+color: white;
+font-size: 1.1em;
+padding: 0.8em 1.5em 0.8em 1.5em;
+cursor: pointer;
+}
+
+.btn-nav:hover{
+    background-color: #231F1E;
+    border: 1px solid #231F1E;
 }
 
 
