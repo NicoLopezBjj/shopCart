@@ -7,8 +7,11 @@ require('dotenv').config()
 const app=express()
 
 app.use(express.static(path.join(__dirname,'public')))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.set('view engine','ejs')
 
+// conexion a la base de datos
 const db_URL = process.env.db_URL
 
 const connectDataBase = async () => {
@@ -22,8 +25,6 @@ const connectDataBase = async () => {
 }
 
 connectDataBase()
-
-
 
 // ruta principal
 app.get('/',(req,res)=>[

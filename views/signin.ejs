@@ -16,11 +16,13 @@
     <div class="d-flex flex-column align-items-center text-center justify-content-center ancho pt-3 mx-auto">
         <div class="d-flex flex-column borde p-4">
             <h4 class="align-self-start">Iniciar sesion</h4>
-            <div class="d-flex flex-column">
+            <form action="/signin" method="post" class="d-flex flex-column">
                 <p class="align-self-start mb-1">Direccion de email</p>
-                <input type="text" class="input p-1">
+                <input type="text" name="email" class="input p-1">
+                <p class="align-self-start mb-1">Contraseña</p>
+                <input type="password" name="password" class="input p-1">
                 <button class="btn btnVerde hoverVerde mt-2">Continuar</button>
-            </div>
+            </form>
             <p class="align-self-start mt-2">Al continuar, aceptas las <a href="" class="hoverEnlace">Condiciones de uso</a> y el <a href="" class="hoverEnlace">Aviso de privacidad</a> de Amazon</p>
             <div class="d-flex">
                 <i class="bi bi-caret-right-fill mt-2 pe-2"></i>
