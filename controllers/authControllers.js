@@ -31,7 +31,6 @@ const signin_post = async (req,res) =>{
         }
 
         const isValidPassword = await bcrypt.compare(password, user.password)
-        console.log(email,password)
         console.log(user.password)
         console.log(isValidPassword)
 
