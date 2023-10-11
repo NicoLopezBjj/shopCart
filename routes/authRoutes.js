@@ -7,9 +7,7 @@ router.get('/signin',(req,res)=>{
     res.render('signin')
 })
 
-router.post('/signin',(req,res)=>{
-    console.log(req.body)
-})
+router.post('/signin',authControllers.signin_post)
 
 router.get('/signup',authControllers.signup_get)
 
