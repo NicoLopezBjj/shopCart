@@ -13,7 +13,7 @@ const signup_post = async (req, res) => {
 }
 
 const signup_get = async (req,res) =>{
-
+    res.render('signup')
 }
 
 const signin_get = async (req,res) =>{
