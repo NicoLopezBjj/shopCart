@@ -1,6 +1,7 @@
 const express = require('express')
 const router=express.Router()
 const User = require('../models/User')
+const authControllers=require('../controllers/authControllers')
 
 router.get('/signin',(req,res)=>{
     res.render('signin')
@@ -14,17 +15,7 @@ router.get('/signup',(req,res)=>{
     res.render('signup')
 })
 
-router.post('/signup',async (req,res)=>{
-    const {email,password,nombre}= req.body
-    try{
-        const user= await User.create({email,password,nombre})
-        res.status(201).json(user)
-        console.log(user)
-    }catch(err){
-        console.log(err)
-        res.status(400)
-    }
-})
+router.post('/signup',authControllers.signup_post)
 
 
 module.exports=router
