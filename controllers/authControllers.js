@@ -17,7 +17,7 @@ const signup_get = async (req,res) =>{
 }
 
 const signin_get = async (req,res) =>{
-    
+    res.render('signin')
 }
 
 const signin_post = async (req,res) =>{
@@ -28,4 +28,4 @@ module.exports = {
     signup_post, 
     signup_get,
     signin_get,
-    signin_post };
+    signin_post }
