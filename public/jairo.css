@@ -487,3 +487,106 @@ img.imagen-principal-store{
 img.imagen-principal-store:hover{
     transform: scale(1.2) rotate(5deg);
 }
+
+/*Services To Help You Shop*/
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    
+}
+
+.section-services-help-area{
+    padding-bottom: 6.25rem;
+
+}
+
+.contenedor-services-help-area{
+    overflow: hidden;
+    width: 100%;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.section-titulo{
+    color:rgb(211, 208, 202);
+}
+
+.contenedor-de-titulo h3{
+    margin-top: 1.25rem;
+    font-size: 1.75em;
+    line-height: 100%;
+    font-weight: 700;
+    color: #231f1e;
+}
+
+.mb-40{
+    margin-bottom: 2.5rem;
+}
+/**/
+.contenedor-de-cards{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.contenedor-card{
+    z-index: 0;
+    border-radius: 10px;  
+}
+
+.contenedor-card{
+    background-color: #f5f6f6;
+}
+
+.titulos-y-descripcion{
+    padding:  2.5rem;
+}
+
+.titulo-de-servicio{
+    max-width: 230px;
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+    font-size: 1.375em    ;
+    line-height: 2rem;
+}
+
+.titulo-de-servicio h3{
+    font-weight: 700;
+}
+
+.descripcion-de-servicio{
+    color: #231f1e;
+    margin-bottom: 0px;
+    font-size: 1em;
+    line-height: 160%;
+    font-weight: 500;
+}
+.descripcion-de-servicio{
+    color: #231f1e;
+}
+/**/
+.imagen-servicio{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contenedor-imagen-servicio{
+    overflow: hidden;
+}
+
+img.imagen-servicio{
+    transition: transform 0.3s ease-in-out;
+}
+
+img.imagen-servicio:hover{
+    transform: scale3d(1.2, 1.2 , 1) ;
+    transform-style: preserve-3d;
+}
+
