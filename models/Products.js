@@ -11,7 +11,8 @@ const productoSchema = new mongoose.Schema({
 },
   marca: {
     type:String,
-    required:true
+    required:true,
+    enum:['Staples','Sprouts','Grocery outlet','Mollie stones','Sports Basement','Container Store','Target','Bevmo!']
 },
   imagen:{
     type: String,
