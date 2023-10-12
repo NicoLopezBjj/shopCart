@@ -357,3 +357,133 @@ img.imagen-descuento:hover{
     transform: scale3d(1.2,1.2,1) ;
     transform-style: preserve-3d;
 }
+
+/*Best-selling-store*/
+
+.best-selling-store{
+    padding-bottom: 5rem;
+    font-size: 0.75rem;
+
+}
+
+.contenedor-best-salling-store{
+    overflow: hidden;
+    width: 100%;
+    max-width: 85rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mb-40{
+    margin-bottom: 2.5rem;
+}
+
+.section-title-store .section-title{
+    color: #231f1e;
+}
+
+.section-title-store h3{
+    margin-top:  1.25rem;
+    font-size: 1.75rem;
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.best-selling-store-cards{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.best-selling-card{
+    z-index: 0;
+}
+.best-selling-imagen{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+img.imagen-principal-store{
+    border-radius: 10px;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+img{
+    border: 0;
+}
+
+.best-selling-contenido{
+    position: relative;
+    z-index: 99;
+    margin-top: -29px;
+    padding-right:  1.25rem;
+    padding-left:  1.25rem;
+}
+
+.best-selling-imagen-segunda{
+    margin-bottom: 10px;
+}
+
+.selling-store-title{
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: #231f1e;
+    font-size:  1.50em;
+    font-weight: 700;
+}
+
+.flex-de-store{
+    display: flex;
+    margin-bottom: 0.75em    ;
+    align-items: center;
+}
+
+.mini-store{
+    color: #848181;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.dot{
+    width: 4px;
+    height: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    border-radius: 100px;
+    background-color: #848181;
+}
+
+.flex-imagen-etiqueta{
+    display: flex;
+    align-items: center;
+}
+
+.image-etiqueta-store{
+    width: 0.8125rem;
+    height: 0.8125rem;
+}
+
+.parrafo-de-etiqueta{
+    margin-left: 0.5rem;
+    color: #c34482;
+    line-height: 160%;
+}
+
+.best-selling-imagen{
+    overflow: hidden;
+}
+
+img.imagen-principal-store{
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    object-fit: cover;
+}
+img.imagen-principal-store:hover{
+    transform: scale(1.2) rotate(5deg);
+}
