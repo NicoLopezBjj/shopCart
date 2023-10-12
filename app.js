@@ -33,7 +33,7 @@ app.get('/',(req,res)=>[
     res.render('home')])
     
 app.use(authRouter)
-app.use(productsRouter)
+
 
 app.listen(PUERTO,()=>{
     console.log('servidor ejectuandose')
