@@ -13,6 +13,7 @@ app.set('view engine','ejs')
 
 // conexion a la base de datos
 const db_URL = process.env.db_URL
+const PUERTO = process.env.PUERTO
 
 const connectDataBase = async () => {
     try{
@@ -30,8 +31,8 @@ connectDataBase()
 app.get('/',(req,res)=>[
     res.render('home')])
     
-    app.use(authRouter)
+app.use(authRouter)
 
-app.listen(3900,()=>{
+app.listen(PUERTO,()=>{
     console.log('servidor ejectuandose')
 })

@@ -3,9 +3,7 @@ const router=express.Router()
 const User = require('../models/User')
 const authControllers=require('../controllers/authControllers')
 
-router.get('/signin',(req,res)=>{
-    res.render('signin')
-})
+router.get('/signin',authControllers.signin_get)
 
 router.post('/signin',authControllers.signin_post)
 
