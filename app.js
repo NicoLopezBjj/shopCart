@@ -3,6 +3,7 @@ const authRouter=require('./routes/authRoutes')
 const path=require ('path')
 const mongoose=require('mongoose')
 require('dotenv').config()
+const productsRouter=require('./routes/products')
 
 const app=express()
 
@@ -32,6 +33,7 @@ app.get('/',(req,res)=>[
     res.render('home')])
     
 app.use(authRouter)
+app.use(productsRouter)
 
 app.listen(PUERTO,()=>{
     console.log('servidor ejectuandose')
