@@ -22,6 +22,7 @@
     font-size: 1.8em;
     
 }
+
 .todoCard{
     
          margin-top: 2em;
@@ -278,4 +279,298 @@ cursor: pointer;
 
 .btn-tar:hover{
     background-color: #231F1E;
+}
+
+
+
+
+/* SHOP SECTIONNNN */
+/* DESCUENTOS CINCUENTA OFF */
+.off-cincuenta{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    background-color: #FBEFE5;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+.off-cincuenta h2{
+font-weight: 600;
+color: #003D29;
+font-size: 2.5em;
+margin-top: 1em;
+}
+
+
+
+.btn-off{
+    font-weight: 500;
+    border: 0px solid #231F1E;
+    margin-top: 1em;
+    margin-bottom: 3em;
+border-radius: 15em;
+background-color: #003D29;
+color: white;
+font-size: 1.1em;
+padding: 0.9em 1.2em 0.9em 1.2em;
+cursor: pointer;
+
+}
+.btn-off:hover{
+    background-color: #231F1E;
+}
+
+.img-cincuenta{
+    margin-bottom: 1em;
+}
+
+
+
+/* FILTROSY ORDENAR */
+.filtros{
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+}
+.filtro-btn{
+    
+   background-color: #EBECED !important;
+   color: black !important;
+   border: 0px #EBECED solid !important;
+   border-radius: 2em !important;
+   margin-right: 2em;
+}
+.filtro-btn:hover{
+    background-color: #d6d8d9 !important;
+ }
+
+ .orden-btn{
+    
+    background-color: white !important;
+    color: black !important;
+    border: 1px #bdbfc0 solid !important;
+    border-radius: 2em !important;
+   margin-left: 54em;
+ }
+ .orden-btn:hover{
+    background-color: #bdbfc0!important;
+ }
+
+.dd-a{
+    background-color:  rgba(0, 0, 0, 0.375);
+    
+}
+.text-blanco{
+    color: white;
+}
+.dd-a:hover span{
+    color: rgb(0, 0, 0);
+}
+.dd-b{
+    background-color: rgba(101, 65, 21, 0.285);
+}
+.dd-c{
+    background-color: rgba(224, 113, 198, 0.242);
+}
+.dd-d{
+    background-color: rgba(205, 18, 18, 0.324);
+}
+.dd-e{
+    background-color: rgba(225, 147, 51, 0.355);
+}
+.dd-f{
+    background-color: rgba(64, 64, 64, 0.272);
+}
+
+
+
+
+/* Card productos */
+.B-cards{
+    width: 70% !important; 
+    margin: auto !important;
+    justify-content: space-between;
+}
+
+.B-todoCard{
+   
+         margin-top: 3em;
+         font-family: Arial, Helvetica, sans-serif;
+         
+   }
+   
+   /* div imagenes */
+   .B-CardFotos{
+         background-color: #F5F6F6;
+            border: 0px ;
+         width: 18em;
+         height: 18em;
+         border-radius: 0.8em;
+         display: flex; 
+        margin-bottom: 1em;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         position: relative; 
+         cursor: pointer;
+   }
+   
+   .B-imagenCard{
+   
+   transition:  0.4s ease; 
+   
+   
+   max-width: 100%;
+   
+   }
+   
+   .B-corazonDiv{
+   
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 50%;
+   padding: 0.3em 0.5em 0.3em 0.5em;
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    z-index: 1;
+   }
+   .B-corazon{
+    width: 1.1em;
+   }
+    
+   /* div texto */
+   
+   
+   .B-namePrecio{
+       display: flex;
+       justify-content: space-between;
+   
+   }
+   .B-name{
+   font-size: 0.9em;
+   font-weight: 600;
+   }
+   .B-precio{
+       font-size: 1em;
+       font-weight: 600;
+       
+   }
+   .B-descrip{
+       font-size: 0.7em;
+       color: rgb(86, 85, 85);
+       margin-top: -1em;
+   }
+   
+   .B-stars{
+       display: flex;
+   }
+   .B-estrellasIMG{
+       width: 0.7em;
+   
+   }
+   
+   .B-numeroStar{
+       font-size: 0.65em;
+       margin-left: 0.5em;
+       margin-top: 0.3em;
+   }
+   
+   .B-AddCart{ 
+       margin-top: 0.6em;
+       cursor: pointer;
+       border: 1px solid black;
+       background-color: #FFFFFF;
+       border-radius: 2em;
+       font-size: 0.8em;
+       transition:  0.5s ease;
+   
+       padding: 0.8em 1.8em 0.8em 1.8em;
+      
+   }
+   /* hover tarjeta */
+   .B-imagenCard:hover {
+    transform: scale(1.2);
+}
+
+.B-corazonDiv:hover{
+    background-color: #F9DCDC;
+}
+
+
+.B-AddCart:hover{
+border: 1px solid #003D29;
+background-color: #003D29;
+color: white;
+}
+
+
+/* varias */
+.B-cards{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* BOTONES 1 2 3 */
+.botones-numeros{
+display: flex;
+width: 70%;
+margin: auto;
+justify-content: center;
+margin-top: 4em;
+
+}
+
+.btn-num{
+    border: none;
+    border-radius: 100em;
+    padding: 0.9em 1.4em 0.9em 1.4em ;
+    background-color:#F5F6F6;
+    color: black;
+    margin-right: 1em;
+}
+.btn-num:hover{
+    color: white;
+    background-color: #003D29;
+   
+}
+
+/* cards abajo */
+.produ-semanales-shop{
+   
+    width: 70% !important; 
+    margin: auto !important;
+   
+}
+.produ-semanales-shop h2{
+    font-weight: 700;
+    margin-top: 3em;
+}
+
+
+
+/* CARDS VARIAS */
+.category-hdos{
+    margin-top: 4em;
+}
+
+.btns-categorias{
+  
+    margin: auto !important;
+}
+.btn-category{
+    margin-top: 1.5em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.522);
+    background-color: #FFFFFF;
+    border-radius: 2em;
+    font-size: 1em;
+   margin-right: 1em;
+
+    padding: 0.8em 1.8em 0.8em 1.8em;
 }
