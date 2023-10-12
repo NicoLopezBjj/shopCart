@@ -13,5 +13,8 @@ router.get('/signup',authControllers.signup_get)
 
 router.post('/signup',authControllers.signup_post)
 
+router.get('/shop',(req,res)=>{
+    res.render('shop')
+})
 
 module.exports=router

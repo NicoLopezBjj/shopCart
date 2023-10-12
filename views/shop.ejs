@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="joaki.css">
+    <link rel="stylesheet" href="jairo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+        <script src="joaki.js"></script>
+</head>
+
+<body>
+
+    <!-- import navbar -->
+    <div class="green-back">
+        <div class="fondoVerde d-flex justify-content-between align-items-center text-align-center text-white px-5">
+            <div>
+                <a href="" class="nav-link active">+001234567890</a>
+            </div>
+            <div class="d-flex justify-content-evenly mt-2">
+                <p class="topGreen pe-2">Obtené un 50% de descuento en artículos seleccionados</p>
+                <a class="ps-2 text-white hoverEnlace" href="/shop" style="text-decoration: none;">Comprar ahora</a>
+            </div>
+            <div class="d-flex">
+                <a href="" class="nav-link active dropdown-toggle ps-3">Ubicación</a>
+            </div>
+        </div>
+    </div>
+     <!-- NAVBAR -->
+     <nav class=" margin-all justify-content-between navbar px-5">
+        
+        <div class="navbar-brand">
+          <a href="/"><img src="Img/ShopCart.jpg" class="shopCart"></a>
+        </div>
+
+        <div class="d-flex">
+            <a href="" class="nav-link active dropdown-toggle text-black px-2 hoverCategoria">Categorias</a>
+            <a href="" class="nav-link px-2 hoverNav">Ofertas</a>
+            <a href="" class="nav-link px-2 hoverNav">Novedades</a>
+            <a href="" class="nav-link px-2 hoverNav">Entregas</a>    
+        </div>
+        <div class="d-flex"> 
+            <form action="" role="search" >
+            <input type="search" placeholder="Buscar producto" class="form-control "> 
+            </form>
+            <button class="border-0"><i class="bi bi-search bg-white"></i></button>
+        </div>
+        <div class="d-flex ">
+            <a href="/signin" class="nav-link px-2 hoverEnlace"><i class="bi bi-person px-2 size"></i>Cuenta</a>
+            <a href="" class="nav-link px-2 hoverEnlace"><i class="bi bi-cart-plus px-2 size"></i>Carrito</a>
+        </div>
+    </nav>
+    
+<!-- arranca todo -->
+
+
+<div class="off-cincuenta">
+  
+    <div>
+      <h2>Obtenga hasta un 50% de descuento <br>en zapatillas seleccionadas</h2>
+      <button class="btn-off">Comprar ahora</button>
+    </div>
+    <div>
+      <img src="img/pies-zapa.png" alt="" class="img-cincuenta">
+    </div>
+</div>
+
+
+<!-- FILTROS -->
+<div class="filtros">
+<div>
+  <div class="dropdown">
+    <button class="filtro-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Precio
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">$1 a $999</a></li>
+      <li><a class="dropdown-item" href="#">$1000 a $9999</a></li>
+      <li><a class="dropdown-item" href="#">+ $10.000</a></li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <div class="dropdown">
+    <button class="filtro-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Color
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li class="dd-a"><a class="dropdown-item" href="#"><span class="text-blanco">Negro</span></a></li>
+      <li ><a class="dropdown-item" href="#">Blanco</a></li>
+      <li class="dd-b"><a class="dropdown-item" href="#">Marron</a></li>
+      <li class="dd-c"><a class="dropdown-item" href="#">Rosa</a></li>
+      <li class="dd-d"><a class="dropdown-item" href="#">Rojo</a></li>
+      <li class="dd-e"><a class="dropdown-item" href="#">Naranja</a></li>
+      <li class="dd-f"><a class="dropdown-item" href="#">Gris</a></li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <div class="dropdown">
+    <button class="filtro-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   Marca
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Now Delivery</a></li>
+      <li><a class="dropdown-item" href="#">Staples</a></li>
+      <li><a class="dropdown-item" href="#">Quicklly</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="ordenar-por">
+
+</div>
+<div class="dropdown">
+  <button class="orden-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+ Ordenar por
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Menor precio</a></li>
+    <li><a class="dropdown-item" href="#">Mayor precio</a></li>
+  </ul>
+</div>
+</div>
+
+
+
+
+
+               <!-- CARDS -->
+               <h2 class="margin-all mt-5">Productos para ti</h2>
+
+    <section class="B-cards" id="cards">
+
+    
+    <!-- toda la card -->
+<div class="B-todoCard" >
+
+
+    <!-- fotos de la card -->
+    <div class="B-CardFotos">
+    
+     
+      <img src="img//parlantin.png" alt="" class="B-imagenCard">
+      
+    
+    
+    <div class="B-corazonDiv">
+       <img src="img//corazon.svg" alt="" class="B-corazon">
+    </div>
+    </div>
+    
+    
+    <!-- textos -->
+    <div class="B-texto">
+    
+     
+    <div class="B-namePrecio">
+    
+    <h4 class="B-name">HomePod mini</h4>
+    
+    <h3 class="B-precio">$239.00</h3>
+    
+    </div>
+    
+    
+    
+    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
+    
+    <div class="B-stars">
+      <div>
+    <img src="img//star.svg" alt="" class="B-estrellasIMG">
+    <img src="img//star.svg" alt="" class="B-estrellasIMG">
+    <img src="img//star.svg" alt="" class="B-estrellasIMG">
+    <img src="img//star.svg" alt="" class="B-estrellasIMG">
+    <img src="img//star.svg" alt="" class="B-estrellasIMG">
+    </div>
+    
+    <div>
+      <p class="B-numeroStar">(121)</p>
+    </div>
+    
+    </div>
+    
+    <button class="B-AddCart"> Add to Cart</button>
+    
+    </div>
+    
+    </div>
+     </section>
+
+
+     <!-- PARTE DE 1 2 3 BOOTNES -->
+     <section class="botones-numeros">
+
+      <button class="btn-num">1</button>
+      <button class="btn-num">2</button>
+      <button class="btn-num">2</button>
+
+     </section>
+
+     <section class="produ-semanales-shop">
+        <h2>Productos populares de la semana</h2>
+        <div class="cards-margin">
+            <%- include ('partials/card.ejs') -%>
+            <%- include ('partials/card.ejs') -%>
+            <%- include ('partials/card.ejs') -%>
+        </div>
+
+     </section>
+</body>
+</html>
