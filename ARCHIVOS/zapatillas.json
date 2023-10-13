@@ -27,147 +27,156 @@
       "color": "blanco"
     },
     {
-      "nombre": "Comoda",
-      "precio": "8000",
-      "marca": "Sprouts",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/comoda-b.png",
-      "descripcion": "Comoda para el hogar",
-      "categoria": "Muebles",
-      "color": "marron"
+      "nombre": "Zapatillas de hombre deportivas altas",
+      "precio": "26000",
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaAzul.png",
+      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
+      "categoria": "Zapatillas",
+      "color": "azul"
     },
     {
-      "nombre": "Comoda",
-      "precio": "8900",
-      "marca": "Sprouts",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/comoda-n.png",
-      "descripcion": "Comoda para el hogar",
-      "categoria": "Muebles",
-      "color": "marron"
+      "nombre": "Zapatillas de hombre deportivas altas",
+      "precio": "26000",
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaRoja.png",
+      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
+      "categoria": "Zapatillas",
+      "color": "rojo"
     },
     {
-      "nombre": "Escritorio",
-      "precio": "12000",
-      "marca": "Container Store",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/escritorio-b.png",
-      "descripcion": "Escritorio en forma de L. Ideal para esquinas.",
-      "categoria": "Muebles",
+      "nombre": "Botines bota futbol",
+      "precio": "31000",
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesBlanco.png",
+      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
+      "categoria": "Zapatillas",
       "color": "blanco"
     },
     {
-      "nombre": "Escritorio",
-      "precio": "12499",
-      "marca": "Container Store",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/escritorio-m.png",
-      "descripcion": "Escritorio en forma de L. Ideal para esquinas.",
-      "categoria": "Muebles",
-      "color": "marron"
-    },
-    {
-      "nombre": "Mecedora",
-      "precio": "6900",
-      "marca": "Target",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mecedora.png",
-      "descripcion": "Silla mecedora. Ideal para disfrutar un momento de relajacion",
-      "categoria": "Muebles",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Juego de mesa y sillas",
-      "precio": "28999",
-      "marca": "Target",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesa-sillas.png",
-      "descripcion": "Juego de mesa y sillas. Ideal para living y/o comedor",
-      "categoria": "Muebles",
-      "color": "marron"
-    },
-    {
-      "nombre": "Mesa",
-      "precio": "8299",
-      "marca": "Grocery outlet",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesa.png",
-      "descripcion": "Mesa en forma de ovalo.",
-      "categoria": "Muebles",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Mesa de luz",
-      "precio": "3900",
-      "marca": "Grocery outlet",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesita-b.png",
-      "descripcion": "Mesa de luz para dormitorios",
-      "categoria": "Muebles",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Mesa de luz",
-      "precio": "3900",
-      "marca": "Grocery outlet",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesita-n.png",
-      "descripcion": "Mesa de luz para dormitorios",
-      "categoria": "Muebles",
+      "nombre": "Botines bota futbol",
+      "precio": "31000",
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesNegro.png",
+      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
+      "categoria": "Zapatillas",
       "color": "negro"
     },
     {
-    "nombre": "Ropero",
-    "precio": "7699",
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/ropero-b.png",
-    "descripcion": "Ropero super amplio para almacenar ropa y/o objetos",
-    "categoria": "Muebles",
-    "color": "blanco"
+      "nombre": "Bota alta",
+      "precio": "9900",
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botitaN.png",
+      "descripcion": "Bota de vestir. Economica y elegante",
+      "categoria": "Zapatillas",
+      "color": "negro"
     },
     {
-    "nombre": "Ropero",
-    "precio": "3900",
+      "nombre": "Zapatillas chatas",
+      "precio": "12000",
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunBlanca.png",
+      "descripcion": "Zapatillas bajas tradicionales de cuero.",
+      "categoria": "Zapatillas",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Zapatillas chatas",
+      "precio": "12000",
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunNegra.png",
+      "descripcion": "Zapatillas bajas tradicionales de cuero.",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Zapatillas deporte moda hombre",
+      "precio": "21000",
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/negra.png",
+      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Zapatillas deporte moda hombre",
+      "precio": "21000",
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/roja.png",
+      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
+      "categoria": "Zapatillas",
+      "color": "rojo"
+    },
+    {
+    "nombre": "Zapatillas",
+    "precio": "11900",
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/ropero-m.png",
-    "descripcion": "Ropero super amplio para almacenar ropa y/o objetos",
-    "categoria": "Muebles",
-    "color": "marron"
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/reebok.png",
+    "descripcion": "Zapatiilas deportivas para mujer.",
+    "categoria": "Zapatillas",
+    "color": "gris"
+    },
+    {
+    "nombre": "Zapatillas mujer caminar",
+    "precio": "17000",
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/pumaRosa.png",
+    "descripcion": "Ideales para caminar, comodas y livianas",
+    "categoria": "Zapatillas",
+    "color": "rosa"
+    },
+    {
+    "nombre": "Zapatos para el agua",
+    "precio": "9999",
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaN.png",
+    "descripcion": "Comodas y livianas. Para usar adentro del agua",
+    "categoria": "Zapatillas",
+    "color": "naranja"
     },
     {
     "nombre": "Silla de oficina",
     "precio": "3900",
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/silla-a.png",
-    "descripcion": "Silla de oficina, gamer o escritorio, con ruedas y para ajustar altura",
-    "categoria": "Muebles",
-    "color": "azul"
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaR.png",
+    "descripcion": "Comodas y livianas. Para usar adentro del agua",
+    "categoria": "Zapatillas",
+    "color": "rosa"
     },
     {
-    "nombre": "Silla de oficina",
-    "precio": "3900",
+    "nombre": "Zapatillas moda",
+    "precio": "12000",
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/silla-n.png",
-    "descripcion": "Silla de oficina, gamer o escritorio, con ruedas y para ajustar altura",
-    "categoria": "Muebles",
-    "color": "negro"
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida1.png",
+    "descripcion": "Zapatillas deportivas modernas",
+    "categoria": "Zapatillas",
+    "color": "violeta"
     },
     {
-    "nombre": "Sillon",
-    "precio": "5799",
+    "nombre": "Zapatillas moda",
+    "precio": "12000",
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sillon-n.png",
-    "descripcion": "Sillon super comodo",
-    "categoria": "Muebles",
-    "color": "negro"
-    },
-    {
-    "nombre": "Silla de oficina",
-    "precio": "3900",
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sillon-r.png",
-    "descripcion": "Sillon super comodo",
-    "categoria": "Muebles",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida2.png",
+    "descripcion": "Zapatillas deportivas modernas",
+    "categoria": "Zapatillas",
     "color": "rosa"   
     },
     {
-    "nombre": "Sofa",
-    "precio": "3900",
+    "nombre": "Zapatillas tenis",
+    "precio": "16799",
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sofa.png",
-    "descripcion": "Sofa para espacios de estar",
-    "categoria": "Muebles",
-    "color": "verde"   
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisC.png",
+    "descripcion": "Zapatillas unisex tenis",
+    "categoria": "Zapatillas",
+    "color": "celeste"   
+    },
+    {
+    "nombre": "Zapatillas tenis",
+    "precio": "16799",
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisN.png",
+    "descripcion": "Zapatillas unisex tenis",
+    "categoria": "Zapatillas",
+    "color": "negro"   
     }
   ]
