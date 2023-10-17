@@ -1,0 +1,173 @@
+[
+    {
+      "nombre": "Iphone3",
+      "precio": 99999,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/Iphone3-removebg-preview.png",
+      "descripcion": "Celular de ultima tecnologia",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre": "Iphone3",
+      "precio": 99999,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/Iphone3colorblanco-removebg-preview.png",
+      "descripcion": "Celular de ultima tecnologia",
+      "categoria": "Tecnologia",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Auriculares",
+      "precio": 17900,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/auri1-b.png",
+      "descripcion": "Auriculares con vincha, sonido extremo",
+      "categoria": "Tecnologia",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Auriculares",
+      "precio": 17900,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/auri1-n.png",
+      "descripcion": "Auriculares con vincha, sonido extremo",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre": "Auriculares inalambricos",
+      "precio": 9800,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/auri2-b.png",
+      "descripcion": "Auriculares bluetooth, conexion rapida con telefonos inteligentes,tabletas o computadoras",
+      "categoria": "Tecnologia",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Auriculares inalambricos",
+      "precio": 9800,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/auri2-n.png",
+      "descripcion": "Auriculares bluetooth, conexion rapida con telefonos inteligentes,tabletas o computadoras",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre": "Camara de fotos",
+      "precio": 56799,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/camarafts.png",
+      "descripcion": "Camara profesional T100 18-55",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre": "Laptop",
+      "precio": 78999,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/laptop-gris.png",
+      "descripcion": "Laptop 8GB RAM, 256gb Intel Core",
+      "categoria": "Tecnologia",
+      "color": "gris"
+    },
+    {
+      "nombre": "Laptop",
+      "precio": 80000,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/laptop-naranja.png",
+      "descripcion": "Laptop 8GB RAM, 256gb Intel Core",
+      "categoria": "Tecnologia",
+      "color": "naranja"
+    },
+    {
+      "nombre": "Microfono",
+      "precio": 27999,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/microfono.png",
+      "descripcion": "Microfono Inalambrico Profesional Con Receptor Hasta 50m",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre":"Monitor LED",
+      "precio": 21000,
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/monitor.png",
+      "descripcion": "Monitor LED 21'",
+      "categoria": "Tecnologia",
+      "color": "negro"
+    },
+    {
+      "nombre": "Reloj de muñeca",
+      "precio": 9000,
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/reloj-b.png",
+      "descripcion": "Reloj inteligente, sumergible con bluetooth",
+      "categoria": "Tecnologia",
+      "color": "blanco"
+    },
+    {
+    "nombre": "Reloj de muñeca",
+    "precio": 9000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/reloj-n.png",
+    "descripcion": "Reloj inteligente, sumergible con bluetooth",
+    "categoria": "Tecnologia",
+    "color": "negro"
+    },
+    {
+    "nombre": "Celular",
+    "precio": 86999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/samsung-n-removebg-preview.png",
+    "descripcion": "Smartphone 256 GB, 3 camaras",
+    "categoria": "Tecnologia",
+    "color": "negro"
+    },
+    {
+    "nombre": "Celular",
+    "precio": 86999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/samsung-r.png",
+    "descripcion": "Smartphone 256 GB, 3 camaras",
+    "categoria": "Tecnologia",
+    "color": "blanco"
+    },
+    {
+    "nombre": "Tablet",
+    "precio": 79999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/tablet.png",
+    "descripcion": "Tablet 32GB RAM 3GB pantalla 1340px x 800px",
+    "categoria": "Tecnologia",
+    "color": "negro"
+    },
+    {
+    "nombre": "TV",
+    "precio": 99999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/tv.png",
+    "descripcion": "Televisor Smart 4k 21'",
+    "categoria": "Tecnologia",
+    "color": "negro"
+    },
+    {
+    "nombre": "WebCam",
+    "precio": 36999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/webcam-b.png",
+    "descripcion": "Ecam 8000 full HD 30FPS",
+    "categoria": "Tecnologia",
+    "color": "blanco"   
+    },
+    {
+    "nombre": "Zapatillas tenis",
+    "precio": 36999,
+    "marca": "Sprouts",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Tecnolog%C3%ADa/webcam-n.png",
+    "descripcion": "Ecam 8000 full HD 30FPS",
+    "categoria": "Tecnologia",
+    "color": "negro"   
+    }
+  ]
