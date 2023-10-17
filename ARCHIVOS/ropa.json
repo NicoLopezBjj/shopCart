@@ -1,0 +1,210 @@
+[
+    {
+      "nombre": "Abrigo",
+      "precio": 5400,
+      "marca": "Mollie stones",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/abrigo-b.png",
+      "descripcion": "Abrigo blanco de lana y cuello con solapa.",
+      "categoria": "ropa",
+      "color": "blanco"
+    },
+    {
+        "nombre": "Abrigo",
+        "precio": 5400,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/abrigo.png",
+        "descripcion": "Abrigo negro de lana y cuello con solapa.",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+    {
+        "nombre": "Camisa",
+        "precio": 1999,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/camisa-b.png",
+        "descripcion": "Camisa blanca con cuello abotonado y manga larga.",
+        "categoria": "ropa",
+        "color": "blanco"
+      },
+      {
+        "nombre": "Camisa",
+        "precio": 1999,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/camisa-n.png",
+        "descripcion": "Camisa negra con cuello abotonado y manga larga.",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Camperon",
+        "precio": 8999,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/camperon-az.png",
+        "descripcion": "Camperon para la nieve con capucha",
+        "categoria": "ropa",
+        "color": "azul"
+      },
+      {
+        "nombre": "Camperon",
+        "precio": 8999,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/camperon-r.png",
+        "descripcion": "Camperon para la nieve con capucha",
+        "categoria": "ropa",
+        "color": "naranja"
+      },
+      {
+        "nombre": "Buzo",
+        "precio": 2750,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/hoodie-b.png",
+        "descripcion": "Buzo de algodón con capucha y bolsillo canguro",
+        "categoria": "ropa",
+        "color": "blanco"
+      },
+      {
+        "nombre": "Buzo",
+        "precio": 2700,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/hoodie-n.png",
+        "descripcion": "Buzo de algodón con capucha y bolsillo canguro",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Jean",
+        "precio": 3399,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/jean-az.png",
+        "descripcion": "Jean suelto estilo desgastado",
+        "categoria": "ropa",
+        "color": "azul"
+      },
+      {
+        "nombre": "Jean",
+        "precio": 3399,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/jean-n.png",
+        "descripcion": "Jean suelto estilo desgastado",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Short de baño",
+        "precio": 1800,
+        "marca": "Sprouts",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/malla-n.png",
+        "descripcion": "Short de baño de tejido elástico y secado rápido, con bolsillos laterales",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Short de baño",
+        "precio": 1800,
+        "marca": "Sprouts",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/malla-r.png",
+        "descripcion": "Short de baño de tejido elástico y secado rápido, con bolsillos laterales",
+        "categoria": "ropa",
+        "color": "rosa"
+      },
+      {
+        "nombre": "Remera mangas largas",
+        "precio": 1100,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/mangas-largas.png",
+        "descripcion": "Remera mangas largas con rayas blancas y negras, hecha de algodón",
+        "categoria": "ropa",
+        "color": ["blanco", "negro"]
+      },
+      {
+        "nombre": "Pollera",
+        "precio": 899,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/pollera-n.png",
+        "descripcion": "Falda corta de tiro alto con efecto piel",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Pollera",
+        "precio": 899,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/pollera-r.png",
+        "descripcion": "Falda corta de tiro alto con efecto piel",
+        "categoria": "ropa",
+        "color": "rojo"
+      },
+      {
+        "nombre": "Remera mangas cortas",
+        "precio": 2200,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/remera-m.png",
+        "descripcion": "Remera mangas cortas oversize hecha de algodón",
+        "categoria": "ropa",
+        "color": "marron"
+      },
+      {
+        "nombre": "Remera mangas cortas",
+        "precio": 2200,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/remera-n.png",
+        "descripcion": "Remera mangas cortas oversize hecha de algodón",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Suéter de Navidad",
+        "precio": 2890,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/sweater-red.png",
+        "descripcion": "Suéter de Navidad rojo con estampado de un gato",
+        "categoria": "ropa",
+        "color": "rojo"
+      },
+      {
+        "nombre": "Suéter de Navidad",
+        "precio": 2890,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/sweater-verde.png",
+        "descripcion": "Suéter de Navidad verde con estampado de un gato",
+        "categoria": "ropa",
+        "color": "verde"
+      },
+      {
+        "nombre": "Crop top",
+        "precio": 670,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/top-b.png",
+        "descripcion": "Crop top sin mangas de tela elastizada",
+        "categoria": "ropa",
+        "color": "blanco"
+      },
+      {
+        "nombre": "Crop top",
+        "precio": 670,
+        "marca": "Sports Basement",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/top-n.png",
+        "descripcion": "Crop top sin mangas de tela elastizada",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Vestido",
+        "precio": 4499,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/vestido-n.png",
+        "descripcion": "Vestido corto para salir",
+        "categoria": "ropa",
+        "color": "negro"
+      },
+      {
+        "nombre": "Vestido",
+        "precio": 4499,
+        "marca": "Mollie stones",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Ropa/vestido-r.png",
+        "descripcion": "Vestido corto para salir",
+        "categoria": "ropa",
+        "color": "rojo"
+      }
+
+]

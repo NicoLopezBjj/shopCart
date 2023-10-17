@@ -1,0 +1,111 @@
+[
+    {
+      "nombre": "Libro de ajedrez",
+      "precio": 220 ,
+      "marca": "Staples",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/ajedrez.jpg",
+      "descripcion": "Libro de ajedrez con secretos para ser el mejor jugador.",
+      "categoria": "Target",
+      "color": ""
+    },
+    {
+      "nombre": "Manga Attack on Titan",
+      "precio":  1240,
+      "marca": "Bevmo!",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/aot-removebg-preview.png",
+      "descripcion": "Los primeros 4 mangas de el anime Attack on Titan.",
+      "categoria": "libros",
+      "color": ""
+    },
+    {
+        "nombre": "Comic Avengers",
+        "precio": 564,
+        "marca": "Bevmo!",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/avengers-removebg-preview.png",
+        "descripcion": "Iron Man, Hulk, Thor, Ant-Man y Wasp unen fuerzas para convertirse en el equipo de héroes más poderoso de Marvel.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "Saga completa de Harry Potter",
+        "precio": 2222,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/hp-removebg-preview.png",
+        "descripcion": "Todos libros en una caja bellamente producida, perfecta para los fanáticos del mundo mágico.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "HTML y CSS: la guía completa.",
+        "precio": 727,
+        "marca": "Staples",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/libro-html-removebg-preview.png",
+        "descripcion": "Su guía completa de HTML5 y CSS3, Cree documentos HTML, diseñe con CSS y obtenga una introducción práctica a los conceptos básicos de JavaScript",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "JavaScript: la guía completa.",
+        "precio": 777,
+        "marca": "Staples",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/libro-js-removebg-preview.png",
+        "descripcion": "Su guía completa de JS, Trabajar con objetos, tipos de referencia, eventos, formularios, etc.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "Lo mejor de Mafalda",
+        "precio": 1000,
+        "marca": "Bevmo!",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/mafalda-removebg-preview.png",
+        "descripcion": "Lo mejor de diez años de Mafalda en tapa dura.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "Winnie pooh",
+        "precio": 299,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/poo.jpg",
+        "descripcion": "Edición clásica de Winnie pooh",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "El principito",
+        "precio": 3499,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/principito-removebg-preview.png",
+        "descripcion": "Una lujosa edición de El Principito con cantos de color, tapa dura y detalles dorados.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "Recetas favoritas",
+        "precio": 1600,
+        "marca": "Staples",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/recetas-removebg-preview.png",
+        "descripcion": "Las mejores recetas en este gran libro de tapa dura.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "El Señor De Los Anillos",
+        "precio":890,
+        "marca": "Target",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/se%C3%B1or-anillos.jpg",
+        "descripcion": "El Señor De Los Anillos Las Dos Torres, de tapa blanda.",
+        "categoria": "libros",
+        "color": ""
+      },
+      {
+        "nombre": "El asombroso Spiderman",
+        "precio": 1190,
+        "marca": "Bevmo!",
+        "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Libros/spiderman-removebg-preview.png",
+        "descripcion": "Comic de Spiderman con los seis siniestros.",
+        "categoria": "libros",
+        "color": ""
+      }
+
+  ]
