@@ -1,0 +1,182 @@
+[
+    {
+      "nombre": "Bota All Star",
+      "precio": 19900,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/allstarB.png",
+      "descripcion": "Zapatillas de lona para mujer.",
+      "categoria": "Zapatillas",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Bota All Star",
+      "precio": 20999,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/allstarM.png",
+      "descripcion": "Zapatillas de lona para mujer.",
+      "categoria": "Zapatillas",
+      "color": "dorado"
+    },
+    {
+      "nombre": "Zapatillas APL (Athletic Propulsion Labs)",
+      "precio": 29000,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/blancaNegra.png",
+      "descripcion": "Zapatillas para hacer atletismo con tejido texturizado.",
+      "categoria": "Zapatillas",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Zapatillas de hombre deportivas altas",
+      "precio": 26000,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaAzul.png",
+      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
+      "categoria": "Zapatillas",
+      "color": "azul"
+    },
+    {
+      "nombre": "Zapatillas de hombre deportivas altas",
+      "precio": 26000,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaRoja.png",
+      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
+      "categoria": "Zapatillas",
+      "color": "rojo"
+    },
+    {
+      "nombre": "Botines bota futbol",
+      "precio": 31000,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesBlanco.png",
+      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
+      "categoria": "Zapatillas",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Botines bota futbol",
+      "precio": 31000,
+      "marca": "Sports Basement",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesNegro.png",
+      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Bota alta",
+      "precio": 9900,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botitaN.png",
+      "descripcion": "Bota de vestir. Economica y elegante",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Zapatillas chatas",
+      "precio": 12000,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunBlanca.png",
+      "descripcion": "Zapatillas bajas tradicionales de cuero.",
+      "categoria": "Zapatillas",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Zapatillas chatas",
+      "precio": 12000,
+      "marca": "Target",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunNegra.png",
+      "descripcion": "Zapatillas bajas tradicionales de cuero.",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Zapatillas deporte moda hombre",
+      "precio": 21000,
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/negra.png",
+      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
+      "categoria": "Zapatillas",
+      "color": "negro"
+    },
+    {
+      "nombre": "Zapatillas deporte moda hombre",
+      "precio": 21000,
+      "marca": "Grocery outlet",
+      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/roja.png",
+      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
+      "categoria": "Zapatillas",
+      "color": "rojo"
+    },
+    {
+    "nombre": "Zapatillas",
+    "precio": 11900,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/reebok.png",
+    "descripcion": "Zapatiilas deportivas para mujer.",
+    "categoria": "Zapatillas",
+    "color": "gris"
+    },
+    {
+    "nombre": "Zapatillas mujer caminar",
+    "precio": 17000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/pumaRosa.png",
+    "descripcion": "Ideales para caminar, comodas y livianas",
+    "categoria": "Zapatillas",
+    "color": "rosa"
+    },
+    {
+    "nombre": "Zapatos para el agua",
+    "precio": 9999,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaN.png",
+    "descripcion": "Comodas y livianas. Para usar adentro del agua",
+    "categoria": "Zapatillas",
+    "color": "naranja"
+    },
+    {
+    "nombre": "Silla de oficina",
+    "precio": 3900,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaR.png",
+    "descripcion": "Comodas y livianas. Para usar adentro del agua",
+    "categoria": "Zapatillas",
+    "color": "rosa"
+    },
+    {
+    "nombre": "Zapatillas moda",
+    "precio": 12000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida1.png",
+    "descripcion": "Zapatillas deportivas modernas",
+    "categoria": "Zapatillas",
+    "color": "violeta"
+    },
+    {
+    "nombre": "Zapatillas moda",
+    "precio": 12000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida2.png",
+    "descripcion": "Zapatillas deportivas modernas",
+    "categoria": "Zapatillas",
+    "color": "rosa"   
+    },
+    {
+    "nombre": "Zapatillas tenis",
+    "precio": 16799,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisC.png",
+    "descripcion": "Zapatillas unisex tenis",
+    "categoria": "Zapatillas",
+    "color": "celeste"   
+    },
+    {
+    "nombre": "Zapatillas tenis",
+    "precio": 16799,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisN.png",
+    "descripcion": "Zapatillas unisex tenis",
+    "categoria": "Zapatillas",
+    "color": "negro"   
+    }
+  ]

@@ -1,7 +1,7 @@
 [
     {
       "nombre": "Banqueta",
-      "precio": "4699",
+      "precio": 4699,
       "marca": "Staples",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/Banqueta.png",
       "descripcion": "Banqueta para exterior/interior",
@@ -10,7 +10,7 @@
     },
     {
       "nombre": "Cama 1 plaza",
-      "precio": "15000",
+      "precio": 15000,
       "marca": "Staples",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/cama-b.png",
       "descripcion": "ESPECTACULAR CAMA DE 1 PLAZA",
@@ -19,7 +19,7 @@
     },
     {
       "nombre": "Cama 1 plaza",
-      "precio": "15000",
+      "precio": 15000,
       "marca": "Staples",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/cama-r.png",
       "descripcion": "ESPECTACULAR CAMA DE 1 PLAZA",
@@ -28,7 +28,7 @@
     },
     {
       "nombre": "Comoda",
-      "precio": "8000",
+      "precio": 8000,
       "marca": "Sprouts",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/comoda-b.png",
       "descripcion": "Comoda para el hogar",
@@ -37,7 +37,7 @@
     },
     {
       "nombre": "Comoda",
-      "precio": "8900",
+      "precio": 8900,
       "marca": "Sprouts",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/comoda-n.png",
       "descripcion": "Comoda para el hogar",
@@ -46,7 +46,7 @@
     },
     {
       "nombre": "Escritorio",
-      "precio": "12000",
+      "precio": 12000,
       "marca": "Container Store",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/escritorio-b.png",
       "descripcion": "Escritorio en forma de L. Ideal para esquinas.",
@@ -55,7 +55,7 @@
     },
     {
       "nombre": "Escritorio",
-      "precio": "12499",
+      "precio": 12499,
       "marca": "Container Store",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/escritorio-m.png",
       "descripcion": "Escritorio en forma de L. Ideal para esquinas.",
@@ -64,7 +64,7 @@
     },
     {
       "nombre": "Mecedora",
-      "precio": "6900",
+      "precio": 6900,
       "marca": "Target",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mecedora.png",
       "descripcion": "Silla mecedora. Ideal para disfrutar un momento de relajacion",
@@ -73,7 +73,7 @@
     },
     {
       "nombre": "Juego de mesa y sillas",
-      "precio": "28999",
+      "precio": 28999,
       "marca": "Target",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesa-sillas.png",
       "descripcion": "Juego de mesa y sillas. Ideal para living y/o comedor",
@@ -82,7 +82,7 @@
     },
     {
       "nombre": "Mesa",
-      "precio": "8299",
+      "precio": 8299,
       "marca": "Grocery outlet",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesa.png",
       "descripcion": "Mesa en forma de ovalo.",
@@ -91,7 +91,7 @@
     },
     {
       "nombre": "Mesa de luz",
-      "precio": "3900",
+      "precio": 3900,
       "marca": "Grocery outlet",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesita-b.png",
       "descripcion": "Mesa de luz para dormitorios",
@@ -100,7 +100,7 @@
     },
     {
       "nombre": "Mesa de luz",
-      "precio": "3900",
+      "precio": 3900,
       "marca": "Grocery outlet",
       "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/mesita-n.png",
       "descripcion": "Mesa de luz para dormitorios",
@@ -109,7 +109,7 @@
     },
     {
     "nombre": "Ropero",
-    "precio": "7699",
+    "precio": 7699,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/ropero-b.png",
     "descripcion": "Ropero super amplio para almacenar ropa y/o objetos",
@@ -118,7 +118,7 @@
     },
     {
     "nombre": "Ropero",
-    "precio": "3900",
+    "precio": 3900,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/ropero-m.png",
     "descripcion": "Ropero super amplio para almacenar ropa y/o objetos",
@@ -127,7 +127,7 @@
     },
     {
     "nombre": "Silla de oficina",
-    "precio": "3900",
+    "precio": 3900,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/silla-a.png",
     "descripcion": "Silla de oficina, gamer o escritorio, con ruedas y para ajustar altura",
@@ -136,7 +136,7 @@
     },
     {
     "nombre": "Silla de oficina",
-    "precio": "3900",
+    "precio": 3900,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/silla-n.png",
     "descripcion": "Silla de oficina, gamer o escritorio, con ruedas y para ajustar altura",
@@ -145,7 +145,7 @@
     },
     {
     "nombre": "Sillon",
-    "precio": "5799",
+    "precio": 5799,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sillon-n.png",
     "descripcion": "Sillon super comodo",
@@ -153,8 +153,8 @@
     "color": "negro"
     },
     {
-    "nombre": "Silla de oficina",
-    "precio": "3900",
+    "nombre": "Sillon",
+    "precio": 5799,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sillon-r.png",
     "descripcion": "Sillon super comodo",
@@ -163,7 +163,7 @@
     },
     {
     "nombre": "Sofa",
-    "precio": "3900",
+    "precio": 3900,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Muebles/sofa.png",
     "descripcion": "Sofa para espacios de estar",
