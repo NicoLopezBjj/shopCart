@@ -1,5 +1,5 @@
 [{
-    "nombre": "boslo Adidas",
+    "nombre": "Bolso Adidas",
     "precio": 9000,
     "marca": "Sports Basement",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/adidasAzul.png",
@@ -7,7 +7,7 @@
     "categoria": "Bolsos",
     "color": "Azul"
   },{
-    "nombre": "boslo Adidas",
+    "nombre": "Bolso Adidas",
     "precio": 9000,
     "marca": "Sports Basement",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/adidasNegra.png",
@@ -27,7 +27,7 @@
     "precio": 7100,
     "marca": "Container Store",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/bolsoMujer.png",
-    "descripcion": "Este bolso preparada para mujeres lleva un buen espacio para llevar objetos personales",
+    "descripcion": "Este bolso preparado para mujeres lleva un buen espacio para llevar objetos personales",
     "categoria": "Bolsos",
     "color": "policromáticos"
   },{
@@ -93,7 +93,7 @@
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochilaRosa.png",
     "descripcion": "Esta mochila de montaña es una herramienta esencial para aventureros que buscan explorar la naturaleza y disfrutar de actividades al aire libre.",
     "categoria": "Bolsos",
-    "color": "Rosado" 
+    "color": "Rosa" 
     },{
     "nombre": "Mochila Escolar",
     "precio": 7000,
@@ -103,7 +103,7 @@
     "categoria": "Bolsos",
     "color": "Verde oscuro"
     },{
-    "nombre": "Mochila de campar",
+    "nombre": "Mochila de acampar",
     "precio": 21000,
     "marca": "Grocery outlet",
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochileroNaranja.png",
@@ -133,7 +133,7 @@
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/morralRosa.png",
     "descripcion": "Es ideal para llevar tus pertenencias de forma cómoda y organizada en tu día a día. Su diseño compacto y versátil lo hace perfecto para una variedad de situaciones, desde desplazamientos urbanos hasta excursiones de un día.",
     "categoria": "Bolsos",
-    "color": "Rosado"
+    "color": "Rosa"
     },{
     "nombre": "Riñonera",
     "precio": 5200,
@@ -165,5 +165,5 @@
     "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/valijaRosa.png",
     "descripcion": "elegante y funcional compañero de viaje que ha sido diseñado con cuidado y atención a los detalles para satisfacer tus necesidades de transporte y organización.",
     "categoria": "Bolsos",
-    "color": "Rosado" 
+    "color": "Rosa" 
   }]
