@@ -48,6 +48,3 @@ app.get('/',(req,res)=>{
 app.use(authRouter)
 
 
-// app.listen(PUERTO,()=>{
-//     console.log('servidor ejectuandose')
-// })
