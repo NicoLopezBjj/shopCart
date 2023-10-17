@@ -31,12 +31,13 @@ const signin_post = async (req,res) =>{
         }
 
         const isValidPassword = await bcrypt.compare(password, user.password)
-        console.log(user.password)
-        console.log(isValidPassword)
 
         if (!isValidPassword) {
             return res.status(401).json({ message: 'Password invalido' });
         }else{
+            req.session.user = user;
+            console.log(user)
+            console.log(req.session.user.nombre)
             res.redirect('/');
         }
 
