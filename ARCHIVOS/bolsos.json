@@ -1,182 +1,169 @@
-[
-    {
-      "nombre": "Bota All Star",
-      "precio": 19900,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/allstarB.png",
-      "descripcion": "Zapatillas de lona para mujer.",
-      "categoria": "Zapatillas",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Bota All Star",
-      "precio": 20999,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/allstarM.png",
-      "descripcion": "Zapatillas de lona para mujer.",
-      "categoria": "Zapatillas",
-      "color": "dorado"
-    },
-    {
-      "nombre": "Zapatillas APL (Athletic Propulsion Labs)",
-      "precio": 29000,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/blancaNegra.png",
-      "descripcion": "Zapatillas para hacer atletismo con tejido texturizado.",
-      "categoria": "Zapatillas",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Zapatillas de hombre deportivas altas",
-      "precio": 26000,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaAzul.png",
-      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
-      "categoria": "Zapatillas",
-      "color": "azul"
-    },
-    {
-      "nombre": "Zapatillas de hombre deportivas altas",
-      "precio": 26000,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botaRoja.png",
-      "descripcion": "Altas, comodas y ligeras. Para caminar y estar a la moda",
-      "categoria": "Zapatillas",
-      "color": "rojo"
-    },
-    {
-      "nombre": "Botines bota futbol",
-      "precio": 31000,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesBlanco.png",
-      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
-      "categoria": "Zapatillas",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Botines bota futbol",
-      "precio": 31000,
-      "marca": "Sports Basement",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botinesNegro.png",
-      "descripcion": "Super comodos y ligeros para jugar en canchas de pasto.",
-      "categoria": "Zapatillas",
-      "color": "negro"
-    },
-    {
-      "nombre": "Bota alta",
-      "precio": 9900,
-      "marca": "Target",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/botitaN.png",
-      "descripcion": "Bota de vestir. Economica y elegante",
-      "categoria": "Zapatillas",
-      "color": "negro"
-    },
-    {
-      "nombre": "Zapatillas chatas",
-      "precio": 12000,
-      "marca": "Target",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunBlanca.png",
-      "descripcion": "Zapatillas bajas tradicionales de cuero.",
-      "categoria": "Zapatillas",
-      "color": "blanco"
-    },
-    {
-      "nombre": "Zapatillas chatas",
-      "precio": 12000,
-      "marca": "Target",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/comunNegra.png",
-      "descripcion": "Zapatillas bajas tradicionales de cuero.",
-      "categoria": "Zapatillas",
-      "color": "negro"
-    },
-    {
-      "nombre": "Zapatillas deporte moda hombre",
-      "precio": 21000,
-      "marca": "Grocery outlet",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/negra.png",
-      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
-      "categoria": "Zapatillas",
-      "color": "negro"
-    },
-    {
-      "nombre": "Zapatillas deporte moda hombre",
-      "precio": 21000,
-      "marca": "Grocery outlet",
-      "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/roja.png",
-      "descripcion": "Diseño unico de moda, elegante para cualquier ocasion",
-      "categoria": "Zapatillas",
-      "color": "rojo"
-    },
-    {
-    "nombre": "Zapatillas",
-    "precio": 11900,
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/reebok.png",
-    "descripcion": "Zapatiilas deportivas para mujer.",
-    "categoria": "Zapatillas",
-    "color": "gris"
-    },
-    {
-    "nombre": "Zapatillas mujer caminar",
-    "precio": 17000,
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/pumaRosa.png",
-    "descripcion": "Ideales para caminar, comodas y livianas",
-    "categoria": "Zapatillas",
-    "color": "rosa"
-    },
-    {
-    "nombre": "Zapatos para el agua",
-    "precio": 9999,
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaN.png",
-    "descripcion": "Comodas y livianas. Para usar adentro del agua",
-    "categoria": "Zapatillas",
-    "color": "naranja"
-    },
-    {
-    "nombre": "Silla de oficina",
-    "precio": 3900,
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaAguaR.png",
-    "descripcion": "Comodas y livianas. Para usar adentro del agua",
-    "categoria": "Zapatillas",
-    "color": "rosa"
-    },
-    {
-    "nombre": "Zapatillas moda",
-    "precio": 12000,
-    "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida1.png",
-    "descripcion": "Zapatillas deportivas modernas",
-    "categoria": "Zapatillas",
+[{
+    "nombre": "boslo Adidas",
+    "precio": 9000,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/adidasAzul.png",
+    "descripcion": "Bolso mediano para utilidades y demás",
+    "categoria": "Bolsos",
+    "color": "Azul"
+  },{
+    "nombre": "boslo Adidas",
+    "precio": 9000,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/adidasNegra.png",
+    "descripcion": "Bolso mediano para utilidades y demás",
+    "categoria": "Bolsos",
+    "color": "Negro"
+  },{
+    "nombre": "Bolso Estandar marrón",
+    "precio": 4500,
+    "marca": "Container Store",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/bolsitoMarron.png",
+    "descripcion": "El bolso cuenta con un espacioso compartimento principal que te permite llevar cómodamente tus objetos personales esenciales",
+    "categoria": "Bolsos",
+    "color": "Marrón"
+  },{
+    "nombre": "Bolso femenino Estandar",
+    "precio": 7100,
+    "marca": "Container Store",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/bolsoMujer.png",
+    "descripcion": "Este bolso preparada para mujeres lleva un buen espacio para llevar objetos personales",
+    "categoria": "Bolsos",
+    "color": "policromáticos"
+  },{
+    "nombre": "Bolso Lila",
+    "precio": 7210,
+    "marca": "Container Store",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/bolsoLila.png",
+    "descripcion": "El bolso cuenta con un espacioso compartimento principal para zapatillas y otros objetos personales como remeras y medias, etc.",
+    "categoria": "Bolsos",
     "color": "violeta"
-    },
-    {
-    "nombre": "Zapatillas moda",
-    "precio": 12000,
+  },{
+    "nombre": "Bolso Verde",
+    "precio": 7000,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/bolsoVerde.png",
+    "descripcion": "El bolso cuenta con un espacioso compartimento principal para zapatillas y otros objetos personales como remeras y medias, etc.",
+    "categoria": "Bolsos",
+    "color": "Verde"
+    },{
+    "nombre": "Cartera",
+    "precio": 6500,
+    "marca": "Container Store",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/carteraRosa.png",
+    "descripcion": "Cartera para llevar documentos y cosas importantes para el oficio",
+    "categoria": "Bolsos",
+    "color": "Marrón"  
+    },{
+    "nombre": "Mochila Escolar",
+    "precio": 7000,
+    "marca": "Target",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/escolarCeleste.png",
+    "descripcion": "mochila escolar minimalista para para llevar cuadernos, cartuchera y cualquier utilidad.Diseñada pensando en la comodidad y la durabilidad.",
+    "categoria": "Bolsos",
+    "color": "Celeste"  
+    },{
+    "nombre": "Mochila Escolar",
+    "precio": 7000,
+    "marca": "Target",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/escolarRosa.png",
+    "descripcion": "mochila escolar minimalista para para llevar cuadernos, cartuchera y cualquier utilidad.Diseñada pensando en la comodidad y la durabilidad.",
+    "categoria": "Bolsos",
+    "color": "Marrón Claro"    
+    },{
+    "nombre": "Mochila Escolar",
+    "precio": 7000,
+    "marca": "Target",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochilaBordo.png",
+    "descripcion": "Esta mochila escolar es un accesorio esencial para estudiantes de todas las edades. Diseñada pensando en la comodidad, la durabilidad y la organización, es perfecta para llevar tus libros, cuadernos y otros elementos esenciales de la escuela.",
+    "categoria": "Bolsos",
+    "color": "Bordo"  
+    },{
+    "nombre": "Mochila de montaña",
+    "precio": 14000,
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaColorida2.png",
-    "descripcion": "Zapatillas deportivas modernas",
-    "categoria": "Zapatillas",
-    "color": "rosa"   
-    },
-    {
-    "nombre": "Zapatillas tenis",
-    "precio": 16799,
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochilaCeleste.png",
+    "descripcion": "Esta mochila de montaña es una herramienta esencial para aventureros que buscan explorar la naturaleza y disfrutar de actividades al aire libre.",
+    "categoria": "Bolsos",
+    "color": "Celeste" 
+    },{
+    "nombre": "Mochila de montaña",
+    "precio": 14000,
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisC.png",
-    "descripcion": "Zapatillas unisex tenis",
-    "categoria": "Zapatillas",
-    "color": "celeste"   
-    },
-    {
-    "nombre": "Zapatillas tenis",
-    "precio": 16799,
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochilaRosa.png",
+    "descripcion": "Esta mochila de montaña es una herramienta esencial para aventureros que buscan explorar la naturaleza y disfrutar de actividades al aire libre.",
+    "categoria": "Bolsos",
+    "color": "Rosado" 
+    },{
+    "nombre": "Mochila Escolar",
+    "precio": 7000,
+    "marca": "Target",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochilaVerde.png",
+    "descripcion": "Esta mochila escolar es un accesorio esencial para estudiantes de todas las edades. Diseñada pensando en la comodidad, la durabilidad y la organización, es perfecta para llevar tus libros, cuadernos y otros elementos esenciales de la escuela.",
+    "categoria": "Bolsos",
+    "color": "Verde oscuro"
+    },{
+    "nombre": "Mochila de campar",
+    "precio": 21000,
     "marca": "Grocery outlet",
-    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Zapatillas/zapaTenisN.png",
-    "descripcion": "Zapatillas unisex tenis",
-    "categoria": "Zapatillas",
-    "color": "negro"   
-    }
-  ]
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochileroNaranja.png",
+    "descripcion": "Esta mochila de acampar es el compañero perfecto para tus aventuras al aire libre. Diseñada específicamente para satisfacer las necesidades de los entusiastas del camping, excursionistas y amantes de la naturaleza, ofrece una combinación de funcionalidad, comodidad y durabilidad.",
+    "categoria": "Bolsos",
+    "color": "Naranja"
+    },{
+    "nombre": "Mochila de acampar",
+    "precio": 21200,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochileroNegro.png",
+    "descripcion": "Esta mochila de acampar es el compañero perfecto para tus aventuras al aire libre. Diseñada específicamente para satisfacer las necesidades de los entusiastas del camping, excursionistas y amantes de la naturaleza, ofrece una combinación de funcionalidad, comodidad y durabilidad.",
+    "categoria": "Bolsos",
+    "color": "Negro"
+    },{
+    "nombre": "Morral",
+    "precio": 6000,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/mochileroNegro.png",
+    "descripcion": "Es ideal para llevar tus pertenencias de forma cómoda y organizada en tu día a día. Su diseño compacto y versátil lo hace perfecto para una variedad de situaciones, desde desplazamientos urbanos hasta excursiones de un día.",
+    "categoria": "Bolsos",
+    "color": "Negro"  
+    },{
+    "nombre": "Morral",
+    "precio": 6000,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/morralRosa.png",
+    "descripcion": "Es ideal para llevar tus pertenencias de forma cómoda y organizada en tu día a día. Su diseño compacto y versátil lo hace perfecto para una variedad de situaciones, desde desplazamientos urbanos hasta excursiones de un día.",
+    "categoria": "Bolsos",
+    "color": "Rosado"
+    },{
+    "nombre": "Riñonera",
+    "precio": 5200,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/ri%C3%B1oGris.png",
+    "descripcion": "accesorio de moda y utilidad que se lleva alrededor de la cintura o en la cadera. Suele estar diseñada para llevar objetos personales de manera segura y cómoda mientras mantienes las manos libres.",
+    "categoria": "Bolsos",
+    "color": "Gris"
+    },{
+    "nombre": "Riñonera",
+    "precio": 5300,
+    "marca": "Sports Basement",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/ri%C3%B1oNegra.png",
+    "descripcion": "accesorio de moda y utilidad que se lleva alrededor de la cintura o en la cadera. Suele estar diseñada para llevar objetos personales de manera segura y cómoda mientras mantienes las manos libres.",
+    "categoria": "Bolsos",
+    "color": "Negro"
+    },{
+    "nombre": "Valija",
+    "precio": 13000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/valijaAmarrilla.png",
+    "descripcion": "elegante y funcional compañero de viaje que ha sido diseñado con cuidado y atención a los detalles para satisfacer tus necesidades de transporte y organización.",
+    "categoria": "Bolsos",
+    "color": "Amarilla"
+    },{
+    "nombre": "Valija",
+    "precio": 13000,
+    "marca": "Grocery outlet",
+    "imagen": "https://github.com/NicoLopezBjj/images/blob/main/Bolsos/valijaRosa.png",
+    "descripcion": "elegante y funcional compañero de viaje que ha sido diseñado con cuidado y atención a los detalles para satisfacer tus necesidades de transporte y organización.",
+    "categoria": "Bolsos",
+    "color": "Rosado" 
+  }]
