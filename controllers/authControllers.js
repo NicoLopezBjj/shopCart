@@ -35,10 +35,9 @@ const signin_post = async (req,res) =>{
         if (!isValidPassword) {
             return res.status(401).json({ message: 'Password invalido' });
         }else{
-            req.session.user = user;
-            console.log(user)
+            req.session.user = user
             console.log(req.session.user.nombre)
-            res.redirect('/');
+            res.render('home', { user: req.session.user });
         }
 
     }catch(err){
