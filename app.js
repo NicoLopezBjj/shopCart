@@ -1,5 +1,7 @@
 const express=require('express')
 const session=require('express-session')
+const passport = require ('passport')
+const LocalStrategy = require ('passport-local')
 const authRouter=require('./routes/authRoutes')
 const path=require ('path')
 const mongoose=require('mongoose')
@@ -19,6 +21,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.set('view engine','ejs')
 
