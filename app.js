@@ -19,7 +19,8 @@ const secretSession = process.env.secretSession
 app.use(session({
     secret: secretSession,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    // cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
 }))
 
 app.use(passport.initialize())
