@@ -1,7 +1,7 @@
 const express=require('express')
 const session=require('express-session')
 const passport = require ('passport')
-const LocalStrategy = require ('passport-local')
+const LocalStrategy = require ('passport-local').Strategy
 const authRouter=require('./routes/authRoutes')
 const path=require ('path')
 const mongoose=require('mongoose')
@@ -19,11 +19,12 @@ const secretSession = process.env.secretSession
 app.use(session({
     secret: secretSession,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false
 }))
 
 app.use(passport.initialize())
 app.use(passport.session())
+
 
 app.set('view engine','ejs')
 
@@ -47,9 +48,11 @@ connectDataBase()
 
 // ruta principal
 app.get('/',(req,res)=>{
-
-    res.render('home')})
+    console.log(req.user)
+    res.render('home',{user: req.user})
+})
     
 app.use(authRouter)
+app.use(productsRouter)
 
 

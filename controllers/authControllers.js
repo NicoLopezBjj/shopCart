@@ -7,8 +7,8 @@ const passport = require ('passport')
 const signup_post = async (req, res) => {
     const { email, password, nombre } = req.body;
     try {
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await User.create({ email, password: hashedPassword, nombre })
+        const hashedPassword = await bcrypt.hash(password, 10); // se encripta la contraseña
+        const user = await User.create({ email, password: hashedPassword, nombre }) // crea el usuario
         res.render('signin')
     } catch (err) {
         console.log(err);
@@ -24,27 +24,35 @@ const signin_get = async (req,res) =>{
     res.render('signin')
 }
 
-const signin_post = async (req,res) =>{
-    const { email, password } = req.body
-    try{
-        const user = await User.findOne({ email })
+
+const signin_post = passport.authenticate('local', {
+    successRedirect: '/', // Ruta a la que redirigir si la autenticación es exitosa
+    failureRedirect: '/signin', // Ruta a la que redirigir si la autenticación falla
+    failureFlash: true, // Habilita mensajes flash para mostrar errores
+})
+
+
+// const signin_post = async (req,res) =>{
+//     const { email, password } = req.body
+//     try{
+//         const user = await User.findOne({ email })
        
-        if (!user) {
-            return res.status(401).json({ message: 'Email invalido' });
-        }
-        const isValidPassword = await bcrypt.compare(password, user.password)
-        if (!isValidPassword) {
-            return res.status(401).json({ message: 'Password invalido' });
-        }else{
-            req.session.user = user
-            console.log(req.session.user.nombre)
-            res.render('home', { user: req.session.user });
-        }
-    }catch(err){
-        console.log(err)
-        res.status(400).json({message:'Error del servidor'})
-    }
-  }
+//         if (!user) {
+//             return res.status(401).json({ message: 'Email invalido' });
+//         }
+//         const isValidPassword = await bcrypt.compare(password, user.password)
+//         if (!isValidPassword) {
+//             return res.status(401).json({ message: 'Password invalido' });
+//         }else{
+//             req.session.user = user
+//             console.log(req.session.user.nombre)
+//             res.render('home', { user: req.session.user });
+//         }
+//     }catch(err){
+//         console.log(err)
+//         res.status(400).json({message:'Error del servidor'})
+//     }
+//   }
   
 module.exports = { 
     signup_post, 
