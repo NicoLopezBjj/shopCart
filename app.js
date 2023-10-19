@@ -20,7 +20,7 @@ app.use(session({
     secret: secretSession,
     resave: false,
     saveUninitialized: false,
-    // cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
+    cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
 }))
 
 app.use(passport.initialize())
@@ -49,7 +49,6 @@ connectDataBase()
 
 // ruta principal
 app.get('/',(req,res)=>{
-    console.log(req.user)
     res.render('home',{user: req.user})
 })
     
