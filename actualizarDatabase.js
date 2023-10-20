@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const Product = require('../shopCart/models/Products');
+require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/tu-basededatos', {
+const db_URL=process.env.db_URL
+
+mongoose.connect(db_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

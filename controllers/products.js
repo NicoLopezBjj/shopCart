@@ -7,7 +7,6 @@ const shop_get = async (req, res) => {
       // Si el usuario está autenticado, obten los productos y renderiza la página de la tienda
       const products = await Producto.find();
       res.render('shop', { user: req.user, products });
-      console.log(products)
     } else {
       // Si el usuario no está autenticado, redirige a la página de inicio de sesión
       res.redirect('/signin');
