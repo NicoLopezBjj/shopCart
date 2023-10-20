@@ -10,16 +10,10 @@ router.get('/signup',authControllers.signup_get)
 
 router.post('/signup',authControllers.signup_post)
 
-router.get('/logout',(req,res)=>{
-    res.render('home')
-})
+router.get('/logout',authControllers.logout_get)
 
-router.post('/logout', function(req, res, next) {
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      res.redirect('/');
-    });
-  });
+
+router.post('/logout',authControllers.logout_post)
 
 
 module.exports=router

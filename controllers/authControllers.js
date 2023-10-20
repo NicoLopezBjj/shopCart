@@ -31,57 +31,25 @@ const signin_post = passport.authenticate('local', {
     failureFlash: true, // Habilita mensajes flash para mostrar errores
 })
 
+const logout_get = async (req,res) =>{
+    res.render('home')
+}
 
-// const signin_post = async (req,res) =>{
-//     const { email, password } = req.body
-//     try{
-//         const user = await User.findOne({ email })
-       
-//         if (!user) {
-//             return res.status(401).json({ message: 'Email invalido' });
-//         }
-//         const isValidPassword = await bcrypt.compare(password, user.password)
-//         if (!isValidPassword) {
-//             return res.status(401).json({ message: 'Password invalido' });
-//         }else{
-//             req.session.user = user
-//             console.log(req.session.user.nombre)
-//             res.render('home', { user: req.session.user });
-//         }
-//     }catch(err){
-//         console.log(err)
-//         res.status(400).json({message:'Error del servidor'})
-//     }
-//   }
+const logout_post = async (req,res,next) =>{
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+      })
+}
+
+
   
 module.exports = { 
     signup_post, 
     signup_get,
     signin_get,
-    signin_post }
+    signin_post,
+    logout_get,
+    logout_post }
 
-    
-// const signin_post = async (req,res) =>{
-//     const { email, password } = req.body
-//     try{
-//         const user = await User.findOne({ email })
-       
-//         if (!user) {
-//             return res.status(401).json({ message: 'Email invalido' });
-//         }
-
-//         const isValidPassword = await bcrypt.compare(password, user.password)
-
-//         if (!isValidPassword) {
-//             return res.status(401).json({ message: 'Password invalido' });
-//         }else{
-//             req.session.user = user
-//             console.log(req.session.user.nombre)
-//             res.render('home', { user: req.session.user });
-//         }
-
-//     }catch(err){
-//         console.log(err)
-//         res.status(400).json({message:'Error del servidor'})
-//     }
-// }
+ 
