@@ -4,4 +4,9 @@ const products=require('../controllers/products')
 
 router.get('/shop',products.shop_get)
 
+
+
+
+  
 module.exports = router
+

@@ -169,35 +169,22 @@
 
     <!-- fotos de la card -->
     <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
+      <img src="${products.imagen}" alt="" class="B-imagenCard">
+      <!-- Otras imágenes si es necesario -->
+      <div class="B-corazonDiv">
+        <img src="img/corazon.svg" alt="" class="B-corazon">
+      </div>
     </div>
-    </div>
-    
-    
-    <!-- textos -->
+
+    <!-- Textos -->
     <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
+      <div class="B-namePrecio">
+        <h4 class="B-name">${products.nombre}</h4>
+        <h3 class="B-precio">${products.precio}</h3>
+      </div>
+      <p class="B-descrip">${products.descripcion}</p>
+
+        <div class="B-stars">
       <div>
     <img src="img//star.svg" alt="" class="B-estrellasIMG">
     <img src="img//star.svg" alt="" class="B-estrellasIMG">
@@ -212,7 +199,7 @@
     
     </div>
     
-    <button class="B-AddCart"> Add to Cart</button>
+    <button class="B-AddCart"> Añadir al carrito</button>
     
     </div>
     
