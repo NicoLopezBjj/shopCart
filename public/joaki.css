@@ -13,7 +13,13 @@
 .green-back{
     background-color: #003D29 !important;
 }
-
+.btn-nombre{
+    background-color: transparent !important;
+    border: none !important;
+    color: black !important;
+    display: flex !important;
+    margin-top: -0.4em !important;
+}
 
 
 
