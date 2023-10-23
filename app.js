@@ -47,6 +47,7 @@ const connectDataBase = async () => {
 
 connectDataBase()
 
+
 // ruta principal
 app.get('/',(req,res)=>{
     res.render('home',{user: req.user})
@@ -55,4 +56,7 @@ app.get('/',(req,res)=>{
 app.use(authRouter)
 app.use(productsRouter)
 
+app.use((req, res, next) => {
+    res.status(404).render('error404');
+});
 

@@ -12,6 +12,8 @@ router.post('/signup',authControllers.signup_post)
 
 router.get('/logout',authControllers.logout_get)
 
+router.get('/home',authControllers.get_home)
+
 
 router.post('/logout',authControllers.logout_post)
 

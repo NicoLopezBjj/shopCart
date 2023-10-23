@@ -1,5 +1,5 @@
 <%- include ('partials/head.ejs') -%>
-<%- include ('partials/header.ejs') -%>
+<%- include ('partials/header.ejs') -%>    
 <!-- arranca todo -->
 
 <!-- los slides -->
@@ -145,7 +145,7 @@
         <div class="B-CardFotos">
           <img src="<%= product.imagen %>" alt="" class="B-imagenCard">
           <div class="B-corazonDiv">
-            <img src="/img/corazon.svg" alt="" class="B-corazon">
+            <img src="img/corazon.svg" alt="" class="B-corazon">
           </div>
         </div>
         <div class="B-texto">
@@ -183,16 +183,7 @@
 
      </section>
 
-     <section class="produ-semanales-shop">
-        <h2>Productos populares de la semana</h2>
-        <div class="cards-margin">
-            <%- include ('partials/card.ejs') -%>
-            <%- include ('partials/card.ejs') -%>
-            <%- include ('partials/card.ejs') -%>
-        </div>
 
-     </section>
-
-     <script src="joaki.js"></script>
+     <script src="/public/joaki.js"></script>
 </body>
 </html>

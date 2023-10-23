@@ -22,40 +22,19 @@
     <div class="navbar-brand">
       <a href="/"><img src="Img/ShopCart.jpg" class="shopCart"></a>
     </div>
-
     <div class="d-flex">
         <a href="" class="nav-link active dropdown-toggle text-black px-2 hoverCategoria">Categorias</a>
         <a href="" class="nav-link px-2 hoverNav">Ofertas</a>
         <a href="" class="nav-link px-2 hoverNav">Novedades</a>
         <a href="" class="nav-link px-2 hoverNav">Entregas</a>    
     </div>
-
     <div class="buscar-prod"> 
         <form> <label> </label> <input type="text" class="texto-buscar" placeholder=" Buscar producto">   </form>
         <button class="lupita"><i class="bi bi-search "></i></button>
     </div>
-    
     <div class="d-flex ">
-      <div class="d-flex ">
-        <% if (typeof user !== 'undefined' && user !== null) { %>
-            <div class="dropdown ">
-                <button class="btn-nombre btn btn-secondary  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <a href="" class="nav-link px-2 hoverEnlace">
-                        <i class="bi bi-person px-2 size"></i>
-                        <%= user.nombre %>
-                        </a>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                  <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
-                </ul>
-              </div>
-        <% } else { %>
-            <a href="/signin" class="nav-link px-2 hoverEnlace">
-            <i class="bi bi-person px-2 size"></i>
-            Cuenta
-            </a>
-        <% } %>              
-        <a href="" class="nav-link px-2 hoverEnlace "><i class="bi bi-cart-plus px-2 size"></i>Carrito</a>
+        <a href="singin.html" class="nav-link px-2 hoverEnlace"><i class="bi bi-person px-2 size"></i>Cuenta</a>
+        <a href="" class="nav-link px-2 hoverEnlace"><i class="bi bi-cart-plus px-2 size"></i>Carrito</a>
     </div>
 </nav>
+</header>
