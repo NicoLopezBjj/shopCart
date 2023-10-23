@@ -46,6 +46,10 @@ const get_home = async (req,res) =>{
     res.render('home',{user : req.user})
 }
 
+const get_carrito = async (req,res) =>{
+    res.render('carrito',{user : req.user})
+}
+
 
   
 module.exports = { 
@@ -55,6 +59,8 @@ module.exports = {
     signin_post,
     logout_get,
     logout_post,
-    get_home }
+    get_home,
+    get_carrito
+}
 
  
