@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 3rem;
+}
+
+.shopCart-titulo {
+    
+    color: #003D29; 
+}
+
+p {
+    color: #777;
+}
+
+.contenedor-error {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #003D29;;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
