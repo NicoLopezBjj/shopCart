@@ -42,6 +42,10 @@ const logout_post = async (req,res,next) =>{
       })
 }
 
+const get_home = async (req,res) =>{
+    res.render('home',{user : req.user})
+}
+
 
   
 module.exports = { 
@@ -50,6 +54,7 @@ module.exports = {
     signin_get,
     signin_post,
     logout_get,
-    logout_post }
+    logout_post,
+    get_home }
 
  
