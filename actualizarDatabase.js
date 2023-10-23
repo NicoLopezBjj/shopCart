@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require('../shopCart/models/Products');
+const Producto = require('../shopCart/models/Products');
 require('dotenv').config()
 
 const db_URL=process.env.db_URL
@@ -9,22 +9,36 @@ mongoose.connect(db_URL, {
   useUnifiedTopology: true,
 });
 
-async function actualizarURLs() {
+
+const actualizarMarcas = async () => {
   try {
-    const productos = await Product.find();
+    const productos = await Producto.find();
 
     for (const producto of productos) {
-      // Actualiza la URL de la imagen aquí
-      producto.imagen = producto.imagen.replace('https://github.com/NicoLopezBjj/images/blob/main/', 'https://raw.githubusercontent.com/NicoLopezBjj/images/main/');
-
-      // Guarda el registro actualizado en la base de datos
-      await producto.save();
+      if (producto.marca === 'Mollie stones') {
+        producto.marca = 'MollieStones';
+        await producto.save();
+      }
+     if (producto.marca === 'Grocery outlet'){
+        producto.marca = 'GroceryOutlet'
+        await producto.save()
+      }
+    if (producto.marca === 'Sports Basement'){
+      producto.marca = 'SportsBasement'
+      await producto.save()
+    }
+    if(producto.marca === 'Container Store'){
+      producto.marca = 'ContainerStore'
+      await producto.save()  
+    }
     }
 
-    console.log('Actualización completada.');
+    console.log('Actualización completada');
   } catch (error) {
-    console.error('Error al actualizar las URLs:', error);
+    console.error('Error al actualizar:', error);
+  } finally {
+    mongoose.connection.close();
   }
 }
 
-actualizarURLs();
+actualizarMarcas()

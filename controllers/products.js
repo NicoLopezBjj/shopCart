@@ -34,7 +34,26 @@ const mostrarCategoria = async (req, res) => {
   }
 };
 
+const mostrarProductosPorMarca = async (req, res) => {
+  const { marca } = req.params;
+  console.log(marca)
+  
+  const marcasEnBaseDeDatos = await Producto.distinct('marca');
+  console.log(marcasEnBaseDeDatos);
+  
+  try {
+    const products = await Producto.find({ marca :marca });
+    console.log(marca)
+    console.log(products)
+    res.render('marca', { user: req.user, products,marca });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error al obtener los productos');
+  }
+};
+
 module.exports={
     shop_get,
-    mostrarCategoria
+    mostrarCategoria,
+    mostrarProductosPorMarca
 }
