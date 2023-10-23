@@ -14,6 +14,52 @@
     height: 40px;
 }
 
+/* buscar productos */
+.buscar-prod{
+    display: flex;
+    
+    justify-content: space-between;
+   
+    border-radius: 10em;
+    background-color: white;
+    border: 1px solid #CFCFCF;
+    
+   }
+  
+  .texto-buscar{
+    border: none;
+    background-color: transparent;
+    margin: 0.4em 4em 0.4em 0.5em;
+   outline: none;
+   font-size: 0.9em;
+  }
+  
+  
+  .lupita{
+    background-color: white;
+     
+     font-size: 1.1rem;
+     padding: 0em 1.8em;
+     border:none ;
+     border-radius: 4em;
+     font-size: 0.9em;
+  }  
+
+  .buscar-prod{
+    display: flex;
+    
+    justify-content: space-between;
+   
+    border-radius: 10em;
+    background-color: white;
+    border: 1px solid #CFCFCF;
+    
+   }
+
+   .buscar-prod:focus-within {
+    border: 1px solid #6BBBF2; 
+}
+
 /* HOVERS */
 
 .hoverCategoria:hover{
