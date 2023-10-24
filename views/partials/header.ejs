@@ -33,8 +33,26 @@
         <button class="lupita"><i class="bi bi-search "></i></button>
     </div>
     <div class="d-flex ">
-        <a href="singin.html" class="nav-link px-2 hoverEnlace"><i class="bi bi-person px-2 size"></i>Cuenta</a>
-        <a href="" class="nav-link px-2 hoverEnlace"><i class="bi bi-cart-plus px-2 size"></i>Carrito</a>
+        <% if (typeof user !== 'undefined' && user !== null) { %>
+            <div class="dropdown ">
+                <button class="btn-nombre btn btn-secondary  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="" class="nav-link px-2 hoverEnlace">
+                        <i class="bi bi-person px-2 size"></i>
+                        <%= user.nombre %>
+                        </a>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+              </div>
+        <% } else { %>
+            <a href="/signin" class="nav-link px-2 hoverEnlace">
+            <i class="bi bi-person px-2 size"></i>
+            Cuenta
+            </a>
+        <% } %>
+        <a href="/carrito" class="nav-link px-2 hoverEnlace"><i class="bi bi-cart-plus px-2 size"></i>Carrito</a>
     </div>
 </nav>
 </header>
