@@ -1,4 +1,4 @@
-
+/* 
 document.addEventListener("DOMContentLoaded", function() {
    
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         cardsContainer.appendChild(clonedCard);
     }
-});
+}); */
 
 /* SLIDES DEL SHOP */
 let slider = document.querySelector(".slider-contenedor")
