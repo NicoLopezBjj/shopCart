@@ -425,10 +425,9 @@ cursor: pointer;
    }
    
    .B-imagenCard{
-   
+
+   width: 11em;
    transition:  0.4s ease; 
-   
-   
    max-width: 100%;
    
    }
