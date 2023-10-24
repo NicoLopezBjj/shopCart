@@ -50,8 +50,27 @@ const mostrarProductosPorMarca = async (req, res) => {
   }
 };
 
+const mostrarProductosPorColor = async (req,res) =>{
+  try {
+    if (!req.isAuthenticated()) {
+      // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+      return res.redirect('/signin');
+    }
+
+    const { color } = req.params;
+    console.log(color)
+    const products = await Producto.find({ color });
+    res.render('color', { user: req.user, products, color });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error al obtener los productos');
+  }
+};
+
+
 module.exports={
     shop_get,
     mostrarCategoria,
-    mostrarProductosPorMarca
+    mostrarProductosPorMarca,
+    mostrarProductosPorColor
 }
