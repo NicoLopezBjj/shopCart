@@ -30,8 +30,32 @@ const mostrarProductosMayorPrecio = async (req, res) => {
     }
   };
 
+  const ordenarPorMenorPrecio = async (req, res) => {
+    try {
+      const products = await Producto.find().sort({ precio: 1 }); 
+      res.render('shop', { user: req.user, products });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error al obtener los productos');
+    }
+  };
+  
+  const ordenarPorMayorPrecio = async (req, res) => {
+    try {
+      const products = await Producto.find().sort({ precio: -1 });
+      res.render('shop', { user: req.user, products });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error al obtener los productos');
+    }
+  };
+    
+  
+  
 module.exports = {
     mostrarProductosMayorPrecio,
     mostrarProductosMedioPrecio,
-    mostrarProductosMenorPrecio
+    mostrarProductosMenorPrecio,
+    ordenarPorMayorPrecio,
+    ordenarPorMenorPrecio
 }
