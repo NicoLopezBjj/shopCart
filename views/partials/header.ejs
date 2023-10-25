@@ -23,9 +23,19 @@
       <a href="/"><img src="/Img/ShopCart.jpg" class="shopCart"></a>
     </div>
     <div class="d-flex">
-        <a href="" class="nav-link active dropdown-toggle text-black px-2 hoverCategoria">Categorias</a>
-        <a href="" class="nav-link px-2 hoverNav">Ofertas</a>
-        <a href="" class="nav-link px-2 hoverNav">Novedades</a>
+        <div class="dropdown">
+            <button class="filtro-btn btn btn-secondary dropdown-toggle text-black px-2 hoverCategoria" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorias</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/shop/categoria/Muebles">Muebles</a></li>
+                <li><a class="dropdown-item" href="/shop/categoria/Zapatillas">Zapatillas</a></li>
+                <li><a class="dropdown-item" href="/shop/categoria/Tecnologia">Tecnologia</a></li>
+                <li><a class="dropdown-item" href="/shop/categoria/Libros">Libros</a></li>
+                <li><a class="dropdown-item" href="/shop/categoria/ropa">Ropa</a></li>
+                <li><a class="dropdown-item" href="/shop/categoria/Bolsos">Bolsos</a></li>
+              </ul>
+        </div>
+        <a href="/shop/precio/menorPrecio" class="nav-link px-2 hoverNav">Ofertas</a>
+        <a href="/shop" class="nav-link px-2 hoverNav">Novedades</a>
         <a href="" class="nav-link px-2 hoverNav">Entregas</a>    
     </div>
     <div class="buscar-prod"> 
