@@ -282,3 +282,13 @@ li{
 .bordeOnly{
     border-right: 1px black solid;
 }
+
+/* MODAL CATEGORIA */
+
+.modalCategoria{
+    width: 50rem;
+}
+
+.imgDrop{
+    max-width: 100px;
+}
