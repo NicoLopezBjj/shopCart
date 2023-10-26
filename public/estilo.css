@@ -282,3 +282,11 @@ li{
 .imgDrop{
     max-width: 100px;
 }
+
+.modalCategoria a{
+    max-height: 100px;
+}
+
+.overFlow{
+    overflow: hidden !important;
+}
