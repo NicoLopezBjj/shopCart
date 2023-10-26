@@ -365,32 +365,43 @@ cursor: pointer;
     background-color: #bdbfc0!important;
  }
 
-.dd-a{
+
+
+ 
+#dd-a:hover{
     background-color:  rgba(0, 0, 0, 0.375);
     
 }
-.text-blanco{
-    color: white;
-}
-.dd-a:hover span{
-    color: rgb(0, 0, 0);
-}
-.dd-b{
+#dd-b:hover{
     background-color: rgba(101, 65, 21, 0.285);
 }
-.dd-c{
+#dd-c:hover{
     background-color: rgba(224, 113, 198, 0.242);
 }
-.dd-d{
+#dd-d:hover{
     background-color: rgba(205, 18, 18, 0.324);
 }
-.dd-e{
+#dd-e:hover{
     background-color: rgba(225, 147, 51, 0.355);
 }
-.dd-f{
+#dd-f:hover{
     background-color: rgba(64, 64, 64, 0.272);
 }
-
+#dd-g:hover{
+    background-color: rgba(13, 35, 124, 0.272);
+}
+#dd-h:hover{
+    background-color: rgba(131, 26, 187, 0.272);
+}
+#dd-i:hover{
+    background-color: rgba(14, 146, 32, 0.272);
+}
+#dd-j:hover{
+    background-color: rgba(20, 132, 177, 0.272);
+}
+#dd-k:hover{
+    background-color: rgba(187, 185, 28, 0.272);
+}
 
 
 
@@ -661,6 +672,7 @@ margin-top: 4em;
     border: 1px solid rgba(128, 128, 128, 0.411);
     border-radius: 0.3em;
     padding: 1em;
+   height: 100%;
 }
 .productos-carrito h3{
     font-size: 1.7em;
@@ -699,7 +711,146 @@ margin-bottom: 0em;
     }
 
     /* derecha */
+   .completar-datos{
+    border: 1.5px solid rgba(128, 128, 128, 0.411);
+    border-radius: 0.3em;
+    padding: 2em;
+    height: 100%;
+    margin-bottom: 2em;
+   }
+   .linea-cart{
+    border-top: 1.5px solid rgba(128, 128, 128, 0.228);
+   
+   }
 
-    input{
-        display: block;
-    }
+
+   .codigo-cart{
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 10em;
+    background-color: #F7F5F7;
+    border: 1px solid #F7F5F7;
+    margin: 1.5em 0em;
+   }
+  
+  .texto-codigo{
+    border: none;
+    background-color: transparent;
+    margin: -1em 1em 0.4em 0.5em;
+    width: 18em;
+    padding: 0.5em 0em;
+   outline: none;
+   color: #8786889d !important;
+   font-size: 0.9em;
+  }
+  
+  
+  .lupita-codigo{
+    background-color: #003D29;
+     color: white;
+     font-size: 1.1rem;
+     padding: 0em 1.8em;
+     border:none ;
+     border-radius: 4em;
+     font-size: 0.9em;
+  }  
+  .lupita-codigo:hover{
+    background-color: #231F1E;
+     color: white;
+    
+  }  
+
+.detalles-pago{
+    font-size: 1.3em;
+    margin: 1em 0em;
+}
+
+.check-cart{
+    margin: 1em 0em;
+}
+.tarjetas-check{
+  margin-top: 1em;
+}
+
+
+.completar-datos input{
+    display: block;
+}
+
+  .cart-form-p{
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+  .cart-form{
+    border: 1.5px solid rgba(128, 128, 128, 0.411);
+    border-radius: 0.2em;
+    width: 100%;
+   padding: 1em;
+   font-size: 0.9em;
+   margin-bottom: 1.5em;
+  }
+
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #000000; 
+  }
+  
+  .cart-form {
+    padding-left: 30px; 
+  }
+  
+  .dos-forms-cart{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.cart-form-dos{
+    border: 1.5px solid rgba(128, 128, 128, 0.411);
+    border-radius: 0.2em;
+    
+   padding: 1em;
+   font-size: 0.9em;
+   margin-bottom: 1.5em;
+}
+
+.sub-total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    
+}
+.sub-total p{
+    font-weight: 500;
+}
+.total-carrito{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+.total-carrito p{
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.btn-pagar-cart{
+    background-color: #003D29;
+     color: white;
+     font-size: 1.1em;
+     padding: 1em 1.8em;
+     border:none ;
+     border-radius: 4em;
+    margin-top: 1em;
+    width: 100%;
+    font-weight: 500;
+}
+.btn-pagar-cart:hover{
+    background-color: #231F1E;
+}

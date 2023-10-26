@@ -17,9 +17,8 @@
 /* buscar productos */
 .buscar-prod{
     display: flex;
-    
     justify-content: space-between;
-   
+
     border-radius: 10em;
     background-color: white;
     border: 1px solid #CFCFCF;
@@ -29,7 +28,7 @@
   .texto-buscar{
     border: none;
     background-color: transparent;
-    margin: 0.4em 4em 0.4em 0.5em;
+    margin: -1em 4em 0.4em 0.5em;
    outline: none;
    font-size: 0.9em;
   }
@@ -45,17 +44,8 @@
      font-size: 0.9em;
   }  
 
-  .buscar-prod{
-    display: flex;
-    
-    justify-content: space-between;
+  
    
-    border-radius: 10em;
-    background-color: white;
-    border: 1px solid #CFCFCF;
-    
-   }
-
    .buscar-prod:focus-within {
     border: 1px solid #6BBBF2; 
 }

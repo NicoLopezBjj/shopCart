@@ -30,20 +30,24 @@
 
  <div class="linea-cart"></div>
 
- <div class="buscar-prod"> 
-    <form> <label> </label> <input type="text" class="texto-buscar" placeholder=" Introduce el código de cupón">   </form>
-    <button class="lupita">Aplicar cupón</i></button>
+ <div class="codigo-cart"> 
+    <form> <label> </label> <input type="text" class="texto-codigo"  placeholder= "Introduce el código del cupón">   </form>
+    <button class="lupita-codigo">Aplicar cupón</i></button>
 </div>
 
 <div class="linea-cart"></div>
 
-<h4>Detalles del pago</h4>
+<h4 class="detalles-pago">Detalles del pago</h4>
 
 <div class="linea-cart"></div>
 
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-    <label class="form-check-label" for="flexRadioDefault1">
+ <div class="check-cart">
+
+
+  
+<div class=" form-check  ">
+    <input class="form-check-input  " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label " for="flexRadioDefault1">
         Pago al recibir el producto 
     </label>
   </div>
@@ -54,52 +58,65 @@
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-    <label class="form-check-label" for="flexRadioDefault2">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+    <label class="form-check-label" for="flexRadioDefault3">
       Paypal
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-    <label class="form-check-label" for="flexRadioDefault2">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+    <label class="form-check-label" for="flexRadioDefault4">
       Tarjeta de debito o credito
     </label>
   </div>
 
+ <!-- tarjetas segun el check --> 
+  <div class="tarjetas-check">
 <img src="Img/tarjetas/4Amazon.png" class="p-2 bord" alt="">
   <img src="Img/tarjetas/2visa.png" class="p-2 bord" alt="">
  <img src="Img/tarjetas/3.png" class="p-2 bord" alt="">
+</div>
 
- <p>Email*</p>
- <input type="email">
- <p>Nombre del titular de la tarjeta*</p>
- <input type="text">
- <p>Número de la tarjeta</p>
- <input type="number">
+</div>
 
- <div>
+ <p class="cart-form-p">Email*</p>
+ <input class="cart-form" type="email" placeholder="Escribe aquí...">
+
+ <p class="cart-form-p">Nombre del titular de la tarjeta*</p>
+ <input class="cart-form"  type="text" placeholder="Escribe aquí...">
+
+ <p class="cart-form-p">Número de la tarjeta*</p>
+<div class="input-with-icon">
+  <i class="bi bi-credit-card-2-front"></i>
+  <input class="cart-form" type="text" oninput="this.value = this.value.replace(/[^0-9]/, '')" placeholder="0000******1245">
+</div>
+
+
+ <div class="dos-forms-cart">
     <div>
-        <p>Vencimiento</p>
-        <input  type="text">
+        <p class="cart-form-p"> Vencimiento</p>
+        <input  type="text" class="cart-form-dos" placeholder="MM/YY" >
     </div>
     <div>
-        <p>CVC</p>
-       <input type="text"> 
+        <p class="cart-form-p">CVC</p>
+       <input type="text" oninput="this.value = this.value.replace(/[^0-9]/, '')" class="cart-form-dos" placeholder="000" maxlength="3"> 
     </div>
     
  </div>
 
- <div>
+ <div class="sub-total">
     <p>Sub Total</p>
     <p>$3900</p>
  </div>
 
- <div>
+ <div class="linea-cart"></div>
+
+ <div class="total-carrito">
     <p>Total</p>
     <p>$3900</p>
  </div>
          
- <button>Pagar %3900</button>
+ <button class="btn-pagar-cart">Pagar $3900</button>
 
 
 
