@@ -1,5 +1,3 @@
-const Carrito = require ('../models/Carrito')
-
 
 const get_carrito = async (req,res) =>{
     res.render('carrito',{user : req.user})

@@ -17,6 +17,20 @@ const userSchema = new mongoose.Schema({
   },
   nombre:{
     type:String
+  },
+  cart:{
+    items:[{
+      productId:{
+        type:mongoose.Types.ObjectId,
+        ref:"Producto",
+        required:true
+      },
+      cantidad:{
+        type:Number,
+        required:true
+      }
+    }],
+    precioTotal:Number
   }
 });
 
