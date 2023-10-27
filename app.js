@@ -8,6 +8,7 @@ const mongoose=require('mongoose')
 require('dotenv').config()
 const productsRouter=require('./routes/products')
 const preciosRouter=require('./routes/precios')
+const carritoRouter=require('./routes/carrito')
 
 
 const app=express()
@@ -58,6 +59,7 @@ app.get('/',(req,res)=>{
 app.use(authRouter)
 app.use(productsRouter)
 app.use(preciosRouter)
+app.use(carritoRouter)
 
 app.use((req, res, next) => {
     res.status(404).render('error404');

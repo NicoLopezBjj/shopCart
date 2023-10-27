@@ -16,9 +16,7 @@ router.get('/home',authControllers.get_home)
 
 router.post('/logout',authControllers.logout_post)
 
-router.get('/carrito', authControllers.get_carrito)
 
-router.post('/carrito', authControllers.get_carrito)
 
 
 module.exports=router
