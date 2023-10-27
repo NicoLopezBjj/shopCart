@@ -783,12 +783,12 @@ margin-bottom: 0em;
     margin-bottom: 0.5em;
   }
   .cart-form{
-    border: 1.5px solid rgba(128, 128, 128, 0.411);
+    border: 1.5px solid rgba(128, 128, 128, 0.411) !important;
     border-radius: 0.2em;
     width: 100%;
-   padding: 1em;
-   font-size: 0.9em;
-   margin-bottom: 1.5em;
+   padding: 1em  !important;
+   font-size: 0.9em !important;
+   margin-bottom: 1.5em ;
   }
 
   .input-with-icon {
@@ -803,8 +803,16 @@ margin-bottom: 0em;
     color: #000000; 
   }
   
-  .cart-form {
-    padding-left: 30px; 
+  .cart-form-card {
+    padding-left: 30px !important; 
+
+    border: 1.5px solid rgba(128, 128, 128, 0.411) !important;
+    border-radius: 0.2em;
+    width: 100%;
+   padding: 1em  !important;
+   font-size: 0.9em !important;
+   margin-bottom: 1.5em ;
+   padding-left: 30px !important; 
   }
   
   .dos-forms-cart{
@@ -816,8 +824,8 @@ margin-bottom: 0em;
     border: 1.5px solid rgba(128, 128, 128, 0.411);
     border-radius: 0.2em;
     
-   padding: 1em;
-   font-size: 0.9em;
+   padding: 1em !important;
+   font-size: 0.9em !important;
    margin-bottom: 1.5em;
 }
 
