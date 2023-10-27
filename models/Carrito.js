@@ -13,11 +13,7 @@ const carritoSchema = new mongoose.Schema({
         ref: 'Producto', // Referencia al modelo Producto
         required: true
       },
-      cantidad: {
-        type: Number,
-        required: true
-      },
-      precioUnitario: {
+      precio: {
         type: Number,
         required: true
       }

@@ -7,15 +7,14 @@ const get_carrito = async (req,res) =>{
 
 const agregarAlCarrito = async (req, res) =>{
     try {
-        const { productoId, cantidad, precioUnitario } = req.body;
+        const { _id, precio } = req.body;
         const carrito = await Carrito.findOneAndUpdate(
           { usuario: req.user._id }, 
           {
             $push: {
               productos: {
-                producto: productoId,
-                cantidad,
-                precioUnitario,
+                producto: _id,
+                precio
               }
             }
           },
@@ -27,8 +26,10 @@ const agregarAlCarrito = async (req, res) =>{
           return total + (producto.cantidad * producto.precioUnitario);
         }, 0);
         await carrito.save();
+        console.log(carrito)
+        console.log(productos)
     
-        res.redirect('/carrito'); 
+        res.render('carrito',{user:req.user}); 
       } catch (error) {
         console.error(error);
         res.status(500).send('Error al agregar al carrito');
