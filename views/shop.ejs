@@ -46,9 +46,10 @@
               <p class="B-numeroStar">(121)</p>
             </div>
           </div>
-          <form action="">
-          <button class="B-AddCart">Añadir al carrito</button>
-        </form>
+            <form action="/carrito/agregar" method="post">
+            <input type="hidden" name="productId" value="<%= product._id %>">
+            <button class="B-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+          </form>
         </div>
       </div>
     <% }); %>

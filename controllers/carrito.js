@@ -1,39 +1,30 @@
+const User = require ('../models/User')
+const Producto = require ('../models/Products')
+
 
 const get_carrito = async (req,res) =>{
     res.render('carrito',{user : req.user})
 }
 
-const agregarAlCarrito = async (req, res) =>{
-    try {
-        const { _id, precio } = req.body;
-        const carrito = await Carrito.findOneAndUpdate(
-          { usuario: req.user._id }, 
-          {
-            $push: {
-              productos: {
-                producto: _id,
-                precio
-              }
-            }
-          },
-          { new: true, upsert: true }
-        );
-    
-        // Calcular el nuevo total del carrito
-        carrito.total = carrito.productos.reduce((total, producto) => {
-          return total + (producto.cantidad * producto.precioUnitario);
-        }, 0);
-        await carrito.save();
-        console.log(carrito)
-        console.log(productos)
-    
-        res.render('carrito',{user:req.user}); 
-      } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al agregar al carrito');
-      }
+const agregarAlCarrito = async (req, res) => {
+  const { productId } = req.body;
+  console.log(req.body)
+
+  try {
+    const usuario = await User.findById(req.user._id);
+
+    if (!usuario) {
+      return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
 
+    await usuario.agregarAlCarrito(productId, 1); // Cambia la cantidad según tu lógica
+
+    return res.status(200).json({ mensaje: 'Producto agregado al carrito exitosamente' });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ mensaje: 'Error al agregar producto al carrito' });
+  }
+};
 
 
 module.exports = {

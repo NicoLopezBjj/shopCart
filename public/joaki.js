@@ -52,19 +52,18 @@ function slides(){
 
 // Logica del Carrito del lado del cliente (frontEND)
 
-// async function agregarAlCarrito() {
-//     try {
-//       const response = await fetch('/carrito/agregar', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({}), // Envio informacion del producto
-//       });
-  
-//       const data = await response.json();
-//       console.log('Producto agregado al carrito:', data);
-//     } catch (error) {
-//       console.error('Error al agregar producto al carrito:', error);
-//     }
-//   }
+function agregarAlCarrito(productId) {
+    const cantidad = 1
+    fetch('/carrito/agregar', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productId, cantidad} ),
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.mensaje);
+    })
+    .catch(error => console.error('Error:', error));
+  }

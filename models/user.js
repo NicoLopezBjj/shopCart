@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const {isEmail} = require('validator')
 const bcrypt=require('bcrypt')
+const Producto = require ('../models/Products')
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -42,6 +43,38 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
       throw new Error(err);
   }
 };
+
+userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
+  try {
+    console.log(productId)
+    const producto = await Producto.findById(productId);
+
+    if (!producto) {
+      throw new Error('Producto no encontrado');
+    }
+
+    const existeCartItem = this.cart.items.find(
+      (item) => item.productId.toString() === productId
+    );
+
+    if (existeCartItem) {
+      // Si el producto ya está en el carrito, actualiza la cantidad
+      existeCartItem.cantidad += cantidad;
+    } else {
+      // Si el producto no está en el carrito, agrégalo
+      this.cart.items.push({ productId, cantidad });
+    }
+
+    this.cart.precioTotal += producto.precio * cantidad;
+    await this.save();
+
+    return this;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
