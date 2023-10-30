@@ -46,7 +46,9 @@ const get_home = async (req,res) =>{
     res.render('home',{user : req.user})
 }
 
-
+const miperfil = async (req,res)=>{
+    res.render('perfil',{user: req.user})
+}
 
   
 module.exports = { 
@@ -57,6 +59,7 @@ module.exports = {
     logout_get,
     logout_post,
     get_home,
+    miperfil
 }
 
  
