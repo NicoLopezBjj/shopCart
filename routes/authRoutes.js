@@ -16,7 +16,7 @@ router.get('/home',authControllers.get_home)
 
 router.post('/logout',authControllers.logout_post)
 
-
+router.get('/miperfil',authControllers.miperfil)
 
 
 module.exports=router
