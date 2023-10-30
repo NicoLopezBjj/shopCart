@@ -590,3 +590,311 @@ img.imagen-servicio:hover{
     transform-style: preserve-3d;
 }
 
+
+
+/*--------------------------------------------*/
+
+/*Perfil ecommerce*/
+
+.contenedor-main-entero{
+    padding-bottom: 5rem;
+}
+
+.contenedor-perfil{
+    margin: auto;
+    max-width: 44.625rem;
+    position: relative;
+    width: 44.625rem;
+
+}
+
+.encabezado-perfil{
+    margin-top: 1.5rem;
+}
+
+.section-contenedor-perfil{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    min-height: 128px;
+    width: 715px;
+}
+
+.hidden-input{
+    display: none;
+}
+
+.section-contenedor-perfil .card-perfil{
+    display: flex;
+    padding: 24px;
+    width: 100%;
+}
+
+.section-contenedor-perfil .card-perfil .image {
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    max-height: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+    position: relative;
+}
+
+.section-contenedor-perfil .card-perfil .image .icon-image {
+    align-items: center;
+    background-color: #fff;
+    background: #fff;
+    border: 1px solid var(--all-andes-gray-070,rgba(0,0,0,.07));
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 28px;
+    font-style: normal;
+    justify-content: center;
+    line-height: 28px;
+    max-height: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+}
+
+.section-contenedor-perfil .card-perfil .image .icon-image img {
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: scale-down;
+}
+
+.section-contenedor-perfil .card-perfil .image img {
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 80px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.section-contenedor-perfil .card-perfil .image .camara{
+    align-items: center;
+    border: 1px solid var(--all-andes-gray-070,rgba(0,0,0,.07));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-contenedor-perfil .card-perfil .image .camara {
+    background-color: #fff;
+    bottom: 0;
+    cursor: pointer;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    padding: 4px;
+    position: absolute;
+    right: 0;
+}
+
+/*Informacion*/
+
+
+.section-contenedor-perfil .card-perfil .perfil-informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4px 0 4px 24px;
+    width: 100%;
+}
+.perfil-informacion{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nueva-web a {
+    color: #009ee3;
+}
+
+.section-contenedor-perfil .card-perfil .perfil-informacion h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    margin: 0;
+}
+
+.section-contenedor-perfil .card-perfil .perfil-informacion p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+.section-contenedor-perfil .card-perfil .perfil-informacion .nueva-web {
+    display: block;
+    margin-top: 8px;
+}
+
+
+/*Margen - medio*/
+.tres-rem-center{
+    margin-top: 3rem;
+}
+
+/*---------------------------------------------------*/
+
+.card-principal-perfil{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+    
+    background-color: #fff;
+    border-radius: 6px;
+    font-family: Proxima Nova,-apple-system,Roboto,Arial,sans-serif;
+
+    max-width: 44.625rem;
+    padding: 2.1875rem 2.5rem 1.5rem;
+    width: 44.625rem;
+
+    padding: 1rem 1rem 1rem 2rem!important;
+
+
+    margin: auto;
+    max-width: 44.625rem;
+    position: relative;
+    width: 44.625rem;
+}
+
+/*---------------------------------------------------*/
+.contenedor-card-perfil {
+    margin-right: 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    font-family: Proxima Nova,-apple-system,Roboto,Arial,sans-serif;
+}
+
+/*UL--*/
+
+.listas-ul-card{
+    background-color: #fff;
+    font-family: Proxima Nova,-apple-system,Roboto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+/*elemento li */
+
+.lista-li-card {
+    cursor: pointer;
+
+    align-items: center;
+    display: flex;
+    padding: 0;
+
+    justify-content: space-between;
+    position: relative;
+}
+
+/*-------------*/
+.link-de-etiquetas-perfil {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -16px;
+    outline: none;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+.primer-bloque-informacion{
+    padding: 14px 0 13px;
+    align-items: center;
+    display: flex;
+    flex-grow: 4;
+    margin-right: 12px;
+}
+/*------------*/
+
+.margen-izquierda {
+    margin-right: 16px;
+}
+
+
+.circulo-imagen-perfil{
+    border: 1px solid rgba(0,0,0,.07)!important;
+    border-radius: 50%;
+    overflow: hidden;
+
+    height: 54px;
+    width: 54px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-svg-perfiles {
+    left: 40px;
+    top: -16px;
+
+    border-radius: 50%;
+    height: 16px;
+    min-width: 16px;
+    width: 16px;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/*alineo blanco*/
+.contenedor-svg-perfiles  svg {
+    height: 16px;
+    width: 16px;
+}
+
+/*-------------------*/
+.verde-session {
+    background: #00a650;
+}
+.warning{
+    background: #FF7733;
+}
+
+.fondo-visual-hidden {
+    clip: rect(0 0 0 0);
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*texto de listas*/
+
+.li-titulo-perfil  {
+    line-height: 30px;
+
+    color: rgba(0,0,0,.9);
+    display: block;
+    font-size: 1rem;
+}
+
+
+/*texto abajo del titulo*/
+.li-texto-perfil {
+    color: rgba(0,0,0,.55);
+    display: block;
+}
