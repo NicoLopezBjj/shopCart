@@ -9,5 +9,6 @@ router.get('/shop/categoria/:categoria?', products.mostrarCategoria)
 router.get('/shop/marca/:marca?',products.mostrarProductosPorMarca)
 router.get('/shop/color/:color?',products.mostrarProductosPorColor)
 
+router.get('/shop/producto',products.producto_get)
 
 module.exports = router
