@@ -68,9 +68,15 @@ const mostrarProductosPorColor = async (req,res) =>{
 };
 
 
+const producto_get = async (req,res)=>{ 
+  /* const products = await Producto.findById () */
+  res.render('producto',{user: req.user, /* products */})
+}
+
 module.exports={
     shop_get,
     mostrarCategoria,
     mostrarProductosPorMarca,
-    mostrarProductosPorColor
+    mostrarProductosPorColor,
+    producto_get
 }
