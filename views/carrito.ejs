@@ -3,27 +3,27 @@
 
 <section class="carrito-all">
 
-<div class="productos-carrito">
-
-  <h3>Revisa tus productos</h3>
-
-    <div class="prod-carrito">
-      <div>
-        <img src="img/parlantin.png" alt="" class="img-producto-carrito">
+  <div class="productos-carrito">
+    <h3>Revisa tus productos</h3>
+    
+    <% productosEnCarrito.forEach(item => { %>
+      <div class="prod-carrito">
+        <div>
+          <img src="<%= item.productId.imagen %>" alt="" class="img-producto-carrito">
+        </div>
+        <div class="cart-nombre">
+          <h4><%= item.productId.nombre %></h4>
+          <p>Color: <%= item.productId.color %></p>
+        </div>
+        <div class="cart-pyc">
+          <p class="cart-precio">$<%= item.productId.precio %></p>
+          <p class="cart-cantidad">Cantidad: <%= item.cantidad %></p>
+        </div>
       </div>
-      <div class="cart-nombre">
-        <h4>Nombre producto</h4>
-        <p>Color: negro</p>
-      </div>
-      <div class="cart-pyc">
-        <p class="cart-precio">$3900</p>
-        <p class="cart-cantidad">Cantidad: 01</p>
-      </div>
+    <% }); %>
+  </div>
 
-   
 
-   </div>
-</div>
 <div class="completar-datos">
 
  <h3>Resumen del pedido</h3>

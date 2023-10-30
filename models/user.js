@@ -31,7 +31,8 @@ const userSchema = new mongoose.Schema({
         required:true
       }
     }],
-    precioTotal:Number
+    precioTotal:{
+      type:Number}
   }
 });
 
@@ -46,7 +47,7 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
 
 userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
   try {
-    console.log(productId)
+    
     const producto = await Producto.findById(productId);
 
     if (!producto) {
@@ -65,7 +66,12 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
       this.cart.items.push({ productId, cantidad });
     }
 
+    if (typeof this.cart.precioTotal !== 'number') {
+      this.cart.precioTotal = 0;
+    }
+    
     this.cart.precioTotal += producto.precio * cantidad;
+    
     await this.save();
 
     return this;
