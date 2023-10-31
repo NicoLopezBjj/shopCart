@@ -33,7 +33,7 @@ app.use(passport.session())
 app.set('view engine','ejs')
 
 // conexion a la base de datos
-const DB_URL = process.env.db_URL
+const DB_URL = process.env.DB_URL
 const PUERTO = process.env.PUERTO
 const connectDB=require('./db/conexion')
 
