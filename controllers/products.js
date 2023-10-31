@@ -67,6 +67,21 @@ const mostrarProductosPorColor = async (req,res) =>{
   }
 };
 
+const mostrarProductoPorID = async (req, res) => {
+  const productId = req.params.id;
+  try {
+    const producto = await Producto.findById(productId);/* encuentra por id */
+    
+    if (producto) {
+      res.render('producto', { product: producto });/* renderiza productos */
+    } else {/* si no la pagina de error */
+      res.render('error404');
+    }
+  } catch (error) {
+    console.error(error);
+    res.render('error404');
+  }
+}
 
 
 
@@ -76,5 +91,6 @@ module.exports={
     mostrarCategoria,
     mostrarProductosPorMarca,
     mostrarProductosPorColor,
+    mostrarProductoPorID
     
 }

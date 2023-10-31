@@ -12,7 +12,6 @@ const get_carrito = async (req,res) =>{
 
     const productosEnCarrito = await Promise.all(usuario.cart.items.map(async (item) => {
       const producto = await Producto.findById(item.productId);
-      console.log('Producto:', producto)
       return {
         cantidad: item.cantidad,
         producto,
@@ -38,7 +37,7 @@ const agregarAlCarrito = async (req, res) => {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
 
-    await usuario.agregarAlCarrito(productId, 1); // Cambia la cantidad según tu lógica
+    await usuario.agregarAlCarrito(productId, 1); 
 
     const productosEnCarrito = await Promise.all(usuario.cart.items.map(async (item) => {
       const producto = await Producto.findById(item.productId);
@@ -55,9 +54,30 @@ const agregarAlCarrito = async (req, res) => {
   }
 };
 
+const eliminarCarrito = async (req,res) => { 
+  const { productId } = req.body;
+
+  try {
+    const usuario = await User.findById(req.user._id);
+
+    if (!usuario) {
+      return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+    }
+
+    await usuario.eliminarDelCarrito(productId);
+    console.log(productId)
+
+    res.redirect('/carrito',{user : req.user , productosEnCarrito});
+  } catch (error) {
+    console.error(error);
+    res.render('error404');
+  }
+}
+
 
 
 module.exports = {
     get_carrito,
     agregarAlCarrito,
+    eliminarCarrito
 }
