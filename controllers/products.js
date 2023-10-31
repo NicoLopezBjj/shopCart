@@ -70,6 +70,10 @@ const mostrarProductosPorColor = async (req,res) =>{
 const mostrarProductoPorID = async (req, res) => {
   const productId = req.params.id;
   try {
+    if (!req.isAuthenticated()) {
+      // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+      return res.redirect('/signin');
+    }
     const producto = await Producto.findById(productId);/* encuentra por id */
     
     if (producto) {
