@@ -68,9 +68,24 @@ function agregarAlCarrito(productId) {
     .catch(error => console.error('Error:', error));
   }
 
+// Logica para eliminar carrito del lado del front
 
 
+document.getElementById('eliminarForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-
+    fetch(this.action, {
+      method: 'DELETE',
+      body: new FormData(this),
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Maneja la respuesta del servidor si es necesario
+      console.log(data);
+      // Redirige a la página de carrito
+      window.location.href = '/carrito';
+    })
+    .catch(error => console.error('Error:', error));
+  });
 
   

@@ -30,7 +30,7 @@
           <% } else { %>
             <p>Precio y cantidad no disponibles</p>
           <% } %>
-          <form action="/carrito/eliminar" method="post">
+          <form id="eliminarForm" action="/carrito/eliminar" method="delete">
             <input type="hidden" name="_method" value="delete">
             <input type="hidden" name="productId" value="<%= item.producto._id %>">
             <button type="submit"><i class="bi bi-trash3"></i>Eliminar producto</button>
