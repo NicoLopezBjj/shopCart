@@ -1,6 +1,5 @@
-const User = require('../models/User')
+const User = require ('../models/User')
 const bcrypt=require('bcrypt')
-const passportArchivo = require ('../config/passport')
 const passport = require ('passport')
 
 
