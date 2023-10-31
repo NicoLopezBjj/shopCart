@@ -73,7 +73,7 @@ const mostrarProductoPorID = async (req, res) => {
     const producto = await Producto.findById(productId);/* encuentra por id */
     
     if (producto) {
-      res.render('producto', { product: producto });/* renderiza productos */
+      res.render('producto', { product: producto, user : req.user });/* renderiza productos */
     } else {/* si no la pagina de error */
       res.render('error404');
     }
