@@ -18,7 +18,7 @@
 
 </div>
 <div class="produ-img">
-  <img src="/img/auri-n.png" alt="" class="auri-img">
+  <img src="<%= product.imagen %>" alt="" class="auri-img">
 </div>
 
 
@@ -28,8 +28,8 @@
 
 
 <div class="produ-nombre">
-<h1>Airpods-Max</h1>
-<p class="p-des">un equilibrio perfecto entre el emocionante audio de alta fidelidad y <br> la  magia natural de los AirPods</p>
+<h1><%= product.nombre %></h1>
+<p class="p-des">$<%= product.descripcion %></p>
 
 <div class="prod-star">
 <img src="/img/star.svg" alt="">
@@ -43,7 +43,7 @@
 </div>
 
 <div class="produ-precio">
-<h3>$15.000 </h3>
+<h3>$<%= product.precio %></h3>
 <p>Pagos sugeridos con financiación especial a 6 meses.</p>
 <div class="lineas-prod"></div>
 </div>

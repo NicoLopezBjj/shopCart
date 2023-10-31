@@ -1,4 +1,5 @@
 <% products.forEach(product => { %>
+  <a href="/shop/producto/<%= product.id %>" class="enlace-sacar">
     <div class="B-todoCard">
       <div class="B-CardFotos">
         <img src="<%= product.imagen %>" alt="" class="B-imagenCard">
@@ -9,6 +10,7 @@
       <div class="B-texto">
         <div class="B-namePrecio">
           <h4 class="B-name"><%= product.nombre %></h4>
+        </a>
           <h3 class="B-precio"> $<%= product.precio %></h3>
         </div>
         
@@ -24,10 +26,11 @@
             <p class="B-numeroStar">(121)</p>
           </div>
         </div>
-          <form action="/carrito/agregar" method="post">
+        <form action="/carrito/agregar" method="post">
           <input type="hidden" name="productId" value="<%= product._id %>">
           <button class="B-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
         </form>
       </div>
     </div>
-  <% }); %>
+ 
+<% }); %>
