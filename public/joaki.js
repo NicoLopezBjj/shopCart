@@ -67,3 +67,10 @@ function agregarAlCarrito(productId) {
     })
     .catch(error => console.error('Error:', error));
   }
+
+
+
+
+
+
+  
