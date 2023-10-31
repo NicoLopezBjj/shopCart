@@ -2,7 +2,6 @@ const User = require ('../models/User')
 const bcrypt=require('bcrypt')
 const passport = require ('passport')
 
-
 const signup_post = async (req, res) => {
     const { email, password, nombre } = req.body;
     try {
