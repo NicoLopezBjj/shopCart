@@ -279,6 +279,10 @@ li{
    
 margin-top: 1em;
 }
+.modalCategoria strong:hover{
+   
+    color: blue;
+    }
 
 
 .div-categoria-uno{

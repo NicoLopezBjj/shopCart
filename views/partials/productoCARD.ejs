@@ -1,34 +1,34 @@
 <% products.forEach(product => { %>
   <a href="/shop/producto/<%= product.id %>" class="enlace-sacar">
-    <div class="B-todoCard">
-      <div class="B-CardFotos">
-        <img src="<%= product.imagen %>" alt="" class="B-imagenCard">
-        <div class="B-corazonDiv">
-          <img src="/img/corazon.svg" alt="" class="B-corazon">
+    <div class="C-todoCard">
+      <div class="C-CardFotos">
+        <img src="<%= product.imagen %>" alt="" class="C-imagenCard">
+        <div class="C-corazonDiv">
+          <img src="/img/corazon.svg" alt="" class="C-corazon">
         </div>
       </div>
-      <div class="B-texto">
-        <div class="B-namePrecio">
-          <h4 class="B-name"><%= product.nombre %></h4>
+      <div class="C-texto">
+        <div class="C-namePrecio">
+          <h4 class="C-name"><%= product.nombre %></h4>
         </a>
-          <h3 class="B-precio"> $<%= product.precio %></h3>
+          <h3 class="C-precio"> $<%= product.precio %></h3>
         </div>
         
-        <div class="B-stars">
+        <div class="C-stars">
           <div>
-            <img src="/img/star.svg" alt="" class="B-estrellasIMG">
-            <img src="/img/star.svg" alt="" class="B-estrellasIMG">
-            <img src="/img/star.svg" alt="" class="B-estrellasIMG">
-            <img src="/img/star.svg" alt="" class="B-estrellasIMG">
-            <img src="/img/star.svg" alt="" class="B-estrellasIMG">
+            <img src="/img/star.svg" alt="" class="C-estrellasIMG">
+            <img src="/img/star.svg" alt="" class="C-estrellasIMG">
+            <img src="/img/star.svg" alt="" class="C-estrellasIMG">
+            <img src="/img/star.svg" alt="" class="C-estrellasIMG">
+            <img src="/img/star.svg" alt="" class="C-estrellasIMG">
           </div>
           <div>
-            <p class="B-numeroStar">(121)</p>
+            <p class="C-numeroStar">(121)</p>
           </div>
         </div>
         <form action="/carrito/agregar" method="post">
           <input type="hidden" name="productId" value="<%= product._id %>">
-          <button class="B-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+          <button class="C-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
         </form>
       </div>
     </div>
