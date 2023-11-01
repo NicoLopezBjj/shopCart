@@ -299,7 +299,7 @@ width: 20em !important;
 .sillon-rosa{
     width: 5em !important;
     max-width: 100px;
-    background-color: white;
+    background-color: white !important;
     
 }
 
