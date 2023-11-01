@@ -37,7 +37,7 @@ const logout_get = async (req,res) =>{
 const logout_post = async (req,res,next) =>{
     req.logout(function(err) {
         if (err) { return next(err); }
-        res.redirect('/');
+        res.render('home');
       })
 }
 
