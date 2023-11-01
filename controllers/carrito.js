@@ -54,7 +54,7 @@ const agregarAlCarrito = async (req, res) => {
 };
 
 const eliminarCarrito = async (req,res) => { 
-  const { productId } = req.body
+  const { productId } = req.query.productId
   console.log(productId)
 
   try {

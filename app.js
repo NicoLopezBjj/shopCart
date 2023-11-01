@@ -1,14 +1,15 @@
-const express=require('express')
-const session=require('express-session')
+const express = require('express')
+const session = require('express-session')
 const passport = require ('passport')
 const LocalStrategy = require ('passport-local').Strategy
-const authRouter=require('./routes/authRoutes')
-const path=require ('path')
-const mongoose=require('mongoose')
+const authRouter = require('./routes/authRoutes')
+const path = require ('path')
+const mongoose = require('mongoose')
 require('dotenv').config()
-const productsRouter=require('./routes/products')
-const preciosRouter=require('./routes/precios')
-const carritoRouter=require('./routes/carrito')
+const productsRouter = require('./routes/products')
+const preciosRouter = require('./routes/precios')
+const carritoRouter = require('./routes/carrito')
+const methodOverride = require('method-override')
 
 
 const app=express()
@@ -28,7 +29,7 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-
+app.use(methodOverride('_method'))
 
 app.set('view engine','ejs')
 
