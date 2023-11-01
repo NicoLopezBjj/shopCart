@@ -19,4 +19,6 @@ router.post('/logout',authControllers.logout_post)
 router.get('/miperfil',authControllers.miperfil)
 
 
+
+
 module.exports=router
