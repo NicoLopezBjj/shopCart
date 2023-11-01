@@ -71,21 +71,19 @@ function agregarAlCarrito(productId) {
 // Logica para eliminar carrito del lado del front
 
 
-document.getElementById('eliminarForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+function eliminarCarrito(productId) {
+  fetch(`/carrito/eliminar`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ productId })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => console.log('Error:', error));
+}
 
-    fetch(this.action, {
-      method: 'DELETE',
-      body: new FormData(this),
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Maneja la respuesta del servidor si es necesario
-      console.log(data);
-      // Redirige a la página de carrito
-      window.location.href = '/carrito';
-    })
-    .catch(error => console.error('Error:', error));
-  });
 
-  

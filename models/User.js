@@ -82,8 +82,10 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
   }
 };
 
-userSchema.methods.eliminarDelCarrito = async function(productId) {
+userSchema.methods.eliminarCarrito = async function(productId) {
   const itemEnCarrito = this.cart.items.find(item => item.productId.toString() === productId);
+  
+
 
   if (!itemEnCarrito) {
     throw new Error('El producto no se encuentra en el carrito');
@@ -93,6 +95,7 @@ userSchema.methods.eliminarDelCarrito = async function(productId) {
   await this.save();
 
   return itemEnCarrito;
+  console.log(itenEnCarrito)
 };
 
 

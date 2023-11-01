@@ -15,6 +15,7 @@ const methodOverride = require('method-override')
 const app=express()
 
 // MiddleWare
+app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -29,7 +30,7 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-app.use(methodOverride('_method'))
+
 
 app.set('view engine','ejs')
 
