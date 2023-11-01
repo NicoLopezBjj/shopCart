@@ -56,7 +56,6 @@ const agregarAlCarrito = async (req, res) => {
 const eliminarCarrito = async (req,res) => { 
   const { productId } = req.body
 
-
   try {
     const usuario = await User.findById(req.user._id);
 

@@ -27,6 +27,9 @@ const productoSchema = new mongoose.Schema({
 },
   color:{
     type:String
+  },
+  minishop:{
+    type:Boolean
   }
 });
 
