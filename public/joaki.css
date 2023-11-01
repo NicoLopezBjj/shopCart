@@ -406,13 +406,13 @@ cursor: pointer;
 
 
 /* Card productos */
-.B-cards{
+.C-cards{
     width: 70% !important; 
     margin: auto !important;
     justify-content: space-between;
 }
 
-.B-todoCard{
+.C-todoCard{
    
          margin-top: 3em;
          font-family: Arial, Helvetica, sans-serif;
@@ -420,7 +420,7 @@ cursor: pointer;
    }
    
    /* div imagenes */
-   .B-CardFotos{
+   .C-CardFotos{
          background-color: #F5F6F6;
             border: 0px ;
          width: 18em;
@@ -435,7 +435,7 @@ cursor: pointer;
          cursor: pointer;
    }
    
-   .B-imagenCard{
+   .C-imagenCard{
 
    width: 11em;
    transition:  0.4s ease; 
@@ -443,7 +443,7 @@ cursor: pointer;
    
    }
    
-   .B-corazonDiv{
+   .C-corazonDiv{
    
     background-color: #FFFFFF;
     border: 0;
@@ -454,48 +454,48 @@ cursor: pointer;
     right: 10px; 
     z-index: 1;
    }
-   .B-corazon{
+   .C-corazon{
     width: 1.1em;
    }
     
    /* div texto */
    
    
-   .B-namePrecio{
+   .C-namePrecio{
        display: flex;
        justify-content: space-between;
    
    }
-   .B-name{
+   .C-name{
    font-size: 0.9em;
    font-weight: 600;
    }
-   .B-precio{
+   .C-precio{
        font-size: 1em;
        font-weight: 600;
        
    }
-   .B-descrip{
+   .C-descrip{
        font-size: 0.7em;
        color: rgb(86, 85, 85);
        margin-top: -1em;
    }
    
-   .B-stars{
+   .C-stars{
        display: flex;
    }
-   .B-estrellasIMG{
+   .C-estrellasIMG{
        width: 0.7em;
    
    }
    
-   .B-numeroStar{
+   .C-numeroStar{
        font-size: 0.65em;
        margin-left: 0.5em;
        margin-top: 0.3em;
    }
    
-   .B-AddCart{ 
+   .C-AddCart{ 
        margin-top: 0.6em;
        cursor: pointer;
        border: 1px solid black;
@@ -508,16 +508,16 @@ cursor: pointer;
       
    }
    /* hover tarjeta */
-   .B-imagenCard:hover {
+   .C-imagenCard:hover {
     transform: scale(1.2);
 }
 
-.B-corazonDiv:hover{
+.C-corazonDiv:hover{
     background-color: #F9DCDC;
 }
 
 
-.B-AddCart:hover{
+.C-AddCart:hover{
 border: 1px solid #003D29;
 background-color: #003D29;
 color: white;
@@ -525,7 +525,7 @@ color: white;
 
 
 /* varias */
-.B-cards{
+.C-cards{
     width: 70%;
     margin: auto;
     display: flex;
