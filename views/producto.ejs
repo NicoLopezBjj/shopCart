@@ -72,8 +72,11 @@
 </div>
 
 <div class="btn-productos">
-<button class="comprar-btn">Comprar ahora</button>
-<button class="btn-carrito">Agregar al carrito</button>
+<a href="/carrito" style="text-decoration: none;" class="comprar-btn">Comprar ahora</a>
+<form action="/carrito/agregar" method="post">
+  <input type="hidden" name="productId" value="<%= product._id %>">
+  <button class="B-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+</form>
 </div>
 
 </div>
@@ -117,5 +120,5 @@
 
 </div>
 
-
+<script src="/joaki.js"></script>
 </section>
