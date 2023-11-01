@@ -12,7 +12,6 @@ const get_carrito = async (req,res) =>{
 
     const productosEnCarrito = await Promise.all(usuario.cart.items.map(async (item) => {
       const producto = await Producto.findById(item.productId);
-      console.log('Producto:', producto)
       return {
         cantidad: item.cantidad,
         producto,
@@ -28,7 +27,6 @@ const get_carrito = async (req,res) =>{
 
 const agregarAlCarrito = async (req, res) => {
   const { productId } = req.body;
-  // console.log(req.body)
 
   try {
     const usuario = await User.findById(req.user._id);
@@ -38,7 +36,7 @@ const agregarAlCarrito = async (req, res) => {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
 
-    await usuario.agregarAlCarrito(productId, 1); // Cambia la cantidad según tu lógica
+    await usuario.agregarAlCarrito(productId, 1); 
 
     const productosEnCarrito = await Promise.all(usuario.cart.items.map(async (item) => {
       const producto = await Producto.findById(item.productId);
@@ -55,9 +53,44 @@ const agregarAlCarrito = async (req, res) => {
   }
 };
 
+const eliminarCarrito = async (req,res) => { 
+  const { productId } = req.body
+  console.log(productId)
+
+  try {
+    const usuario = await User.findById(req.user._id);
+    console.log(usuario)
+
+    if (!usuario) {
+      return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+    }
+
+    const productoEliminado = await usuario.eliminarDelCarrito(productId);
+    console.log(productoEliminado);
+    
+    const productosEnCarrito = await Promise.all(
+      usuario.cart.items.map(async (item) => {
+        const producto = await Producto.findById(item.productId);
+        return {
+          cantidad: item.cantidad,
+          producto,
+        };
+      })
+    );
+
+
+    res.redirect('/carrito',{user : req.user , productosEnCarrito});
+  } catch (error) {
+    console.error(error);
+    res.render('error404');
+    console.log(error)
+  }
+}
+
 
 
 module.exports = {
     get_carrito,
     agregarAlCarrito,
+    eliminarCarrito
 }

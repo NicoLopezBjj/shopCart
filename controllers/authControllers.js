@@ -1,8 +1,7 @@
-const User= require('../models/User')
+const User = require ('../models/User')
 const bcrypt=require('bcrypt')
-const passportArchivo = require ('../config/passport')
 const passport = require ('passport')
-
+const passportArchivo = require ('../config/passport')
 
 const signup_post = async (req, res) => {
     const { email, password, nombre } = req.body;

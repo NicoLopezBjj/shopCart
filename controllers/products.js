@@ -67,6 +67,25 @@ const mostrarProductosPorColor = async (req,res) =>{
   }
 };
 
+const mostrarProductoPorID = async (req, res) => {
+  const productId = req.params.id;
+  try {
+    if (!req.isAuthenticated()) {
+      // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+      return res.redirect('/signin');
+    }
+    const producto = await Producto.findById(productId);/* encuentra por id */
+    
+    if (producto) {
+      res.render('producto', { product: producto, user : req.user });/* renderiza productos */
+    } else {/* si no la pagina de error */
+      res.render('error404');
+    }
+  } catch (error) {
+    console.error(error);
+    res.render('error404');
+  }
+}
 
 
 
@@ -76,5 +95,6 @@ module.exports={
     mostrarCategoria,
     mostrarProductosPorMarca,
     mostrarProductosPorColor,
+    mostrarProductoPorID
     
 }

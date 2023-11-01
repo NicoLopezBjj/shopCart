@@ -33,13 +33,13 @@ app.use(passport.session())
 app.set('view engine','ejs')
 
 // conexion a la base de datos
-const db_URL = process.env.db_URL
+const DB_URL = process.env.DB_URL
 const PUERTO = process.env.PUERTO
 const connectDB=require('./db/conexion')
 
 const connectDataBase = async () => {
     try{
-        await connectDB(db_URL)
+        await connectDB(DB_URL)
         console.log ('Conexion exitosa a la base de datos')
         app.listen(PUERTO,console.log('servidor ejecutandose'))
     }

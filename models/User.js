@@ -36,6 +36,8 @@ const userSchema = new mongoose.Schema({
   }
 });
 
+// Metodos que modifican el esquema
+
 userSchema.methods.comparePassword = async function(candidatePassword) {
   try {
       const isMatch = await bcrypt.compare(candidatePassword, this.password);
@@ -78,6 +80,19 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
   } catch (error) {
     throw new Error(error);
   }
+};
+
+userSchema.methods.eliminarDelCarrito = async function(productId) {
+  const itemEnCarrito = this.cart.items.find(item => item.productId.toString() === productId);
+
+  if (!itemEnCarrito) {
+    throw new Error('El producto no se encuentra en el carrito');
+  }
+
+  this.cart.items = this.cart.items.filter(item => item.productId.toString() !== productId);
+  await this.save();
+
+  return itemEnCarrito;
 };
 
 
