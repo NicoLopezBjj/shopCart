@@ -18,6 +18,9 @@ const get_carrito = async (req,res) =>{
       };
     }));
 
+    const precioTotal = usuario.cart.precioTotal
+    console.log(precioTotal)
+
     res.render('carrito', { user:req.user, productosEnCarrito });
   } catch (error) {
     console.error(error);
@@ -45,6 +48,9 @@ const agregarAlCarrito = async (req, res) => {
         producto,
       };
     }));
+
+    const precioTotal = usuario.cart.precioTotal
+    console.log(precioTotal)
 
     res.render('carrito', {user : req.user , productosEnCarrito})
   } catch (error) {
@@ -77,6 +83,9 @@ const eliminarCarrito = async (req,res) => {
         };
       })
     );
+
+    const precioTotal = usuario.cart.precioTotal
+    console.log(precioTotal)
 
 
     res.render('carrito',{user : req.user , productosEnCarrito});

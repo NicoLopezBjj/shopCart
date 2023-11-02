@@ -92,6 +92,13 @@ userSchema.methods.eliminarCarrito = async function(productId) {
   }
 
   this.cart.items = this.cart.items.filter(item => item.productId.toString() !== productId);
+
+  
+  if (this.cart.items.length === 0) {
+    this.cart.precioTotal = null
+  }
+
+  this.cart.precioTotal -= producto.precio * cantidad;
   await this.save();
 
   return itemEnCarrito;
