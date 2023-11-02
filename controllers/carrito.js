@@ -19,9 +19,8 @@ const get_carrito = async (req,res) =>{
     }));
 
     const precioTotal = usuario.cart.precioTotal
-    console.log(precioTotal)
 
-    res.render('carrito', { user:req.user, productosEnCarrito });
+    res.render('carrito', { user:req.user, productosEnCarrito, precioTotal });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ mensaje: 'Error al obtener productos del carrito' });
@@ -52,7 +51,7 @@ const agregarAlCarrito = async (req, res) => {
     const precioTotal = usuario.cart.precioTotal
     console.log(precioTotal)
 
-    res.render('carrito', {user : req.user , productosEnCarrito})
+    res.render('carrito', {user : req.user , productosEnCarrito, precioTotal})
   } catch (error) {
     console.error(error);
     res.render('error404')
@@ -71,7 +70,6 @@ const eliminarCarrito = async (req,res) => {
     }
 
     const productoEliminado = await usuario.eliminarCarrito(productId);
-    console.log(productoEliminado)
     
     
     const productosEnCarrito = await Promise.all(

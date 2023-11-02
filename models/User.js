@@ -84,8 +84,6 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
 
 userSchema.methods.eliminarCarrito = async function(productId) {
   const itemEnCarrito = this.cart.items.find(item => item.productId.toString() === productId);
-  
-
 
   if (!itemEnCarrito) {
     throw new Error('El producto no se encuentra en el carrito');
@@ -98,13 +96,12 @@ userSchema.methods.eliminarCarrito = async function(productId) {
     this.cart.precioTotal = null
   }
 
-  this.cart.precioTotal -= producto.precio * cantidad;
+  
   await this.save();
 
   return itemEnCarrito;
-  console.log(itenEnCarrito)
-};
 
+}
 
 const User = mongoose.model('User', userSchema);
 
