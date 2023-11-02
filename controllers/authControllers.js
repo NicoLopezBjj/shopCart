@@ -1,14 +1,16 @@
 const User = require ('../models/User')
 const bcrypt=require('bcrypt')
 const passport = require ('passport')
-const passportArchivo = require ('../config/passport')
+require ('../config/passport')
 
 const signup_post = async (req, res) => {
     const { email, password, nombre } = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10); // se encripta la contraseña
         const user = await User.create({ email, password: hashedPassword, nombre }) // crea el usuario
-        res.render('signin')
+        await user.save();
+        res.redirect('/signin');
+
     } catch (err) {
         console.log(err);
         res.status(400);
