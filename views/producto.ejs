@@ -72,8 +72,11 @@
 </div>
 
 <div class="btn-productos">
-<a href="/carrito" style="text-decoration: none;" class="comprar-btn">Comprar ahora</a>
-<button class="B-AddCart">Añadir al carrito</button>
+<form action="/carrito/agregar" method="post">
+  <button class="comprar-btn" onclick="agregarAlCarrito('<%= product._id %>')">Comprar ahora</button>
+  <input type="hidden" name="productId" value="<%= product._id %>">
+  <button class="C-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+</form>
 </div>
 
 </div>
