@@ -18,6 +18,12 @@ const get_carrito = async (req,res) =>{
       };
     }));
 
+    const productosFiltrados = productosEnCarrito.filter((producto, index, self) =>
+    index === self.findIndex((p) => (
+      p.producto._id.toString() === producto.producto._id.toString()
+    ))
+  );
+
     const precioTotal = usuario.cart.precioTotal
 
     res.render('carrito', { user:req.user, productosEnCarrito, precioTotal });
@@ -32,29 +38,25 @@ const agregarAlCarrito = async (req, res) => {
 
   try {
     const usuario = await User.findById(req.user._id);
-   
 
     if (!usuario) {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
 
-    await usuario.agregarAlCarrito(productId, 1); 
+    const existeCartItem = usuario.cart.items.find(
+      (item) => item.productId.toString() === productId
+    );
 
-    const productosEnCarrito = await Promise.all(usuario.cart.items.map(async (item) => {
-      const producto = await Producto.findById(item.productId);
-      return {
-        cantidad: item.cantidad,
-        producto,
-      };
-    }));
+    if (existeCartItem) {
+      existeCartItem.cantidad += 1; // Asumiendo que queremos agregar uno más
+    } else {
+      await usuario.agregarAlCarrito(productId, 1);
+    }
 
-    const precioTotal = usuario.cart.precioTotal
-    console.log(precioTotal)
-
-    res.render('carrito', {user : req.user , productosEnCarrito, precioTotal})
+    return res.redirect('/carrito');
   } catch (error) {
     console.error(error);
-    res.render('error404')
+    res.render('error404');
   }
 };
 
@@ -83,10 +85,9 @@ const eliminarCarrito = async (req,res) => {
     );
 
     const precioTotal = usuario.cart.precioTotal
-    console.log(precioTotal)
 
 
-    res.render('carrito',{user : req.user , productosEnCarrito});
+    res.render('carrito',{user : req.user , productosEnCarrito, precioTotal});
   } catch (error) {
     console.log('El error es ',error);
     res.render('error404');

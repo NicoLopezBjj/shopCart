@@ -53,7 +53,6 @@ function slides(){
 // Logica del Carrito del lado del cliente (frontEND)
 
 function agregarAlCarrito(productId) {
-    const cantidad = 1
     fetch('/carrito/agregar', {
       method: 'POST',
       headers: {
