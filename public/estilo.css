@@ -128,7 +128,7 @@ li:hover {
 
 /* Section Sillon */
 .imgSillon{
-    background-image: url(Img/FotoSillones.png);
+    background-image: url(img/FotoSillones.png);
     height: 80vh !important;
     width: 100% !important;
     background-size: cover;
