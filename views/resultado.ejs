@@ -1,7 +1,7 @@
-
 <%- include ('partials/head.ejs') -%>
 <%- include ('partials/header.ejs') -%>
 
+<% productos.forEach(product => { %>
 <div class="produ-linea">
 
 </div>
@@ -14,6 +14,8 @@
   <p><%= product.categoria %></p>
   <p>/</p>
   <p><%= product.nombre %></p>
+
+
 </div>
 <div class="produ-img">
   <img src="<%= product.imagen %>" alt="" class="auri-img">
@@ -117,6 +119,6 @@
 </div>
 
 </div>
-
+<% }); %>
 <script src="/joaki.js"></script>
 </section>

@@ -62,10 +62,11 @@
         <a href="/shop" class="nav-link px-2 hoverNav">Novedades</a>
         <a href="" class="nav-link px-2 hoverNav">Entregas</a>    
     </div>
-    <div class="buscar-prod"> 
-        <form> <label> </label> <input type="text" class="texto-buscar" placeholder=" Buscar producto">   </form>
-        <button class="lupita"><i class="bi bi-search "></i></button>
-    </div>
+    <form action="/buscar" method="get" class="buscar-prod">
+        <label></label>
+        <input type="text" class="texto-buscar" name="busqueda" placeholder="Buscar producto">
+        <button class="lupita" type="submit"><i class="bi bi-search"></i></button>
+      </form>
     <div class="d-flex ">
         <% if (typeof user !== 'undefined' && user !== null) { %>
             <div class="dropdown ">
