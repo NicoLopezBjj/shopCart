@@ -48,7 +48,7 @@ const agregarAlCarrito = async (req, res) => {
     );
 
     if (existeCartItem) {
-      existeCartItem.cantidad += 1; // Asumiendo que queremos agregar uno más
+      existeCartItem.cantidad += 1; 
     } else {
       await usuario.agregarAlCarrito(productId, 1);
     }

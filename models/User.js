@@ -91,6 +91,11 @@ userSchema.methods.eliminarCarrito = async function(productId) {
 
   this.cart.items = this.cart.items.filter(item => item.productId.toString() !== productId);
 
+
+   // Restar el precio del producto eliminado al precioTotal
+   const producto = await Producto.findById(productId);
+   this.cart.precioTotal -= producto.precio * itemEnCarrito.cantidad;
+
   
   if (this.cart.items.length === 0) {
     this.cart.precioTotal = null
