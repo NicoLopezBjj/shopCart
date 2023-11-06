@@ -10,6 +10,7 @@ const productsRouter = require('./routes/products')
 const preciosRouter = require('./routes/precios')
 const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
+const busquedaRouter = require('./routes/busqueda')
 
 
 const app=express()
@@ -62,6 +63,7 @@ app.use(authRouter)
 app.use(productsRouter)
 app.use(preciosRouter)
 app.use(carritoRouter)
+app.use(busquedaRouter)
 
 app.use((req, res, next) => {
     res.status(404).render('error404');
