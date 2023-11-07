@@ -73,7 +73,11 @@ const eliminarCarrito = async (req,res) => {
 
     const productoEliminado = await usuario.eliminarCarrito(productId); //busco en el cart de ese usuario el producto para eliminar, a traves de productId
     
-    
+    if (usuario.cart.items.length === 0) {
+      // Si el carrito está vacío, redirige al usuario a la página de la tienda
+      return res.redirect('/shop');
+    }
+
     const productosEnCarrito = await Promise.all(
       usuario.cart.items.map(async (item) => {
         const producto = await Producto.findById(item.productId);
