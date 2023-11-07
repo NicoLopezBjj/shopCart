@@ -32,16 +32,21 @@ const signin_post = passport.authenticate('local', {
     failureFlash: true, // Habilita mensajes flash para mostrar errores
 })
 
-const logout_get = async (req,res) =>{
-    res.render('home')
+const logout_get = (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      // Maneja el error de cierre de sesión, si es necesario
+      return next(err);
+    }
+    res.redirect('/'); // Redirige al usuario a la página de inicio o a donde desees después de cerrar sesión.
+  });
 }
 
-const logout_post = async (req,res,next) =>{
-    req.logout(function(err) {
-        if (err) { return next(err); }
-        res.render('home');
-      })
-}
+const logout_post = (req, res) => {
+    req.logout(); // Cierra la sesión del usuario
+    res.redirect('/'); // Redirige al usuario a la página de inicio o a donde desees después de cerrar sesión.
+  }
+  
 
 const get_home = async (req,res) =>{
     res.render('home',{user : req.user})
@@ -51,7 +56,7 @@ const miperfil = async (req,res)=>{
     res.render('perfil',{user: req.user})
 }
 
-  
+
 module.exports = { 
     signup_post, 
     signup_get,
