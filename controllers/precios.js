@@ -6,7 +6,7 @@ const mostrarProductosMenorPrecio = async (req, res) => {
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Error al obtener los productos filtrados');
+      res.render('error404');
     }
   };
 
@@ -16,7 +16,7 @@ const mostrarProductosMedioPrecio = async (req, res) => {
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Error al obtener los productos');
+      res.render('error404');
     }
   };
 
@@ -26,7 +26,7 @@ const mostrarProductosMayorPrecio = async (req, res) => {
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Error al obtener los productos');
+      res.render('error404');
     }
   };
 
@@ -36,7 +36,7 @@ const mostrarProductosMayorPrecio = async (req, res) => {
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Error al obtener los productos');
+      res.render('error404');
     }
   };
   
@@ -46,7 +46,7 @@ const mostrarProductosMayorPrecio = async (req, res) => {
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Error al obtener los productos');
+      res.render('error404');
     }
   };
     

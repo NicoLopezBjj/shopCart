@@ -8,8 +8,8 @@ const buscar = async (req,res) =>{
       const productosEncontrados = await Producto.find({ nombre: { $regex: new RegExp(busqueda, 'i') } });
       res.render('resultado', { productos: productosEncontrados ,Producto,user : req.user});
     } catch (error) {
-      console.error(error);
-      res.status(500).send('Error interno del servidor');
+      console.log(error);
+      res.render('error404')
     }
 }
 

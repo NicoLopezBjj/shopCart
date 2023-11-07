@@ -8,7 +8,7 @@ const shop_get = async (req, res) => {
       res.render('shop', { user: req.user, products  });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al obtener los productos');
+    res.render('error404');
   }
 }
 
@@ -19,7 +19,7 @@ const mostrarCategoria = async (req, res) => {
       res.render('categoria', { user: req.user, products, categoria });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al obtener los productos');
+    res.render('error404');
   }
 };
 
@@ -30,7 +30,7 @@ const mostrarProductosPorMarca = async (req, res) => {
     res.render('marca', { user: req.user, products, marca });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al obtener los productos');
+    res.render('error404');
   }
 };
 
@@ -41,7 +41,7 @@ const mostrarProductosPorColor = async (req,res) =>{
     res.render('color', { user: req.user, products, color });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al obtener los productos');
+    res.render('error404');
   }
 };
 

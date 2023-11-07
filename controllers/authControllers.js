@@ -13,7 +13,7 @@ const signup_post = async (req, res) => {
 
     } catch (err) {
         console.log(err);
-        res.status(400);
+        res.render('error404');
     }
 }
 

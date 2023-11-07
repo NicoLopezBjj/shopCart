@@ -29,7 +29,7 @@ const get_carrito = async (req,res) =>{
     res.render('carrito', { user:req.user, productosEnCarrito, precioTotal });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ mensaje: 'Error al obtener productos del carrito' });
+    res.render('error404');
   }
 };
 
@@ -61,17 +61,17 @@ const agregarAlCarrito = async (req, res) => {
 };
 
 const eliminarCarrito = async (req,res) => { 
-  const { productId } = req.body
+  const { productId } = req.body // requiero id del body
 
   try {
-    const usuario = await User.findById(req.user._id);
+    const usuario = await User.findById(req.user._id); //busco ese id en DB y lo paso a usuario
 
 
     if (!usuario) {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
 
-    const productoEliminado = await usuario.eliminarCarrito(productId);
+    const productoEliminado = await usuario.eliminarCarrito(productId); //busco en el cart de ese usuario el producto para eliminar, a traves de productId
     
     
     const productosEnCarrito = await Promise.all(
@@ -82,12 +82,12 @@ const eliminarCarrito = async (req,res) => {
           producto,
         };
       })
-    );
+    );  // vuelve a crear un array nuevo con los productos que quedaron.
 
-    const precioTotal = usuario.cart.precioTotal
+    const precioTotal = usuario.cart.precioTotal //busco el precioTotal en el cart y lo pongo en una variable
 
 
-    res.render('carrito',{user : req.user , productosEnCarrito, precioTotal});
+    res.render('carrito',{user : req.user , productosEnCarrito, precioTotal}); //renderizo carrito con todas las variables, para poder mostrarla en la plantilla
   } catch (error) {
     console.log('El error es ',error);
     res.render('error404');
