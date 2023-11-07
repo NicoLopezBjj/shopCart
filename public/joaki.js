@@ -4,7 +4,10 @@
 let slider = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
 let contador = 1;
-let width = sliderIndividual[0].clientWidth;
+let width = 0; // Valor por defecto en caso de que no haya elementos
+if (sliderIndividual.length > 0) {
+  width = sliderIndividual[0].clientWidth;
+}
 let intervalo = 5000; /* tiempo de pasarlo */
 
 window.addEventListener("resize", function(){
