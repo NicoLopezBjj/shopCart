@@ -1,23 +1,4 @@
-/* 
-document.addEventListener("DOMContentLoaded", function() {
-   
 
-    const cardsContainer = document.getElementById("cards");
-    const cantidadTarjetas = 11;
-
-    
-    const cardSample = document.querySelector(".B-todoCard");
-
-    
-    for (let i = 0; i < cantidadTarjetas; i++) {
-    
-
-        const clonedCard = cardSample.cloneNode(true);
-
-        
-        cardsContainer.appendChild(clonedCard);
-    }
-}); */
 
 /* SLIDES DEL SHOP */
 let slider = document.querySelector(".slider-contenedor")
@@ -86,3 +67,37 @@ function eliminarCarrito(productId) {
 }
 
 
+
+
+
+/* CARDS CARRUSEL HECHO CON SWIPER.JS */
+const swiper = new Swiper('.swiper-container', {
+	
+	slidesPerView: 1,
+	spaceBetween: 10,
+	// init: false,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+
+  
+	breakpoints: {
+	  620: {
+		slidesPerView: 1,
+		spaceBetween: 20,
+	  },
+	  680: {
+		slidesPerView: 2,
+		spaceBetween: 40,
+	  },
+	  920: {
+		slidesPerView: 3,
+		spaceBetween: 40,
+	  },
+	  1240: {
+		slidesPerView: 4,
+		spaceBetween: 50,
+	  },
+	} 
+    });
