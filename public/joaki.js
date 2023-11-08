@@ -1,5 +1,3 @@
-
-
 /* SLIDES DEL SHOP */
 let slider = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
@@ -33,6 +31,39 @@ function slides(){
         },1500)
     }
 }
+
+
+/* CARDS CARRUSEL HECHO CON SWIPER.JS */
+const swiper = new Swiper('.swiper-container', {
+	
+	slidesPerView: 1,
+	spaceBetween: 10,
+	// init: false,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+
+  
+	breakpoints: {
+	  620: {
+		slidesPerView: 1,
+		spaceBetween: 20,
+	  },
+	  680: {
+		slidesPerView: 2,
+		spaceBetween: 40,
+	  },
+	  920: {
+		slidesPerView: 3,
+		spaceBetween: 40,
+	  },
+	  1240: {
+		slidesPerView: 4,
+		spaceBetween: 50,
+	  },
+	} 
+    });
 
 // Logica del Carrito del lado del cliente (frontEND)
 
@@ -72,35 +103,3 @@ function eliminarCarrito(productId) {
 
 
 
-
-/* CARDS CARRUSEL HECHO CON SWIPER.JS */
-const swiper = new Swiper('.swiper-container', {
-	
-	slidesPerView: 1,
-	spaceBetween: 10,
-	// init: false,
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
-
-  
-	breakpoints: {
-	  620: {
-		slidesPerView: 1,
-		spaceBetween: 20,
-	  },
-	  680: {
-		slidesPerView: 2,
-		spaceBetween: 40,
-	  },
-	  920: {
-		slidesPerView: 3,
-		spaceBetween: 40,
-	  },
-	  1240: {
-		slidesPerView: 4,
-		spaceBetween: 50,
-	  },
-	} 
-    });

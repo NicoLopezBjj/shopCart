@@ -327,3 +327,10 @@ width: 20em !important;
 .overFlow{
     overflow: hidden !important;
 }
+
+/* Busqueda */
+
+.imagenBusqueda{
+    width: 12rem;
+    height: 12rem;
+}
