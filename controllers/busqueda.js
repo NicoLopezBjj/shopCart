@@ -9,7 +9,7 @@ const buscar = async (req,res) =>{
         res.render('resultado', { productos: productosEncontrados ,Producto,user : req.user});
     } else {
         // No se encontraron productos, renderiza una página de "no se encontraron resultados"
-        res.render('no_resultados', { busqueda });
+        res.render('no_resultados', { busqueda , user : req.user });
     }
     } catch (error) {
       console.log(error);
