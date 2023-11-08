@@ -769,6 +769,7 @@ margin-bottom: 0em;
 /* PARTE IZQUIERDA */
 .imagen-producto{
     margin-right: 5em;
+  
 }
 
 /* categorias */
@@ -787,8 +788,9 @@ margin-bottom: 0em;
     border-radius: 0.5em;
     margin-top: 1em;
 }
-.auri-img{
+.imagen-produu{
     width: 35em;
+    padding: 2em;
 }
 /*  */
 .produ-color{
@@ -913,7 +915,38 @@ margin-bottom: 1.5em;
     color: #FF7A17;
 }
 
+
+
+
 /* botones comprar */
+
+
+.D-AddCart{ 
+
+    font-weight: 400;
+    border: 1px solid black;
+    margin-top: 1em;
+    margin-bottom: 2em;
+border-radius: 15em;
+background-color: #FFFFFF;
+
+
+padding: 0.8em 3em 0.8em 3em;
+cursor: pointer;
+transition:  0.5s ease;
+margin-right: 1em;
+
+
+
+    
+   
+}
+.D-AddCart:hover{
+    border: 1px solid #003D29;
+    background-color: #003D29;
+    color: white;
+    }
+
 .comprar-btn{
     font-weight: 400;
     border: 0px solid #231F1E;

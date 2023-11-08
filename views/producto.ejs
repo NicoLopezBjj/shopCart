@@ -16,7 +16,7 @@
   <p><%= product.nombre %></p>
 </div>
 <div class="produ-img">
-  <img src="<%= product.imagen %>" alt="" class="auri-img">
+  <img src="<%= product.imagen %>" alt="" class="imagen-produu">
 </div>
 
 
@@ -73,7 +73,7 @@
 <form action="/carrito/agregar" method="post">
   <button class="comprar-btn" onclick="agregarAlCarrito('<%= product._id %>')">Comprar ahora</button>
   <input type="hidden" name="productId" value="<%= product._id %>">
-  <button class="C-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+  <button class="D-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
 </form>
 </div>
 
