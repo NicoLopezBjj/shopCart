@@ -34,7 +34,7 @@ function slides(){
 
 
 /* CARDS CARRUSEL HECHO CON SWIPER.JS */
-const swiper = new Swiper('.swiper-container', {
+/* const swiper = new Swiper('.swiper-container', {
 	
 	slidesPerView: 1,
 	spaceBetween: 10,
@@ -63,7 +63,46 @@ const swiper = new Swiper('.swiper-container', {
 		spaceBetween: 50,
 	  },
 	} 
-    });
+    }); */
+
+    document.addEventListener("DOMContentLoaded", function() { /* asegura que el codigo js se ejecute después de que el dom este cargado */
+     
+ 
+    // Selecciona todos los contenedores de carruseles
+var swiperContainers = document.querySelectorAll('.swiper-container');
+
+// Recorre cada contenedor 
+swiperContainers.forEach(function (container) {
+  var swiper = new Swiper(container, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: container.querySelector('.swiper-pagination'),
+      clickable: true,
+    },
+    breakpoints: {
+      620: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      680: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      920: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1240: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    }
+  });
+});
+
+});
+
 
 // Logica del Carrito del lado del cliente (frontEND)
 

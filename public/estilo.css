@@ -331,6 +331,10 @@ width: 20em !important;
 /* Busqueda */
 
 .imagenBusqueda{
-    width: 12rem;
-    height: 12rem;
+    width: 15rem;
+    padding: 1em;
+}
+.lineas-busqueda{
+    border-top: 2px solid rgba(0, 0, 0, 0.065);
+    width: 20em;
 }
