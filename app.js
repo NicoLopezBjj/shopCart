@@ -56,7 +56,7 @@ connectDataBase()
 
 // ruta principal
 app.get('/',(req,res)=>{
-    res.render('home',{user: req.user})
+    res.render('home',{user: req.user, products})
 })
     
 app.use(authRouter)
