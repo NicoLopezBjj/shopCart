@@ -140,5 +140,32 @@ function eliminarCarrito(productId) {
 }
 
 
+/* category cards */
+// Envuelve tu código dentro de $(document).ready
+jQuery(document).ready(function() {
+  console.log("joaki.js cargado correctamente");
 
+  // Resto de tu código jQuery aquí
 
+  jQuery(".B-AddCart").text("Añadir al Carrito");
+
+  // Oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
+  jQuery(".contenido").not("#ropa").hide();
+
+  // Manejo de clic en botones de categoría
+  jQuery("#categorias button").click(function() {
+      const targetId = $(this).data("target");
+
+      // Oculta todos los elementos con clase "contenido"
+      jQuery(".contenido").hide();
+
+      // Remueve la clase "selected" de todos los botones
+      jQuery("#categorias button").removeClass("selected");
+
+      // Muestra el elemento con el ID correspondiente
+      jQuery("#" + targetId).show();
+
+      // Agrega la clase "selected" al botón seleccionado
+      jQuery(this).addClass("selected");
+  });
+});
