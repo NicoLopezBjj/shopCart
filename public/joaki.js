@@ -140,36 +140,47 @@ function eliminarCarrito(productId) {
 }
 
 
-/* category cards */
-// Envuelve tu código dentro de $(document).ready
-jQuery(document).ready(function() {
-  console.log("joaki.js cargado correctamente");
 
-  // Resto de tu código jQuery aquí
+// Cargar jQuery desde CDN y utilizar el modo sin conflicto
+document.addEventListener("DOMContentLoaded", function() {
+  // Agregar jQuery desde CDN
+  var script = document.createElement('script');
+  script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+  script.type = 'text/javascript';
+  script.async = true;
+  document.head.appendChild(script);
 
-  jQuery(".B-AddCart").text("Añadir al Carrito");
+  script.onload = function() {
+    // Modo sin conflicto de jQuery
+    jQuery.noConflict();
+    (function($) {
+      // Tu código jQuery aquí
+      console.log("joaki.js cargado correctamente");
 
-  // Oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
-  jQuery(".contenido").not("#ropa").hide();
+      $(".B-AddCart").text("Añadir al Carrito");
 
-  // Manejo de clic en botones de categoría
-  jQuery("#categorias button").click(function() {
-      const targetId = $(this).data("target");
+      // Oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
+      $(".contenido").not("#ropa").hide();
 
-      // Oculta todos los elementos con clase "contenido"
-      jQuery(".contenido").hide();
+      // Manejo de clic en botones de categoría
+      $("#categorias button").click(function() {
+        const targetId = $(this).data("target");
 
-      // Remueve la clase "selected" de todos los botones
-      jQuery("#categorias button").removeClass("selected");
+        // Oculta todos los elementos con clase "contenido"
+        $(".contenido").hide();
 
-      // Muestra el elemento con el ID correspondiente
-      jQuery("#" + targetId).show();
+        // Remueve la clase "selected" de todos los botones
+        $("#categorias button").removeClass("selected");
 
-      // Agrega la clase "selected" al botón seleccionado
-      jQuery(this).addClass("selected");
-  });
+        // Muestra el elemento con el ID correspondiente
+        $("#" + targetId).show();
+
+        // Agrega la clase "selected" al botón seleccionado
+        $(this).addClass("selected");
+      });
+    })(jQuery);
+  };
 });
-
 
 // Logica del contador del carrito
 

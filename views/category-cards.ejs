@@ -12,7 +12,6 @@
       <button class="btn-category" data-target="muebles">Muebles</button>
   </div>
 </section>
-
 <% /* Bucle para cada categoría */ %>
 <% ['ropa', 'libros', 'tecnologia', 'bolsos', 'zapatillas', 'muebles'].forEach(category => { %>
   <div class="contenido" id="<%= category %>">
@@ -55,6 +54,7 @@
                   <button class="B-AddCart">Añadir al carrito</button>
               </div>
           </div>
+        
       <% }); %>
   </div>
 <% }); %>
