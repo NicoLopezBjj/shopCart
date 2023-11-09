@@ -55,12 +55,18 @@ const connectDataBase = async () => {
 connectDataBase()
 
 
-// ruta principal
-app.get('/', (req, res) => {
-    // Filtrar los productos que tienen minishop:true
-    const minishopProducts = Products.filter(product => product.minishop === true);
 
-    res.render('home', { user: req.user, Products: minishopProducts });
+/* ruta principal */
+
+
+app.get('/', async (req, res) => {
+    try {
+        const minishopProducts = await Products.find({ minishop: true }).exec();
+        res.render('home', { user: req.user, products: minishopProducts });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al obtener los productos');
+    }
 });
     
 app.use(authRouter)

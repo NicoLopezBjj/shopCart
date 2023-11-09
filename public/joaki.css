@@ -1187,3 +1187,159 @@ border-radius: 0.3em;
         opacity: 0%;
         }
     
+
+        /* category cards */
+        .margin-all{
+            width: 70%;
+            margin: auto;
+        }
+        .category-hdos{
+            margin-top: 4em;
+        }
+        
+        .btns-categorias{
+          
+            margin: auto !important;
+        }
+        .btn-category{
+            margin-top: 1.5em;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.522);
+            background-color: #FFFFFF;
+            border-radius: 2em;
+            font-size: 1em;
+           margin-right: 1em;
+        
+            padding: 0.8em 1.8em 0.8em 1.8em;
+        }
+        .btn-category.selected {
+            background-color: #003D29; /* Cambia esto al verde deseado */
+            color: #FFFFFF; /* Color de texto en el botón seleccionado */
+        }
+        
+        
+        
+        .contenido{
+            width: 70% !important; 
+            margin: auto !important;
+            justify-content: space-between;
+        
+        
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .B-todoCard{
+           
+                 margin-top: 3em;
+                 font-family: Arial, Helvetica, sans-serif;
+                 
+           }
+           
+           /* div imagenes */
+           .B-CardFotos{
+                 background-color: #F5F6F6;
+                    border: 0px ;
+                 width: 18em;
+                 height: 18em;
+                 border-radius: 0.8em;
+                 display: flex; 
+                margin-bottom: 1em;
+                 justify-content: center;
+                 align-items: center;
+                 overflow: hidden;
+                 position: relative; 
+                 cursor: pointer;
+           }
+           
+           .B-imagenCard{
+        
+           width: 11em;
+           transition:  0.4s ease; 
+           max-width: 100%;
+           
+           }
+           
+           .B-corazonDiv{
+           
+            background-color: #FFFFFF;
+            border: 0;
+            border-radius: 50%;
+           padding: 0.3em 0.5em 0.3em 0.5em;
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+            z-index: 1;
+           }
+           .B-corazon{
+            width: 1.1em;
+           }
+            
+           /* div texto */
+           
+           
+           .B-namePrecio{
+               display: flex;
+               justify-content: space-between;
+           
+           }
+           .B-name{
+           font-size: 0.9em;
+           font-weight: 600;
+           }
+           .B-precio{
+               font-size: 1em;
+               font-weight: 600;
+               
+           }
+           .B-descrip{
+               font-size: 0.7em;
+               color: rgb(86, 85, 85);
+               margin-top: -1em;
+           }
+           
+           .B-stars{
+               display: flex;
+           }
+           .B-estrellasIMG{
+               width: 0.7em;
+           
+           }
+           
+           .B-numeroStar{
+               font-size: 0.65em;
+               margin-left: 0.5em;
+               margin-top: 0.3em;
+           }
+           
+           .B-AddCart{ 
+               margin-top: 0.6em;
+               cursor: pointer;
+               border: 1px solid black;
+               background-color: #FFFFFF;
+               border-radius: 2em;
+               font-size: 0.8em;
+               transition:  0.5s ease;
+           
+               padding: 0.8em 1.8em 0.8em 1.8em;
+              
+           }
+           /* hover tarjeta */
+           .B-imagenCard:hover {
+            transform: scale(1.2);
+        }
+        
+        .B-corazonDiv:hover{
+            background-color: #F9DCDC;
+        }
+        
+        
+        .B-AddCart:hover{
+        border: 1px solid #003D29;
+        background-color: #003D29;
+        color: white;
+        }
+        
+        
