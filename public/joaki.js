@@ -169,3 +169,23 @@ jQuery(document).ready(function() {
       jQuery(this).addClass("selected");
   });
 });
+
+
+// Logica del contador del carrito
+
+async function cambiarCantidad(productId, accion) {
+  try {
+    const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
+    const data = await response.json();
+
+    // Actualiza la cantidad en la interfaz de usuario
+    const cantidadElement = document.querySelector(`#cantidad-${productId}`);
+    cantidadElement.innerText = data.cantidad;
+
+    // Actualiza el precio total en la interfaz de usuario
+    const precioTotalElement = document.querySelector('#precioTotal');
+    precioTotalElement.innerText = `$${data.precioTotal}`;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}

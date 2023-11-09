@@ -2,10 +2,11 @@ const express = require('express')
 const router=express.Router()
 
 const carrito = require ('../controllers/carrito')
+const autenticar = require ('../middlewares/authMiddleware')
 
-router.get('/carrito', carrito.get_carrito)
-router.post('/carrito/agregar',carrito.agregarAlCarrito)
-router.delete('/carrito/eliminar',carrito.eliminarCarrito)
+router.get('/carrito', autenticar,carrito.get_carrito)
+router.post('/carrito/agregar', autenticar,carrito.agregarAlCarrito)
+router.delete('/carrito/eliminar',autenticar ,carrito.eliminarCarrito)
 
 
 
