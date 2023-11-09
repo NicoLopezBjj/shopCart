@@ -11,6 +11,7 @@ const preciosRouter = require('./routes/precios')
 const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
+const products = require('./models/Products')
 
 
 const app=express()
