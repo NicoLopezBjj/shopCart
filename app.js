@@ -11,7 +11,7 @@ const preciosRouter = require('./routes/precios')
 const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
-const products = require('./models/Products')
+const Products = require('./models/Products')
 
 
 const app=express()
@@ -56,9 +56,12 @@ connectDataBase()
 
 
 // ruta principal
-app.get('/',(req,res)=>{
-    res.render('home',{user: req.user, products})
-})
+app.get('/', (req, res) => {
+    // Filtrar los productos que tienen minishop:true
+    const minishopProducts = Products.filter(product => product.minishop === true);
+
+    res.render('home', { user: req.user, Products: minishopProducts });
+});
     
 app.use(authRouter)
 app.use(productsRouter)
