@@ -30,6 +30,9 @@ const productoSchema = new mongoose.Schema({
   },
   minishop:{
     type:Boolean
+  },
+  pagina:{
+    type:Number
   }
 });
 
