@@ -28,9 +28,9 @@
             <p class="cart-precio">$<%= item.producto.precio %></p>
             <div class="agregar-prod">
               <button onclick="cambiarCantidad('<%= item.producto._id %>', 'restar')">-</button>
-              <p><%= item.cantidad %></p>
+              <p id="cantidad-<%= item.producto._id %>"><%= item.cantidad %></p>
               <button onclick="cambiarCantidad('<%= item.producto._id %>', 'sumar')">+</button>
-            </div>
+          </div>
           <% } else { %>
             <p>Precio y cantidad no disponibles</p>
           <% } %>

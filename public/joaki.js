@@ -156,17 +156,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function cambiarCantidad(productId, accion) {
   try {
-    const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
-    const data = await response.json();
+      const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
+      const data = await response.json();
+      console.log(data)
 
-    // Actualiza la cantidad en la interfaz de usuario
-    const cantidadElement = document.querySelector(`#cantidad-${productId}`);
-    cantidadElement.innerText = data.cantidad;
+      const cantidadInput = document.querySelector(`#input-cantidad-${productId}`);
+      const cantidad = parseInt(cantidadInput.value, 10);
+      console.log(cantidad)
+  
+      // Verifica que cantidad sea un número válido
+      if (isNaN(cantidad)) {
+        console.error('Cantidad no válida');
+        return;
+      }
+  
 
-    // Actualiza el precio total en la interfaz de usuario
-    const precioTotalElement = document.querySelector('#precioTotal');
-    precioTotalElement.innerText = `$${data.precioTotal}`;
+      // Actualiza la cantidad en la interfaz de usuario
+      const cantidadElement = document.querySelector(`#cantidad-${productId}`);
+      cantidadElement.innerText = data.cantidad;
+      console.log(data.cantidad)
+
+      // Actualiza el precio total en la interfaz de usuario
+      const precioTotalElement = document.querySelector('#precioTotal');
+      precioTotalElement.innerText = `$${data.precioTotal}`;
   } catch (error) {
-    console.error('Error:', error);
+      console.error('Error:', error);
   }
 }
