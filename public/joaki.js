@@ -1,5 +1,6 @@
 /* SLIDES DEL SHOP */
-let slider = document.querySelector(".slider-contenedor")
+
+let slide = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
 let contador = 1;
 let width = 0; // Valor por defecto en caso de que no haya elementos
@@ -19,14 +20,14 @@ setInterval(function(){
 
 
 function slides(){
-    slider.style.transform = "translate("+(-width*contador)+"px)";
-    slider.style.transition = "transform .8s";
+    slide.style.transform = "translate("+(-width*contador)+"px)";
+    slide.style.transition = "transform .8s";
     contador++;
 
     if(contador == sliderIndividual.length){
         setTimeout(function(){
-            slider.style.transform = "translate(0px)";
-            slider.style.transition = "transform 0s";
+            slide.style.transform = "translate(0px)";
+            slide.style.transition = "transform 0s";
             contador=1;
         },1500)
     }
@@ -111,6 +112,9 @@ function eliminarCarrito(productId) {
 
 
 
+
+
+
 // Cargar jQuery desde CDN y utilizar el modo sin conflicto
 document.addEventListener("DOMContentLoaded", function() {
   // Agregar jQuery desde CDN
@@ -151,6 +155,11 @@ document.addEventListener("DOMContentLoaded", function() {
     })(jQuery);
   };
 });
+
+
+
+
+
 
 // Logica del contador del carrito
 async function cambiarCantidad(productId, accion) {
