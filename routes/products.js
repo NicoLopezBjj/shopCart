@@ -8,6 +8,7 @@ router.get('/shop/categoria/:categoria?',autenticar, products.mostrarCategoria)
 router.get('/shop/marca/:marca?',autenticar,products.mostrarProductosPorMarca)
 router.get('/shop/color/:color?',autenticar,products.mostrarProductosPorColor)
 router.get('/shop/producto/:id',autenticar,products.mostrarProductoPorID)
+router.get('/shop/pagina/:pagina', autenticar, products.shop_get);
   
   
 
