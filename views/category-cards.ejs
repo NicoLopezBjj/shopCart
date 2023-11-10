@@ -1,459 +1,63 @@
+<%- include ('partials/head.ejs') -%>
 
 <section class="margin-all">
-    <h2 class="category-hdos">¡Las mejores ofertas de hoy para ti!</h2>
+  <h2 class="category-hdos">¡Las mejores ofertas de hoy para ti!</h2>
 
-<div class="btns-categorias">
-    <button class="btn-category">Ropa</button>
-    <button class="btn-category">Libros</button>
-    <button class="btn-category">Tecnología</button>
-    <button class="btn-category">Bolsos</button>
-    <button class="btn-category">Zapatillas</button>
-    <button class="btn-category">Muebles</button>
-</div>
+  <div class="btns-categorias" id="categorias">
+      <button class="btn-category selected" data-target="ropa">Ropa</button>
+      <button class="btn-category" data-target="libros">Libros</button>
+      <button class="btn-category" data-target="tecnologia">Tecnología</button>
+      <button class="btn-category" data-target="bolsos">Bolsos</button>
+      <button class="btn-category" data-target="zapatillas">Zapatillas</button>
+      <button class="btn-category" data-target="muebles">Muebles</button>
+  </div>
 </section>
-
-
-
-
-    <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
+<% /* Bucle para cada categoría */ %>
+<% ['ropa', 'libros', 'tecnologia', 'bolsos', 'zapatillas', 'muebles'].forEach(category => { %>
+  <div class="contenido" id="<%= category %>">
+      <% /* Filtrar productos por categoría */ %>
+      <% const categoryProducts = products.filter(product => product.categoria === category); %>
       
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
+      <% /* Bucle para cada producto de la categoría */ %>
+      <% categoryProducts.forEach(product => { %>
+          <!-- toda la card -->
+          <div class="B-todoCard">
+              <!-- fotos de la card -->
+              <div class="B-CardFotos">
+                  <img src="<%= product.imagen %>" alt="" class="B-imagenCard">
+                  <div class="B-corazonDiv">
+                      <img src="img//corazon.svg" alt="" class="B-corazon">
+                  </div>
+              </div>
 
-     <!-- toda la card -->
-<div class="B-todoCard" >
+              <!-- textos -->
+              <div class="B-texto">
+                  <div class="B-namePrecio">
+                      <h4 class="B-name"><%= product.nombre %></h4>
+                      <h3 class="B-precio"><%= product.precio %></h3>
+                  </div>
+                  <p class="B-descrip"><%= product.descripcion %></p>
 
+                  <div class="B-stars">
+                      <div>
+                          <img src="img//star.svg" alt="" class="B-estrellasIMG">
+                          <img src="img//star.svg" alt="" class="B-estrellasIMG">
+                          <img src="img//star.svg" alt="" class="B-estrellasIMG">
+                          <img src="img//star.svg" alt="" class="B-estrellasIMG">
+                          <img src="img//star.svg" alt="" class="B-estrellasIMG">
+                      </div>
+                      <div>
+                          <p class="B-numeroStar">(121)</p>
+                      </div>
+                  </div>
 
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
+                  <button class="B-AddCart">Añadir al carrito</button>
+              </div>
+          </div>
+        
+      <% }); %>
+  </div>
+<% }); %>
 
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     <!-- toda la card -->
-<div class="B-todoCard" >
-
-
-    <!-- fotos de la card -->
-    <div class="B-CardFotos">
-    
-     
-      <img src="img//parlantin.png" alt="" class="B-imagenCard">
-      
-    
-    
-    <div class="B-corazonDiv">
-       <img src="img//corazon.svg" alt="" class="B-corazon">
-    </div>
-    </div>
-    
-    
-    <!-- textos -->
-    <div class="B-texto">
-    
-     
-    <div class="B-namePrecio">
-    
-    <h4 class="B-name">HomePod mini</h4>
-    
-    <h3 class="B-precio">$239.00</h3>
-    
-    </div>
-    
-    
-    
-    <p class="B-descrip">Table with air purifier, stained veneer/black</p>
-    
-    <div class="B-stars">
-      <div>
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    <img src="img//star.svg" alt="" class="B-estrellasIMG">
-    </div>
-    
-    <div>
-      <p class="B-numeroStar">(121)</p>
-    </div>
-    
-    </div>
-    
-    <button class="B-AddCart"> Add to Cart</button>
-    
-    </div>
-    
-    </div>
-
-     
-    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/joaki.js"></script>

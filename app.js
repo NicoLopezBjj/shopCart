@@ -11,6 +11,7 @@ const preciosRouter = require('./routes/precios')
 const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
+const Products = require('./models/Products')
 
 const flash = require('connect-flash');
 const app=express()
@@ -54,10 +55,19 @@ const connectDataBase = async () => {
 connectDataBase()
 
 
-// ruta principal
-app.get('/',(req,res)=>{
-    res.render('home',{user: req.user})
-})
+
+/* ruta principal */
+
+
+app.get('/', async (req, res) => {
+    try {
+        const minishopProducts = await Products.find({ minishop: true }).exec();
+        res.render('home', { user: req.user, products: minishopProducts });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al obtener los productos');
+    }
+});
     
 app.use(authRouter)
 app.use(productsRouter)

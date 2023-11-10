@@ -34,7 +34,7 @@ const get_carrito = async (req,res) =>{
 };
 
 const agregarAlCarrito = async (req, res) => {
-  const { productId } = req.body;
+  const { productId} = req.body;
 
   try {
     const usuario = await User.findById(req.user._id);
@@ -50,7 +50,7 @@ const agregarAlCarrito = async (req, res) => {
     if (existeCartItem) {
       existeCartItem.cantidad += 1; 
     } else {
-      await usuario.agregarAlCarrito(productId, 1);
+      await usuario.agregarAlCarrito(productId,1);
     }
 
     return res.redirect('/carrito');
@@ -99,9 +99,32 @@ const eliminarCarrito = async (req,res) => {
 }
 
 
+const cambiarCantidad = async (req, res) => {
+  const { productId, accion } = req.params;
+  const { cantidad } = req.body; // toma  la cantidad desde el cliente
+  console.log('controlador info :',productId,accion,cantidad)
+  try {
+    // Obtiene el usuario actual
+    const user = await User.findById(req.user._id);
+
+    // Llama al método agregarAlCarrito para actualizar la cantidad
+    await user.agregarAlCarrito(productId, cantidad, accion);
+
+    // Devuelve la nueva información del carrito al cliente
+    res.json({
+      cantidad: user.cart.items.find(item => item.productId.toString() === productId).cantidad,
+      precioTotal: user.cart.precioTotal
+    });
+  } catch (error) {
+    console.log('Error:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+};
+
 
 module.exports = {
     get_carrito,
     agregarAlCarrito,
-    eliminarCarrito
+    eliminarCarrito,
+    cambiarCantidad
 }

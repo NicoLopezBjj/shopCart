@@ -26,14 +26,19 @@
         <div class="cart-pyc">
           <% if (item.producto) { %>
             <p class="cart-precio">$<%= item.producto.precio %></p>
-            <p class="cart-cantidad">Cantidad: <%= item.cantidad %></p>
+            <div class="agregar-prod">
+              <button onclick="cambiarCantidad('<%= item.producto._id %>', 'restar')">-</button>
+              <p id="cantidad-<%= item.producto._id %>"><%= item.cantidad %></p>
+              <button onclick="cambiarCantidad('<%= item.producto._id %>', 'sumar')">+</button>
+              </div>
+              <p id="precio-total-<%= item.producto._id %>">$<%= item.producto.precio * item.cantidad %></p>
           <% } else { %>
             <p>Precio y cantidad no disponibles</p>
           <% } %>
           <form action="/carrito/eliminar?_method=DELETE" method="post">
             <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="productId" value="<%= item.producto._id %>">
-            <button  onclick="elimnarCarrito('<%= item.producto._id %>')"><i class="bi bi-trash3"></i>Eliminar producto</button>
+            <button class="C-AddCart" onclick="elimnarCarrito('<%= item.producto._id %>')"><i class="bi bi-trash3"></i>Eliminar producto</button>
           </form>
         </div>
       </div>
@@ -122,23 +127,25 @@
  </div>
 
  <div class="sub-total">
-    <p>Sub Total</p>
-    <p> $<%= precioTotal %></p>
- </div>
+  <p>Sub Total</p>
+  <p id="precioTotal">$<%= precioTotal %></p>
+</div>
 
- <div class="linea-cart"></div>
+<div class="linea-cart"></div>
 
- <div class="total-carrito">
-    <p>Total</p>
-    <P>$<%= precioTotal %></P>
- </div>
+<div class="total-carrito">
+  <p>Total</p>
+  <p id="precioTotal">$<%= precioTotal %></p>
+</div>
          
- <button class="btn-pagar-cart">Pagar $ <%= precioTotal %> </button>
+<button class="btn-pagar-cart">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
 
 
 
 
 
 </div>
-<script src="/joaki.js"></script>
+
 </section>
+
+<%- include ('partials/footer.ejs') -%>

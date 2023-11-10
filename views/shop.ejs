@@ -27,12 +27,10 @@
 
      <!-- PARTE DE 1 2 3 BOOTNES -->
      <section class="botones-numeros">
-
-      <button class="btn-num">1</button>
-      <button class="btn-num">2</button>
-      <button class="btn-num">3</button>
-
-     </section>
+      <% for (let i = 1; i <= 3; i++) { %>
+        <a href="/shop/pagina/<%= i %>"><button class="btn-num"><%= i %></button></a>
+      <% } %>
+    </section>
 
      <section class="produ-semanales-shop">
         <h2>Productos populares de la semana</h2>

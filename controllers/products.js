@@ -4,13 +4,19 @@ const Producto=require('../models/Products')
 
 const shop_get = async (req, res) => {
   try {
-      const products = await Producto.find();
-      res.render('shop', { user: req.user, products  });
+    // Obtiene el número de la página desde los parámetros de la solicitud o establece el valor predeterminado en 1
+    const pagina = parseInt(req.params.pagina) || 1;
+
+    // Obtiene los productos de la página solicitada
+    const products = await Producto.find({ pagina });
+
+    res.render('shop', { user: req.user, products, pagina });
   } catch (error) {
     console.error(error);
     res.render('error404');
   }
 }
+
 
 const mostrarCategoria = async (req, res) => {
   try {

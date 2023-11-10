@@ -47,9 +47,12 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
   }
 };
 
-userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
+
+userSchema.methods.agregarAlCarrito = async function (productId, cantidad = 1, accion) {
+  console.log('productid method:',productId)
+  console.log('cantidad method:',cantidad)
+  console.log('accion method:',accion)
   try {
-    
     const producto = await Producto.findById(productId);
 
     if (!producto) {
@@ -62,7 +65,12 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
 
     if (existeCartItem) {
       // Si el producto ya está en el carrito, actualiza la cantidad
-      existeCartItem.cantidad += cantidad;
+      if (accion === 'restar') {
+        existeCartItem.cantidad -= cantidad;
+      } else {
+        // Si la acción no es 'restar', se asume 'sumar' o cualquier otra cosa
+        existeCartItem.cantidad += cantidad;
+      }
     } else {
       // Si el producto no está en el carrito, agrégalo
       this.cart.items.push({ productId, cantidad });
@@ -71,9 +79,15 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
     if (typeof this.cart.precioTotal !== 'number') {
       this.cart.precioTotal = 0;
     }
-    
-    this.cart.precioTotal += producto.precio * cantidad;
-    
+
+    // Actualiza el precio total basado en la acción
+    if (accion === 'restar') {
+      this.cart.precioTotal -= producto.precio * cantidad;
+    } else {
+      // Si la acción no es 'restar', se asume 'sumar' o cualquier otra cosa
+      this.cart.precioTotal += producto.precio * cantidad;
+    }
+
     await this.save();
 
     return this;
@@ -81,6 +95,9 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad) {
     throw new Error(error);
   }
 };
+
+
+
 
 userSchema.methods.eliminarCarrito = async function(productId) {
   const itemEnCarrito = this.cart.items.find(item => item.productId.toString() === productId);

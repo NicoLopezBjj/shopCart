@@ -33,37 +33,7 @@ function slides(){
 }
 
 
-/* CARDS CARRUSEL HECHO CON SWIPER.JS */
-/* const swiper = new Swiper('.swiper-container', {
-	
-	slidesPerView: 1,
-	spaceBetween: 10,
-	// init: false,
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
 
-  
-	breakpoints: {
-	  620: {
-		slidesPerView: 1,
-		spaceBetween: 20,
-	  },
-	  680: {
-		slidesPerView: 2,
-		spaceBetween: 40,
-	  },
-	  920: {
-		slidesPerView: 3,
-		spaceBetween: 40,
-	  },
-	  1240: {
-		slidesPerView: 4,
-		spaceBetween: 50,
-	  },
-	} 
-    }); */
 
     document.addEventListener("DOMContentLoaded", function() { /* asegura que el codigo js se ejecute después de que el dom este cargado */
      
@@ -141,4 +111,76 @@ function eliminarCarrito(productId) {
 
 
 
+// Cargar jQuery desde CDN y utilizar el modo sin conflicto
+document.addEventListener("DOMContentLoaded", function() {
+  // Agregar jQuery desde CDN
+  var script = document.createElement('script');
+  script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+  script.type = 'text/javascript';
+  script.async = true;
+  document.head.appendChild(script);
 
+  script.onload = function() {
+    // Modo sin conflicto de jQuery
+    jQuery.noConflict();
+    (function($) {
+      // Tu código jQuery aquí
+      console.log("joaki.js cargado correctamente");
+
+      $(".B-AddCart").text("Añadir al Carrito");
+
+      // Oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
+      $(".contenido").not("#ropa").hide();
+
+      // Manejo de clic en botones de categoría
+      $("#categorias button").click(function() {
+        const targetId = $(this).data("target");
+
+        // Oculta todos los elementos con clase "contenido"
+        $(".contenido").hide();
+
+        // Remueve la clase "selected" de todos los botones
+        $("#categorias button").removeClass("selected");
+
+        // Muestra el elemento con el ID correspondiente
+        $("#" + targetId).show();
+
+        // Agrega la clase "selected" al botón seleccionado
+        $(this).addClass("selected");
+      });
+    })(jQuery);
+  };
+});
+
+// Logica del contador del carrito
+async function cambiarCantidad(productId, accion) {
+  try {
+    // Actualiza la cantidad en la interfaz de usuario antes de enviar la solicitud
+    const cantidadElement = document.querySelector(`#cantidad-${productId}`);
+    
+    if (cantidadElement) {
+      cantidadElement.innerText = accion === 'sumar' ? parseInt(cantidadElement.innerText, 10) + 1 : parseInt(cantidadElement.innerText, 10) - 1;
+    } else {
+      console.error('Elemento de cantidad no encontrado en el DOM');
+      return;
+    }
+
+    // Realiza la solicitud al servidor para actualizar la cantidad
+    const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
+    const data = await response.json();
+     console.log(data)
+
+    // Actualiza el precio total del producto en la interfaz de usuario
+    const precioTotalElement = document.querySelector(`#precio-total-${productId}`);
+    precioTotalElement.innerText = `$${data.precioTotal}`;
+    console.log(precioTotalProducto)
+
+    // Actualiza el precio total en la interfaz de usuario
+    const precioTotalGlobalElement = document.querySelector('#precioTotalCarrito');
+    precioTotalGlobalElement.innerText = `$${data.precioTotal}`;
+    console.log(precioTotalCarrito)
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
