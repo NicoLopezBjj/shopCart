@@ -30,7 +30,8 @@
               <button onclick="cambiarCantidad('<%= item.producto._id %>', 'restar')">-</button>
               <p id="cantidad-<%= item.producto._id %>"><%= item.cantidad %></p>
               <button onclick="cambiarCantidad('<%= item.producto._id %>', 'sumar')">+</button>
-          </div>
+              </div>
+              <p id="precio-total-<%= item.producto._id %>">$<%= item.producto.precio * item.cantidad %></p>
           <% } else { %>
             <p>Precio y cantidad no disponibles</p>
           <% } %>
@@ -126,18 +127,18 @@
  </div>
 
  <div class="sub-total">
-    <p>Sub Total</p>
-    <p> $<%= precioTotal %></p>
- </div>
+  <p>Sub Total</p>
+  <p id="precioTotal">$<%= precioTotal %></p>
+</div>
 
- <div class="linea-cart"></div>
+<div class="linea-cart"></div>
 
- <div class="total-carrito">
-    <p>Total</p>
-    <P>$<%= precioTotal %></P>
- </div>
+<div class="total-carrito">
+  <p>Total</p>
+  <p id="precioTotal">$<%= precioTotal %></p>
+</div>
          
- <button class="btn-pagar-cart">Pagar $ <%= precioTotal %> </button>
+<button class="btn-pagar-cart">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
 
 
 

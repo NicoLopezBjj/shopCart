@@ -153,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Logica del contador del carrito
-
 async function cambiarCantidad(productId, accion) {
   try {
     // Actualiza la cantidad en la interfaz de usuario antes de enviar la solicitud
@@ -169,13 +168,19 @@ async function cambiarCantidad(productId, accion) {
     // Realiza la solicitud al servidor para actualizar la cantidad
     const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
     const data = await response.json();
+     console.log(data)
+
+    // Actualiza el precio total del producto en la interfaz de usuario
+    const precioTotalElement = document.querySelector(`#precio-total-${productId}`);
+    precioTotalElement.innerText = `$${data.precioTotal}`;
+    console.log(precioTotalProducto)
 
     // Actualiza el precio total en la interfaz de usuario
-    const precioTotalElement = document.querySelector('#precioTotal');
-    precioTotalElement.innerText = `$${data.precioTotal}`;
+    const precioTotalGlobalElement = document.querySelector('#precioTotalCarrito');
+    precioTotalGlobalElement.innerText = `$${data.precioTotal}`;
+    console.log(precioTotalCarrito)
 
   } catch (error) {
     console.error('Error:', error);
   }
 }
-
