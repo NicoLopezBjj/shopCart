@@ -5,26 +5,110 @@
     <div class="d-flex flex-column align-items-center text-center justify-content-center ancho pt-3 mx-auto">
         <div class="d-flex flex-column borde p-4">
             <h4 class="align-self-start">Crear cuenta</h4>
-                <form action="/signup" method="post" class="d-flex flex-column">
-                    <p class="align-self-start mb-1">Tu nombre</p>
-                    <input type="text" name="nombre" class="input p-1 form-control" placeholder="Nombre y apellido">
-                    <p class="align-self-start mb-1">Correo electronico</p>
-                    <input type="text" name="email" class="input p-1 form-control" placeholder="Email">
-                    <p class="align-self-start mb-1 pt-2">Contraseña</p>
-                    <input type="password" name="password" class="input p-1 form-control" placeholder="Debe tener al menos 6 caracteres">
-                    <div class="d-flex justify-content-evenly pt-1 me-5">
-                        <i class="bi bi-info alerta"></i>
-                        <p class="achicar">La contraseña debe tener al menos 6 caracteres</p>
-                    </div>
-                    <button type="submit" class="btn btnVerde mt-2 hoverVerde">Continuar</button>
-                </form>
-            <p class="align-self-start mt-2">Al crear una cuenta, aceptas las <a href="" class="hoverEnlace">Condiciones de uso</a>
-                y el <a href="" class="hoverEnlace">Aviso de privacidad</a> de Amazon</p>
+
+
+            <form id="signupForm" method="post" class="d-flex flex-column">
+                <p class="align-self-start mb-1">Tu nombre</p>
+                <input type="text" id="nombre" name="nombre" class="input p-1 form-control" placeholder="Nombre y apellido">
+                <span id="nombreError" class="error"></span>
+                <p class="align-self-start mb-1">Correo electrónico</p>
+                <input type="text" id="correo" name="email" class="input p-1 form-control" placeholder="Email">
+                <span id="correoError" class="error"></span>
+                <p class="align-self-start mb-1 pt-2">Contraseña</p>
+                <input type="password" id="password" name="password" class="input p-1 form-control" placeholder="Debe tener al menos 6 caracteres">
+                <span id="passwordError" class="error"></span>
+                <div class="d-flex justify-content-evenly pt-1 me-5">
+                    <i class="bi bi-info alerta"></i>
+                    <p class="achicar">La contraseña debe tener al menos 6 caracteres</p>
+                </div>
+                <input type="submit" class="btn btnVerde mt-2 hoverVerde" value="Continuar"></input>
+            </form>
+            
+            <p class="align-self-start mt-2">Al crear una cuenta, aceptas las <a href="" class="hoverEnlace">Condiciones de uso</a> y el <a href="" class="hoverEnlace">Aviso de privacidad</a> de Amazon</p>
             <hr>
             <div class="d-flex pt-5">
-                <p>¿Ya tienes una cuenta?</p><a href="/signin" class="ps-1 hoverEnlace">Iniciar sesion<i class="bi bi-caret-right-fill ps-1 achicar"></i></a>
+                <p>¿Ya tienes una cuenta?</p><a href="/signin" class="ps-1 hoverEnlace">Iniciar sesión<i class="bi bi-caret-right-fill ps-1 achicar"></i></a>
             </div>
-        </div>
-    </div>
+            
+            <!--  mostrar mensajes de error -->
+            <div id="signupError"></div>
+            <script>
+                document.getElementById("signupForm").addEventListener("submit", async function (event) {
+                    event.preventDefault(); // Previene el comportamiento predeterminado del formulario
+            
+                    let nombre = document.getElementById("nombre").value;
+                    let correo = document.getElementById("correo").value;
+                    let password = document.getElementById("password").value;
+            
+                    let nombreError = document.getElementById("nombreError");
+                    let correoError = document.getElementById("correoError");
+                    let passwordError = document.getElementById("passwordError");
+            
+                    let isValid = true;
+            
+                    // Validar el campo de nombre y apellido
+                    if (nombre === "") {
+                        nombreError.innerHTML = "Este campo es obligatorio.";
+                        isValid = false;
+                    } else if (nombre.length > 15) {
+                        nombreError.innerHTML = "El nombre debe tener un máximo de 15 caracteres.";
+                        isValid = false;
+                    } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+                        nombreError.innerHTML = "Solo se permiten letras y espacios en el nombre.";
+                        isValid = false;
+                    } else {
+                        nombreError.innerHTML = "";
+                    }
+            
+                    // Validar el campo de correo electrónico
+                    if (correo === "") {
+                        correoError.innerHTML = "Este campo es obligatorio.";
+                        isValid = false;
+                    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(correo) || !correo.endsWith(".com")) {
+                        correoError.innerHTML = "Ingrese un correo electrónico válido";
+                        isValid = false;
+                    } else {
+                        correoError.innerHTML = "";
+                    }
+            
+                    // Validar el campo de contraseña
+                    if (password === "") {
+                        passwordError.innerHTML = "Este campo es obligatorio.";
+                        isValid = false;
+                    } else if (password.length < 6) {
+                        passwordError.innerHTML = "La contraseña debe tener al menos 6 caracteres.";
+                        isValid = false;
+                    } else {
+                        passwordError.innerHTML = "";
+                    }
+            
+                    if (isValid) {
+            try {
+                const response = await fetch("/signup", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ nombre, email: correo, password })
+                });
+
+                if (response.ok) {
+                    window.location.href = "/signin";
+                } else {
+                    const errorData = await response.json();
+                    console.error("Error en el servidor:", errorData.error);
+                    
+                    // Muestra el mensaje de error al usuario
+                    signupError.innerHTML = errorData.message || "Error en el servidor";
+                }
+            } catch (error) {
+                console.error("Error al enviar la solicitud:", error);
+                // Muestra el mensaje de error al usuario
+                signupError.innerHTML = "Error al enviar la solicitud";
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -12,7 +12,7 @@ const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
 
-
+const flash = require('connect-flash');
 const app=express()
 
 // MiddleWare
@@ -28,7 +28,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
 }))
-
+app.use(flash());
 app.use(passport.initialize())
 app.use(passport.session())
 

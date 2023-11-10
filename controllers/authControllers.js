@@ -5,6 +5,14 @@ require ('../config/passport')
 
 const signup_post = async (req, res) => {
     const { email, password, nombre } = req.body;
+
+
+      // Validar en el lado del servidor
+    if (!nombre || !email || !password) {
+        return res.status(400).json({ error: 'Todos los campos son obligatorios' });
+    }
+
+
     try {
         const hashedPassword = await bcrypt.hash(password, 10); // se encripta la contraseña
         const user = await User.create({ email, password: hashedPassword, nombre }) // crea el usuario
@@ -13,7 +21,11 @@ const signup_post = async (req, res) => {
 
     } catch (err) {
         console.log(err);
-        res.render('error404');
+         // Manejar errores específicos, como correo electrónico duplicado
+         if (err.code === 11000 && err.keyPattern && err.keyPattern.email) {
+            return res.status(400).json({ error: 'El correo electrónico ya está registrado', message: 'Este correo electronico ya esta registrado!' });
+        }
+
     }
 }
 
