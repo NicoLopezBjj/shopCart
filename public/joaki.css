@@ -1061,14 +1061,13 @@ border-radius: 0.3em;
     /* CARD CARRUSEL EN EL HOME Y SHOP */
         
 
-.containerr{
-    overflow: hidden;
-    }
-    
+
     .swiper-slide{
         padding-right: 25em;
+        
       
     }
+   
      /* Estilos de las tarjetas */
     .todoCard {
         margin-top: 2em;
@@ -1180,11 +1179,16 @@ border-radius: 0.3em;
         color: white;
     }
     
+    .mesasa{
+        padding-right: 35em !important;
+    }
     #hidden-card{
     opacity: 0%;
+   position: absolute;
     }
     #hidden-card2{
         opacity: 0%;
+       position: absolute;
         }
     
 
@@ -1354,4 +1358,25 @@ border-radius: 0.3em;
 }
 
 
-    
+
+body ::-webkit-scrollbar {
+  
+    height: 0.3em;
+    width: 12em;
+    background-color: #c7c6c6; 
+  }
+  
+body::-webkit-scrollbar-button {
+    width: 11em;       
+  }
+  
+ body ::-webkit-scrollbar-thumb {
+    background-color: black;    
+    border-radius: 2em;      
+  
+   pointer-events: none;
+  }
+
+
+
+

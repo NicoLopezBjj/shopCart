@@ -56,11 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         1240: { slidesPerView: 4, spaceBetween: 50 },
       },
       on: {
-        slideChangeTransitionStart: function () {
-          // Actualiza el color de fondo de la barra de progreso al cambiar de diapositiva
-          var pagination = container.querySelector('.swiper-pagination');
-          pagination.style.backgroundColor = '#000'; // Cambia el color al negro
-        },
+       
       },
     });
   });
@@ -186,3 +182,8 @@ async function cambiarCantidad(productId, accion) {
     console.error('Error:', error);
   }
 }
+
+
+
+
+
