@@ -35,44 +35,37 @@ function slides(){
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  var swiperContainers = document.querySelectorAll('.swiper-container');
 
-    document.addEventListener("DOMContentLoaded", function() { /* asegura que el codigo js se ejecute después de que el dom este cargado */
-     
- 
-    // Selecciona todos los contenedores de carruseles
-var swiperContainers = document.querySelectorAll('.swiper-container');
-
-// Recorre cada contenedor 
-swiperContainers.forEach(function (container) {
-  var swiper = new Swiper(container, {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: container.querySelector('.swiper-pagination'),
-      clickable: true,
-    },
-    breakpoints: {
-      620: {
-        slidesPerView: 1,
-        spaceBetween: 20,
+  swiperContainers.forEach(function (container) {
+    var swiper = new Swiper(container, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: container.querySelector('.swiper-pagination'),
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
       },
-      680: {
-        slidesPerView: 2,
-        spaceBetween: 40,
+      breakpoints: {
+        620: { slidesPerView: 1, spaceBetween: 20 },
+        680: { slidesPerView: 2, spaceBetween: 40 },
+        920: { slidesPerView: 3, spaceBetween: 40 },
+        1240: { slidesPerView: 4, spaceBetween: 50 },
       },
-      920: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+      on: {
+        slideChangeTransitionStart: function () {
+          // Actualiza el color de fondo de la barra de progreso al cambiar de diapositiva
+          var pagination = container.querySelector('.swiper-pagination');
+          pagination.style.backgroundColor = '#000'; // Cambia el color al negro
+        },
       },
-      1240: {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
-    }
+    });
   });
 });
 
-});
 
 
 // Logica del Carrito del lado del cliente (frontEND)

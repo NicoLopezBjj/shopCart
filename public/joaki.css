@@ -1342,4 +1342,16 @@ border-radius: 0.3em;
         color: white;
         }
         
-        
+
+
+
+
+
+/* Estilos del contenedor con desplazamiento horizontal */
+.containerr {
+   
+    overflow-x: scroll;
+}
+
+
+    
