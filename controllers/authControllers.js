@@ -16,7 +16,6 @@ const signup_post = async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(password, 10); // se encripta la contraseña
         const user = await User.create({ email, password: hashedPassword, nombre }) // crea el usuario
-        await user.save();
         res.redirect('/signin');
 
     } catch (err) {
@@ -33,9 +32,10 @@ const signup_get = async (req,res) =>{
     res.render('signup')
 }
 
-const signin_get = async (req,res) =>{
-    res.render('signin')
+const signin_get = async (req, res) => {
+    res.render('signin', { messages: req.flash('error') || [] }); // Pasar mensajes de error a la vista
 }
+
 
 
 const signin_post = passport.authenticate('local', {

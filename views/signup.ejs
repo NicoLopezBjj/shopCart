@@ -20,18 +20,19 @@
                 <div class="d-flex justify-content-evenly pt-1 me-5">
                     <i class="bi bi-info alerta"></i>
                     <p class="achicar">La contraseña debe tener al menos 6 caracteres</p>
+                
                 </div>
                 <input type="submit" class="btn btnVerde mt-2 hoverVerde" value="Continuar"></input>
             </form>
+             <!--  mostrar mensajes de error -->
+             <div id="signupError" style="color: red; font-size: 1.4em;"></div>
             
             <p class="align-self-start mt-2">Al crear una cuenta, aceptas las <a href="" class="hoverEnlace">Condiciones de uso</a> y el <a href="" class="hoverEnlace">Aviso de privacidad</a> de Amazon</p>
             <hr>
             <div class="d-flex pt-5">
                 <p>¿Ya tienes una cuenta?</p><a href="/signin" class="ps-1 hoverEnlace">Iniciar sesión<i class="bi bi-caret-right-fill ps-1 achicar"></i></a>
             </div>
-            
-            <!--  mostrar mensajes de error -->
-            <div id="signupError"></div>
+      
             <script>
                 document.getElementById("signupForm").addEventListener("submit", async function (event) {
                     event.preventDefault(); // Previene el comportamiento predeterminado del formulario
