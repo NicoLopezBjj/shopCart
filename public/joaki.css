@@ -563,14 +563,37 @@ margin-top: 4em;
 .prod-carrito{
     display: flex;
     align-items: center;
+    margin-bottom: 1em;
+   
+    justify-content: space-between;
 }
 
 .img-producto-carrito{
+    max-width: 80%;
+ 
+}
+.img-div-carrito{
     width: 10em;
+    height: 10em;
     background-color: #F7F5F7;
     border-radius: 0.3em;
     margin-right: 2em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
+.imagen-nombre{
+    display: flex;
+    align-items: center;
+}
+.cart-pyc{
+    
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cart-nombre{
     margin-right: 10em;
 }
