@@ -655,6 +655,10 @@ margin-bottom: 0em;
   margin-top: 1em;
 }
 
+.opcion-check {
+    display: none;
+}
+
 
 .completar-datos input{
     display: block;

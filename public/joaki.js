@@ -187,3 +187,24 @@ async function cambiarCantidad(productId, accion) {
 
 
 
+
+/* check */
+function mostrarOpcion(opcion) {
+  // Oculta todas las opciones
+  document.querySelectorAll('.opcion-check').forEach(function (opcionDiv) {
+    opcionDiv.style.display = 'none';
+  });
+
+  // Muestra la opción seleccionada
+  document.getElementById(opcion).style.display = 'block';
+
+  // hace que desaparezca el div para popner datos de la tarjeta
+  var flexRadioDefault1 = document.getElementById('flexRadioDefault1');
+  var desapareceeDiv = document.querySelector('.desaparecee');
+
+  if (flexRadioDefault1.checked) {
+    desapareceeDiv.style.display = 'none';
+  } else {
+    desapareceeDiv.style.display = 'block';
+  }
+}
