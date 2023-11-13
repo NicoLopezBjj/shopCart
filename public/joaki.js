@@ -104,7 +104,7 @@ function eliminarCarrito(productId) {
 
 
 
-// Cargar jQuery desde CDN y utilizar el modo sin conflicto
+// minishop
 document.addEventListener("DOMContentLoaded", function() {
   // Agregar jQuery desde CDN
   var script = document.createElement('script');
@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Agrega la clase "selected" al botón seleccionado
         $(this).addClass("selected");
+        console.log(product.ropa)
       });
     })(jQuery);
   };

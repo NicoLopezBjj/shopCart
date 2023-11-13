@@ -5,16 +5,16 @@
 
   <div class="btns-categorias" id="categorias">
       <button class="btn-category selected" data-target="ropa">Ropa</button>
-      <button class="btn-category" data-target="libros">Libros</button>
-      <button class="btn-category" data-target="tecnologia">Tecnología</button>
-      <button class="btn-category" data-target="bolsos">Bolsos</button>
-      <button class="btn-category" data-target="zapatillas">Zapatillas</button>
-      <button class="btn-category" data-target="muebles">Muebles</button>
+      <button class="btn-category" data-target="Libros">Libros</button>
+      <button class="btn-category" data-target="Tecnologia">Tecnología</button>
+      <button class="btn-category" data-target="Bolsos">Bolsos</button>
+      <button class="btn-category" data-target="Zapatillas">Zapatillas</button>
+      <button class="btn-category" data-target="Muebles">Muebles</button>
   </div>
 </section>
-<% ['ropa', 'libros', 'tecnologia', 'bolsos', 'zapatillas', 'muebles'].forEach(category => { %>
+<% ['ropa', 'Libros', 'Tecnologia', 'Bolsos', 'Zapatillas', 'Muebles'].forEach(category => { %>
   <div class="contenido" id="<%= category %>">
-    <h2 class="category-hdos">¡Productos de <%= category %>!</h2>
+  
     <% const categoryProducts = products.filter(product => product.categoria === category); %>
     <% categoryProducts.forEach(product => { %>
       <!-- Toda la card -->
@@ -31,9 +31,9 @@
         <div class="B-texto">
           <div class="B-namePrecio">
             <h4 class="B-name"><%= product.nombre %></h4>
-            <h3 class="B-precio"><%= product.precio %></h3>
+            <h3 class="B-precio">$<%= product.precio %></h3>
           </div>
-          <p class="B-descrip"><%= product.descripcion %></p>
+        
 
           <div class="B-stars">
             <div>
