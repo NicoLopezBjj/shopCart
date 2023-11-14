@@ -5,9 +5,9 @@
 
 <section class="d-flex justify-content-between seccionBusqueda p-4">
     <div class="d-flex justify-content-between">
-      <a href="/shop/producto/<%= product.id %>"><img src="<%= product.imagen %>" alt="" class="auri-img imgBusqueda"></a>
+      <a href="/shop/producto/<%= product.id %>" class="enlace-sacar"><img src="<%= product.imagen %>" alt="" class="auri-img imgBusqueda">
       <div class="d-flex flex-column justify-content-center ps-3">
-        <h4 class="align-items-center "><strong><%= product.nombre %></strong></h4>
+        <h4 class="align-items-center "><strong><%= product.nombre %></strong></h4></a>
         <p> <strong>Categoria:</strong> <%= product.categoria %></p>
       </div>
     </div>

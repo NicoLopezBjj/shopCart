@@ -39,15 +39,25 @@
 <div class="lineas-prod"></div>
 </div>
 <!-- circulosssssss -->
-<div class="produ-colores">
-<h4>Elije el color</h4>
-<div class="prod-colores">
-<a href=""><img src="/img/circulo-n.png" alt=""  class="bolaN"></a>
-<a href=""><img src="/img/circulo-b.png" alt="" class="bolaB"></a>
-</div>
-<div class="lineas-prod"></div>
+<% if (productosCategoria.length > 1) { %>
+  <div class="produ-colores">
+    <h4>Elije el color</h4>
+    <div class="prod-colores">
+      <% for (const productoCategoria of productosCategoria) { %>
+        <% if (productoCategoria._id.toString() !== product._id.toString()) { %>
+          <a href="/shop/producto/<%= productoCategoria._id %>">
+            <img src="<%= productoCategoria.imagen %>" alt="" class="bola"<%= productoCategoria.color.charAt(0).toUpperCase() %>>
+          </a>
+        <% } %>
+      <% } %>
+      <div class="lineas-prod"></div>
+    </div>
+  </div>
+<% } %>
 
-</div>
+
+
+
 
 <div class="produ-comprar">
 <div class="prod-add">
