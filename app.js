@@ -12,6 +12,8 @@ const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
 const Products = require('./models/Products')
+const obtenerProductosMinishop = require('./controllers/products')
+const error404 = require('./controllers/error404')
 
 const flash = require('connect-flash');
 const app=express()
@@ -58,24 +60,12 @@ connectDataBase()
 
 /* ruta principal */
 
-
-app.get('/', async (req, res) => {
-    try {
-        const minishopProducts = await Products.find({ minishop: true }).exec();
-        res.render('home', { user: req.user, products: minishopProducts });
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al obtener los productos');
-    }
-});
+app.get('/', obtenerProductosMinishop.obtenerProductosMinishop)
     
 app.use(authRouter)
 app.use(productsRouter)
 app.use(preciosRouter)
 app.use(carritoRouter)
 app.use(busquedaRouter)
-
-app.use((req, res, next) => {
-    res.status(404).render('error404');
-});
+app.use(error404);
 

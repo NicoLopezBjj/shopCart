@@ -67,12 +67,22 @@ const mostrarProductoPorID = async (req, res) => {
   }
 }
 
+const obtenerProductosMinishop = async (req, res) => {
+  try {
+      const minishopProducts = await Producto.find({ minishop: true }).exec();
+      res.render('home', { user: req.user, products: minishopProducts });
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error al obtener los productos');
+  }
+};
+
 
 module.exports={
     shop_get,
     mostrarCategoria,
     mostrarProductosPorMarca,
     mostrarProductosPorColor,
-    mostrarProductoPorID
-    
+    mostrarProductoPorID,
+    obtenerProductosMinishop
 }
