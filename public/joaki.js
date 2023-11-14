@@ -154,16 +154,6 @@ document.addEventListener("DOMContentLoaded", function() {
 // Logica del contador del carrito
 async function cambiarCantidad(productId, accion,cantidad) {
   try {
-    // Actualiza la cantidad en la interfaz de usuario antes de enviar la solicitud
-    const cantidadElement = document.querySelector(`#cantidad-${productId}`);
-    
-    if (cantidadElement) {
-      cantidadElement.innerText = accion === 'sumar' ? parseInt(cantidadElement.innerText, 10) + 1 : parseInt(cantidadElement.innerText, 10) - 1;
-    } else {
-      console.error('Elemento de cantidad no encontrado en el DOM');
-      return;
-    }
-
     // Realiza la solicitud al servidor para actualizar la cantidad
     const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, {
       method: 'POST',
@@ -175,6 +165,16 @@ async function cambiarCantidad(productId, accion,cantidad) {
 
     const data = await response.json();
     console.log(data);
+
+     // Actualiza la cantidad en la interfaz de usuario con la cantidad devuelta por el servidor
+     const cantidadElement = document.querySelector(`#cantidad-${productId}`);
+     if (cantidadElement) {
+       cantidadElement.innerText = data.cantidad;
+       } else {
+         console.log('Elemento de cantidad no encontrado en el DOM');
+           return;
+       }
+
     // Actualiza el precio total del producto en la interfaz de usuario
     const precioTotalElement = document.querySelector(`#precio-total-${productId}`);
     precioTotalElement.innerText = `$${data.precioTotal}`;

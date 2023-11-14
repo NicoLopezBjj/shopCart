@@ -95,7 +95,7 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad = 1, a
       precioTotal: this.cart.precioTotal
     };
 
-    return this;
+   
   } catch (error) {
     throw new Error(error);
   }
