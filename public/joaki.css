@@ -1128,7 +1128,9 @@ border-radius: 0.3em;
         transition: 0.4s ease;
        width: 10em;
     }
-    
+    .top-foto{
+        width: 18em;
+    }
     .corazonDiv {
         background-color: #FFFFFF;
         border-radius: 50%;
