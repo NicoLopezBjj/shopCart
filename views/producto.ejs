@@ -29,14 +29,7 @@
 <h1><%= product.nombre %></h1>
 <p class="p-des"><%= product.descripcion %></p>
 
-<div class="prod-star">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<p>(121)</p>
-</div>
+<%- include ('partials/starProducto.ejs') -%>
 <div class="lineas-prod"></div>
 </div>
 
