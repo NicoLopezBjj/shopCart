@@ -14,9 +14,9 @@ const busquedaRouter = require('./routes/busqueda')
 const Products = require('./models/Products')
 const obtenerProductosMinishop = require('./controllers/products')
 const error404 = require('./controllers/error404')
-
 const flash = require('connect-flash');
-const app=express()
+
+const app = express()
 
 // MiddleWare
 app.use(methodOverride('_method'))
@@ -31,6 +31,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
 }))
+
 app.use(flash());
 app.use(passport.initialize())
 app.use(passport.session())
@@ -61,7 +62,9 @@ connectDataBase()
 /* ruta principal */
 
 app.get('/', obtenerProductosMinishop.obtenerProductosMinishop)
-    
+
+/* rutas secundarias */
+
 app.use(authRouter)
 app.use(productsRouter)
 app.use(preciosRouter)
