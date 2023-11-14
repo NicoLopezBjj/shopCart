@@ -49,12 +49,14 @@
 
 <div class="produ-comprar">
 <div class="prod-add">
-<div class="agregar-prod">
-  <button>-</button>
-  <p>1</p>
-  <button>+</button>
-
-</div>
+  <div class="agregar-prod">
+    <button onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
+    <p id="cantidad-<%= product._id %>">
+      <% const cartItem = usuario.cart.items.find(item => item.productId.toString() === product._id.toString()); %>
+      <%= cartItem ? cartItem.cantidad : 0 %>
+    </p>
+    <button onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
+    </div>
 <div class="left-items">
   <p>Solo quedan <span class="texto-naranja">12 articulos</span> <br> No te lo pierdas</p>
 </div>
@@ -64,7 +66,7 @@
 <form action="/carrito/agregar" method="post">
   <button class="comprar-btn" onclick="agregarAlCarrito('<%= product._id %>')">Comprar ahora</button>
   <input type="hidden" name="productId" value="<%= product._id %>">
-  <button class="C-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+  <button class="D-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
 </form>
 </div>
 
