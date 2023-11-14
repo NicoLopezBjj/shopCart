@@ -175,11 +175,6 @@ async function cambiarCantidad(productId, accion,cantidad) {
            return;
        }
 
-    // Actualiza el precio total del producto en la interfaz de usuario
-    const precioTotalElement = document.querySelector(`#precio-total-${productId}`);
-    precioTotalElement.innerText = `$${data.precioTotal}`;
-    console.log(precioTotalProducto)
-
     // Actualiza el precio total en la interfaz de usuario
     const precioTotalGlobalElement = document.querySelector('#precioTotalCarrito');
     precioTotalGlobalElement.innerText = `$${data.precioTotal}`;

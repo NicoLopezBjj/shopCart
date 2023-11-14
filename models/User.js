@@ -73,7 +73,7 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad = 1, a
       }
     } else {
       // Si el producto no está en el carrito, agrégalo
-      this.cart.items.push({ productId, cantidad });
+      this.cart.items.push({ productId, cantidad : 1});
     }
 
     if (typeof this.cart.precioTotal !== 'number') {

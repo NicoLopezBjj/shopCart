@@ -62,9 +62,8 @@
     <button onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
     <p id="cantidad-<%= product._id %>">
       <% const cartItem = usuario.cart.items.find(item => item.productId.toString() === product._id.toString()); %>
-      <%= cartItem ? cartItem.cantidad : 1 %>
+      <%= cartItem ? cartItem.cantidad : 0 %>
     </p>
-    
     <button onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
     </div>
     
