@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Logica del contador del carrito
-async function cambiarCantidad(productId, accion) {
+async function cambiarCantidad(productId, accion,cantidad) {
   try {
     // Actualiza la cantidad en la interfaz de usuario antes de enviar la solicitud
     const cantidadElement = document.querySelector(`#cantidad-${productId}`);
@@ -165,10 +165,16 @@ async function cambiarCantidad(productId, accion) {
     }
 
     // Realiza la solicitud al servidor para actualizar la cantidad
-    const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, { method: 'POST' });
-    const data = await response.json();
-     console.log(data)
+    const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ cantidad }), // Envía la cantidad en el cuerpo de la solicitud
+    });
 
+    const data = await response.json();
+    console.log(data);
     // Actualiza el precio total del producto en la interfaz de usuario
     const precioTotalElement = document.querySelector(`#precio-total-${productId}`);
     precioTotalElement.innerText = `$${data.precioTotal}`;
