@@ -19,8 +19,20 @@
     
 }
 
+.ubi-btn{
+    background-color: transparent !important;
+    border: none !important;
+}
 
-
+.a-ubi {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 2em !important;
+}
+.a-ubi img{
+   width: 1.1em !important;
+}
 /* Card productos */
 
 
