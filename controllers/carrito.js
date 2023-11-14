@@ -34,7 +34,7 @@ const get_carrito = async (req,res) =>{
 };
 
 const agregarAlCarrito = async (req, res) => {
-  const { productId} = req.body;
+  const { productId,cantidad,accion} = req.body;
   
 
   try {
