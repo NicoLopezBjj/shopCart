@@ -1,6 +1,6 @@
 const passport=require('passport')
 const Producto=require('../models/Products')
-
+const User = require ('../models/User')
 
 const shop_get = async (req, res) => {
   try {
@@ -55,8 +55,9 @@ const mostrarProductoPorID = async (req, res) => {
   const productId = req.params.id;
   try {
     const producto = await Producto.findById(productId);/* encuentra por id */
+    const usuario = await User.findById(req.user._id);
     if (producto) {
-      res.render('producto', { product: producto, user : req.user });/* renderiza productos */
+      res.render('producto', { product: producto, user : req.user, usuario});/* renderiza productos */
     } else {/* si no la pagina de error */
       res.render('error404');
     }

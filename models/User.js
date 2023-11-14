@@ -90,6 +90,11 @@ userSchema.methods.agregarAlCarrito = async function (productId, cantidad = 1, a
 
     await this.save();
 
+    return {
+      cantidad: existeCartItem ? existeCartItem.cantidad : cantidad,
+      precioTotal: this.cart.precioTotal
+    };
+
     return this;
   } catch (error) {
     throw new Error(error);
