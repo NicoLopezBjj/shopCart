@@ -283,19 +283,23 @@ cursor: pointer;
 }
 
 
-
+.invisible{
+    opacity: 0%;
+}
 /* Card productos */
 .C-cards{
     width: 70% !important; 
     margin: auto !important;
-    justify-content: space-between;
+    justify-content: start;
+    /* justify-content: space-between; */
 }
 
 .C-todoCard{
    
          margin-top: 3em;
          font-family: Arial, Helvetica, sans-serif;
-         
+         margin-right: 1.4em;
+         margin-left: 1.4em;
    }
    
    /* div imagenes */
@@ -451,6 +455,7 @@ margin-top: 4em;
 .enlace-sacar{
     text-decoration: none;
     color: black;
+    
 }
 
 /* CARDS VARIAS */
@@ -1087,7 +1092,7 @@ border-radius: 0.3em;
 
     /* CARD CARRUSEL EN EL HOME Y SHOP */
         
-
+   
 
     .swiper-slide{
         padding-right: 25em;
@@ -1195,7 +1200,9 @@ border-radius: 0.3em;
     .imagenCard:hover {
         transform: scale(1.2);
     }
-    
+    .alaa{
+        z-index: 1;
+    }
     .corazonDiv:hover {
         background-color: #F9DCDC;
     }

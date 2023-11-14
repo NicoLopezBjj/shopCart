@@ -18,6 +18,7 @@
     <% const categoryProducts = products.filter(product => product.categoria === category); %>
     <% categoryProducts.forEach(product => { %>
       <!-- Toda la card -->
+      <a href="/shop/producto/<%= product.id %>" class="enlace-sacar">
       <div class="B-todoCard">
         <!-- Fotos de la card -->
         <div class="B-CardFotos">
@@ -33,7 +34,7 @@
             <h4 class="B-name"><%= product.nombre %></h4>
             <h3 class="B-precio">$<%= product.precio %></h3>
           </div>
-        
+        </a>
 
           <div class="B-stars">
             <div>
@@ -48,11 +49,14 @@
             </div>
           </div>
 
-          <button class="B-AddCart">Añadir al carrito</button>
+          <form action="/carrito/agregar" method="post">
+            <input type="hidden" name="productId" value="<%= product._id %>">
+            <button class="C-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+          </form>
         </div>
       </div>
 
-      
+   
     <% }); %>
   </div>
 

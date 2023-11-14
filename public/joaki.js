@@ -34,7 +34,7 @@ function slides(){
 }
 
 
-
+/* carrucel */
 document.addEventListener("DOMContentLoaded", function () {
   var swiperContainers = document.querySelectorAll('.swiper-container');
 
