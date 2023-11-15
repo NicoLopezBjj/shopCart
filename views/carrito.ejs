@@ -66,13 +66,16 @@
 
 <div class="linea-cart"></div>
 
+
+ <!-- Detalles de pago  -->
+
 <h4 class="detalles-pago">Detalles del pago</h4>
 
 <div class="linea-cart"></div>
 
  <div class="check-cart">
 
-
+ 
   
   <div class="check-cart">
     <div class="form-check">
@@ -123,58 +126,152 @@
 
 
 
+  <!-- FORMULARIO -->
 
+  <div class="desaparecee">
 
-<div class="desaparecee">
-
-
- <p class="cart-form-p">Email*</p>
- <input class="cart-form form-control" type="email" placeholder="Escribe aquí...">
-
- <p class="cart-form-p">Nombre del titular de la tarjeta*</p>
- <input class="cart-form form-control"  type="text" placeholder="Escribe aquí...">
-
- <p class="cart-form-p">Número de la tarjeta*</p>
-<div class="input-with-icon">
-  <i class="bi bi-credit-card-2-front card-imagen-cart"></i>
-  <input class="cart-form-card form-control" type="text" oninput="this.value = this.value.replace(/[^0-9]/, '')" placeholder="0000******1245">
-</div>
-
-
- <div class="dos-forms-cart">
-    <div>
-        <p class="cart-form-p"> Vencimiento</p>
-        <input  type="text" class="cart-form-dos form-control" placeholder="MM/YY" >
-    </div>
-    <div>
-        <p class="cart-form-p">CVC</p>
-       <input type="text" oninput="this.value = this.value.replace(/[^0-9]/, '')" class="cart-form-dos form-control" placeholder="000" maxlength="3"> 
-    </div>
-    
- </div>
-
-</div>
-
-
- <div class="sub-total">
-  <p>Sub Total</p>
-  <p id="precioTotal">$<%= precioTotal %></p>
-</div>
-
-<div class="linea-cart"></div>
-
-<div class="total-carrito">
-  <p>Total</p>
-  <p id="precioTotal">$<%= precioTotal %></p>
-</div>
+    <form onsubmit="return validarFormulario()">
+      <span id="correoError" style="color: red;"></span>
+      <p class="cart-form-p">Email*</p>
+      <input id="correo" class="cart-form form-control" type="email" placeholder="Escribe aquí...">
+      
+      <span id="nombreError" style="color: red;"></span>
+      <p class="cart-form-p">Nombre del titular de la tarjeta*</p>
+      <input id="nombre" class="cart-form form-control" type="text" placeholder="Escribe aquí...">
+      
+  
+      <span id="numeroTarjetaError" style="color: red;"></span>
+      <p class="cart-form-p">Número de la tarjeta*</p>
+      <div class="input-with-icon">
+        <i class="bi bi-credit-card-2-front card-imagen-cart"></i>
+        <input id="numeroTarjeta" class="cart-form-card form-control" type="text" placeholder="0000 ****** 1245">
+      </div>
+      
+  
+      <div class="dos-forms-cart">
+        <div>
+          <span id="vencimientoError" style="color: red;"></span>
+          <p class="cart-form-p">Vencimiento</p>
+          <input id="vencimiento" type="text" class="cart-form-dos form-control" placeholder="MM/YY">
          
-<button class="btn-pagar-cart">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
+        </div>
+        <div>
+          <span id="cvcError" style="color: red;"></span>
+          <p class="cart-form-p">CVC</p>
+          <input id="cvc" type="text"  class="cart-form-dos form-control" placeholder="000" maxlength="3">
+          
+        </div>
+      </div>
+      
+  </div>
+ <!-- FORMULARIO -->
 
+    <div class="sub-total">
+      <p>Sub Total</p>
+      <p id="precioTotal">$<%= precioTotal %></p>
+    </div>
 
+    <div class="linea-cart"></div>
+
+    <div class="total-carrito">
+      <p>Total</p>
+      <p id="precioTotal">$<%= precioTotal %></p>
+    </div>
+         
+  <button  type="submit" class="btn-pagar-cart">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
+
+</form>
+<!-- End FORMULARIO -->
 
 
 
 </div>
+
+
+<script>
+  function formatTarjeta() {
+    let numeroTarjetaInput = document.getElementById('numeroTarjeta');
+    let numeroTarjeta = numeroTarjetaInput.value.replace(/\s/g, '');
+
+    // Aplicar el formato cada 4 dígitos
+    numeroTarjeta = numeroTarjeta.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+    // Actualizar el valor del input
+    numeroTarjetaInput.value = numeroTarjeta;
+  }
+
+
+
+  function validarFormulario() {
+    // Obtener los valores de los campos
+    let correo = document.getElementById('correo').value;
+    let nombre = document.getElementById('nombre').value;
+    let numeroTarjeta = document.getElementById('numeroTarjeta').value;
+    let vencimiento = document.getElementById('vencimiento').value;
+    let cvc = document.getElementById('cvc').value;
+
+    // Inicializar la variable isValid
+    let isValid = true;
+
+    // Validar el campo de correo electrónico
+    let correoError = document.getElementById('correoError');
+    if (correo === "") {
+      correoError.innerHTML = "Este campo es obligatorio.";
+      isValid = false;
+    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(correo) || !correo.endsWith(".com")) {
+      correoError.innerHTML = "Ingrese un correo electrónico válido";
+      isValid = false;
+    } else {
+      correoError.innerHTML = "";
+    }
+
+    // Validar el nombre del titular de la tarjeta
+    let nombreError = document.getElementById('nombreError');
+    if (nombre === "") {
+      nombreError.innerHTML = "Este campo es obligatorio.";
+      isValid = false;
+    } else if (nombre.length > 15) {
+      nombreError.innerHTML = "El nombre debe tener un máximo de 15 caracteres.";
+      isValid = false;
+    } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+      nombreError.innerHTML = "Solo se permiten letras y espacios en el nombre.";
+      isValid = false;
+    } else {
+      nombreError.innerHTML = "";
+    }
+
+    // Validar el número de la tarjeta
+    let numeroTarjetaError = document.getElementById('numeroTarjetaError');
+    if (!/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(numeroTarjeta)) {
+      numeroTarjetaError.innerHTML = "*";
+      isValid = false;
+    } else {
+      numeroTarjetaError.innerHTML = "";
+    }
+
+    // Validar el vencimiento
+    let vencimientoError = document.getElementById('vencimientoError');
+    if (!/^[0-9]{2}\/[0-9]{2}$/.test(vencimiento)) {
+      vencimientoError.innerHTML = "(MM/AA).";
+      isValid = false;
+    } else {
+      vencimientoError.innerHTML = "";
+    }
+
+    // Validar el CVC
+    let cvcError = document.getElementById('cvcError');
+    if (!/^[0-9]{3}$/.test(cvc)) {
+      cvcError.innerHTML = "(3 dígitos).";
+      isValid = false;
+    } else {
+      cvcError.innerHTML = "";
+    }
+
+    // Devolver el resultado de la validación
+    return isValid;
+  }
+</script>
+
 
 </section>
 
