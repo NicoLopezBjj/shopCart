@@ -125,9 +125,29 @@ const cambiarCantidad = async (req, res) => {
 };
 
 
+const actualizarContadorCarrito = async (req, res) => {
+    try {
+      const usuario = await User.findById(req.user._id); // Busca al usuario por su ID
+      
+      if (!usuario) {
+        return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+      }
+  
+      const cantidadProductos = usuario.cart.items.reduce((total, item) => total + item.cantidad, 0); // Suma la cantidad de productos en el carrito
+  
+      res.json({ cantidad: cantidadProductos }); // Devuelve la cantidad de productos al frontend
+    } catch (error) {
+      console.error('Error al obtener la cantidad de productos en el carrito:', error);
+      res.render('error404')
+    }
+  };
+  
+
+
 module.exports = {
     get_carrito,
     agregarAlCarrito,
     eliminarCarrito,
-    cambiarCantidad
+    cambiarCantidad,
+    actualizarContadorCarrito
 }

@@ -8,6 +8,7 @@ router.get('/carrito', autenticar,carrito.get_carrito)
 router.post('/carrito/agregar', autenticar,carrito.agregarAlCarrito)
 router.delete('/carrito/eliminar',autenticar ,carrito.eliminarCarrito)
 router.post('/carrito/cambiarCantidad/:productId/:accion',autenticar, carrito.cambiarCantidad)
+router.get('/carrito/cantidad',carrito.actualizarContadorCarrito)
 
 
 

@@ -67,19 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // Logica del Carrito del lado del cliente (frontEND)
 
 function agregarAlCarrito(productId) {
-    fetch('/carrito/agregar', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ productId, cantidad} ),
-    })
+  fetch('/carrito/agregar', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ productId, cantidad }),
+  })
     .then(response => response.json())
     .then(data => {
       alert(data.mensaje);
+      actualizarContadorCarrito(); // Llama a la función para actualizar el contador
     })
     .catch(error => console.error('Error:', error));
-  }
+}
+
 
 // Logica para eliminar carrito del lado del front
 
@@ -99,7 +101,24 @@ function eliminarCarrito(productId) {
   .catch(error => console.log('Error:', error));
 }
 
+// Logica para contador del header en carrito 
 
+function actualizarContadorCarrito() {
+  fetch('/carrito/cantidad') // Endpoint para obtener la cantidad de productos en el carrito
+    .then(response => response.json())
+    .then(data => {
+      const contador = document.getElementById('contadorCarrito');
+      if (data && data.cantidad > 0) {
+        contador.innerText = data.cantidad;
+        contador.style.display = 'inline-block'; // Muestra el contador si hay productos en el carrito
+      } else {
+        contador.style.display = 'none'; // Oculta el contador si no hay productos en el carrito
+      }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+actualizarContadorCarrito()
 
 
 
