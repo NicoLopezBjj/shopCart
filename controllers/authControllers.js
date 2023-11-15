@@ -68,6 +68,9 @@ const miperfil = async (req,res)=>{
     res.render('perfil',{user: req.user})
 }
 
+const nosotros = async (req,res)=>{
+    res.render('nosotros',{user: req.user})
+}
 
 module.exports = { 
     signup_post, 
@@ -77,7 +80,8 @@ module.exports = {
     logout_get,
     logout_post,
     get_home,
-    miperfil
+    miperfil,
+    nosotros
 }
 
  
