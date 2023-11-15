@@ -1451,3 +1451,36 @@ body::-webkit-scrollbar-button {
 
 
 /* nosotross */
+.sucursal{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sucursal a{
+   
+     color: #148760 !important;
+}
+
+.tama{
+  font-size: 3em;  
+}
+.mailto{
+   
+}
+.mapita{
+    width: 20em;
+    height: 20em;
+    
+}
+.gracias{
+    display: flex;
+    justify-content: center;
+   
+}
+.gracias h1{
+    
+    margin-top: 2em !important;
+}
+.futer{
+    margin-top: 10em;
+}
