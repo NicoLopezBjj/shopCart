@@ -152,8 +152,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Logica del contador del carrito
-async function cambiarCantidad(productId, accion,cantidad) {
+
+async function cambiarCantidad(productId, accion, cantidad) {
   try {
+    if (accion === 'restar') {
+      const cantidadElement = document.querySelector(`#cantidad-${productId}`);
+      const currentCantidad = parseInt(cantidadElement.innerText);
+
+       // Evita que la cantidad sea negativa
+       if (currentCantidad - cantidad <= 0) {
+        // Deshabilita el botón de "Añadir al carrito" cuando la cantidad es cero
+        const addCartButton = document.querySelector(`button[data-id='${productId}'][class='D-AddCart']`);
+        if (addCartButton) {
+          addCartButton.disabled = true;
+        }
+        return;
+      }
+    }
+
     // Realiza la solicitud al servidor para actualizar la cantidad
     const response = await fetch(`/carrito/cambiarCantidad/${productId}/${accion}`, {
       method: 'POST',
@@ -170,24 +186,26 @@ async function cambiarCantidad(productId, accion,cantidad) {
      const cantidadElement = document.querySelector(`#cantidad-${productId}`);
      if (cantidadElement) {
        cantidadElement.innerText = data.cantidad;
-       } else {
-         console.log('Elemento de cantidad no encontrado en el DOM');
-           return;
-       }
+     } else {
+       console.log('Elemento de cantidad no encontrado en el DOM');
+       return;
+     }
+ 
+     // Deshabilita el botón de restar si la cantidad es cero
+     const restarButton = document.querySelector(`button[data-action='restar'][data-id='${productId}']`);
+     if (restarButton) {
+       restarButton.disabled = data.cantidad === 0;
+     }
+ 
 
     // Actualiza el precio total en la interfaz de usuario
     const precioTotalGlobalElement = document.querySelector('#precioTotalCarrito');
     precioTotalGlobalElement.innerText = `$${data.precioTotal}`;
-    console.log(precioTotalCarrito)
-
+    console.log(precioTotalCarrito);
   } catch (error) {
     console.error('Error:', error);
   }
 }
-
-
-
-
 
 
 /* check */

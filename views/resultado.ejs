@@ -2,75 +2,31 @@
 <%- include ('partials/header.ejs') -%>
 
 <% productos.forEach(product => { %>
-<div class="produ-linea">
 
-</div>
-<section class="d-flex flex-column margin-all">
-<div class="imagen-producto">
-
-<div class="produ-categorias">
-  <p>Categoria</p>
-  <p>/</p>
-  <p><%= product.categoria %></p>
-  <p>/</p>
-  <p><%= product.nombre %></p>
-
-
-</div>
-<div class="produ-img imagenBusqueda">
-  <img src="<%= product.imagen %>" alt="" class="auri-img">
-</div>
-
-
-</div>
-                                            <!-- parte derechaaa -->
-<div class="producto-des">
-
-
-
-<div class="lineas-prod"></div>
-</div>
-
-<div class="produ-precio">
-<h3>$<%= product.precio %></h3>
-<p>Pagos sugeridos con financiación especial a 6 meses.</p>
-<div class="lineas-prod"></div>
-</div>
-<!-- circulosssssss -->
-<div class="produ-colores">
-<h4>Elije el color</h4>
-<div class="prod-colores">
-<a href=""><img src="/img/circulo-n.png" alt=""  class="bolaN"></a>
-<a href=""><img src="/img/circulo-b.png" alt="" class="bolaB"></a>
-</div>
-<div class="lineas-prod"></div>
-
-</div>
-
-<div class="produ-comprar">
-<div class="prod-add">
-  <div class="agregar-prod">
-    <button onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
-    <p id="cantidad-<%= product._id %>">
-      <% const cartItem = usuario.cart.items.find(item => item.productId.toString() === product._id.toString()); %>
-      <%= cartItem ? cartItem.cantidad : 0 %>
-    </p>
-    <button onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
+<section class="d-flex justify-content-between seccionBusqueda p-4">
+    <div class="d-flex justify-content-between">
+      <a href="/shop/producto/<%= product.id %>" class="enlace-sacar"><img src="<%= product.imagen %>" alt="" class="auri-img imgBusqueda">
+      <div class="d-flex flex-column justify-content-center ps-3">
+        <h4 class="align-items-center "><strong><%= product.nombre %></strong></h4></a>
+        <p> <strong>Categoria:</strong> <%= product.categoria %></p>
+      </div>
     </div>
-<div class="left-items">
-  <p>Solo quedan <span class="texto-naranja">12 articulos</span> <br> No te lo pierdas</p>
-</div>
-</div>
+    <div class="d-flex flex-column justify-content-center">
+      <div>
+        <h4>$<%= product.precio %></h4>
+        <p>Pagos sugeridos con financiación especial a 6 meses.</p>
+      </div>
+    <div>
+      <form action="/carrito/agregar" method="post">
+        <button class="comprar-btn" onclick="agregarAlCarrito('<%= product._id %>')">Comprar ahora</button>
+        <input type="hidden" name="productId" value="<%= product._id %>">
+        <button class="D-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
+      </form>
+    </div>
+  </div>
 
-<div class="btn-productos">
-<form action="/carrito/agregar" method="post">
-  <button class="comprar-btn" onclick="agregarAlCarrito('<%= product._id %>')">Comprar ahora</button>
-  <input type="hidden" name="productId" value="<%= product._id %>">
-  <button class="D-AddCart" onclick="agregarAlCarrito('<%= product._id %>')">Añadir al carrito</button>
-</form>
-</div>
 
-</div>
+</section>
 
 
 <% }); %>

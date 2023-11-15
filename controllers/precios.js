@@ -2,7 +2,7 @@ const Producto = require ('../models/Products')
 
 const mostrarProductosMenorPrecio = async (req, res) => {
     try {
-      const products = await Producto.find({ precio: { $lte: 999 } });
+      const products = await Producto.find({ precio: { $lte: 999 } }).sort({ precio: 1 });
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
@@ -12,7 +12,7 @@ const mostrarProductosMenorPrecio = async (req, res) => {
 
 const mostrarProductosMedioPrecio = async (req, res) => {
     try {
-      const products = await Producto.find({ precio: { $gte: 1000, $lte: 25000 } });
+      const products = await Producto.find({ precio: { $gte: 1000, $lte: 25000 } }).sort({ precio: 1 });
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);
@@ -22,7 +22,7 @@ const mostrarProductosMedioPrecio = async (req, res) => {
 
 const mostrarProductosMayorPrecio = async (req, res) => {
     try {
-      const products = await Producto.find({ precio: { $gte: 25000 } });
+      const products = await Producto.find({ precio: { $gte: 25000 } }).sort({ precio: 1 });
       res.render('shop', { user: req.user, products });
     } catch (error) {
       console.error(error);

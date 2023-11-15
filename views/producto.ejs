@@ -29,14 +29,7 @@
 <h1><%= product.nombre %></h1>
 <p class="p-des"><%= product.descripcion %></p>
 
-<div class="prod-star">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<img src="/img/star.svg" alt="">
-<p>(121)</p>
-</div>
+<%- include ('partials/starProducto.ejs') -%>
 <div class="lineas-prod"></div>
 </div>
 
@@ -46,26 +39,37 @@
 <div class="lineas-prod"></div>
 </div>
 <!-- circulosssssss -->
-<div class="produ-colores">
-<h4>Elije el color</h4>
-<div class="prod-colores">
-<a href=""><img src="/img/circulo-n.png" alt=""  class="bolaN"></a>
-<a href=""><img src="/img/circulo-b.png" alt="" class="bolaB"></a>
-</div>
-<div class="lineas-prod"></div>
+<% if (productosCategoria.length > 1) { %>
+  <div class="produ-colores">
+    <h4>Elije el color</h4>
+    <div class="prod-colores">
+      <% for (const productoCategoria of productosCategoria) { %>
+        <% if (productoCategoria._id.toString() !== product._id.toString()) { %>
+          <a href="/shop/producto/<%= productoCategoria._id %>">
+            <img src="<%= productoCategoria.imagen %>" alt="" class="bola"<%= productoCategoria.color %>>
+          </a>
+        <% } %>
+      <% } %>
+      <div class="lineas-prod"></div>
+    </div>
+  </div>
+<% } %>
 
-</div>
+
+
+
 
 <div class="produ-comprar">
 <div class="prod-add">
   <div class="agregar-prod">
-    <button onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
+    <button data-action="restar" data-id="<%= product._id %>" onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
     <p id="cantidad-<%= product._id %>">
       <% const cartItem = usuario.cart.items.find(item => item.productId.toString() === product._id.toString()); %>
-      <%= cartItem ? cartItem.cantidad : 0 %>
+      <%= cartItem ? cartItem.cantidad : 1 %>
     </p>
-    <button onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
-    </div>
+    <button data-action="sumar" data-id="<%= product._id %>" onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
+    
+  </div>
     
 <div class="left-items">
   <p>Solo quedan <span class="texto-naranja">12 articulos</span> <br> No te lo pierdas</p>

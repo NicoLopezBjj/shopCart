@@ -12,9 +12,11 @@ const carritoRouter = require('./routes/carrito')
 const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
 const Products = require('./models/Products')
-
+const obtenerProductosMinishop = require('./controllers/products')
+const error404 = require('./middlewares/error404')
 const flash = require('connect-flash');
-const app=express()
+
+const app = express()
 
 // MiddleWare
 app.use(methodOverride('_method'))
@@ -29,6 +31,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: { maxAge: 60 * 60 * 1000 } // mantiene al usuario logeado por 1 hora
 }))
+
 app.use(flash());
 app.use(passport.initialize())
 app.use(passport.session())
@@ -58,24 +61,14 @@ connectDataBase()
 
 /* ruta principal */
 
+app.get('/', obtenerProductosMinishop.obtenerProductosMinishop)
 
-app.get('/', async (req, res) => {
-    try {
-        const minishopProducts = await Products.find({ minishop: true }).exec();
-        res.render('home', { user: req.user, products: minishopProducts });
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al obtener los productos');
-    }
-});
-    
+
+
 app.use(authRouter)
 app.use(productsRouter)
 app.use(preciosRouter)
 app.use(carritoRouter)
 app.use(busquedaRouter)
-
-app.use((req, res, next) => {
-    res.status(404).render('error404');
-});
+app.use(error404);
 

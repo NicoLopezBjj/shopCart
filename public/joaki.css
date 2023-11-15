@@ -806,7 +806,7 @@ margin-bottom: 0em;
     margin: auto;
     display: flex;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 7em;
 }
 
 
@@ -911,16 +911,18 @@ font-size: 1.5em;
     }
 /* circulo colores */
 .prod-colores{
-display: flex;
+margin-top: 2em;
 margin-bottom: 1.5em;
 }
 
-.bolaN{
-    width: 2.7em;
+.bola{
+    width: 6em;
+    background-color: #F5F6F6;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 0.5emS;
 }
-.bolaB  {
-    width: 2.7em;
-}
+
 
 /* botoness */
 

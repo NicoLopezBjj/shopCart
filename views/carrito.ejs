@@ -30,7 +30,7 @@
 
         <div class="cart-pyc">
           <% if (item.producto) { %>
-            <p class="cart-precio">Precio: $<%= item.producto.precio %></p>
+            <p class="cart-precio">Precio: $<%= item.producto.precio * item.cantidad %></p>
           
              
               <p id="cantidad-<%= item.producto._id %>">Cantidad: <%= item.cantidad %></p>

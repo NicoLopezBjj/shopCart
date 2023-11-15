@@ -54,25 +54,68 @@ const mostrarProductosPorColor = async (req,res) =>{
 const mostrarProductoPorID = async (req, res) => {
   const productId = req.params.id;
   try {
-    const producto = await Producto.findById(productId);/* encuentra por id */
+    const producto = await Producto.findById(productId);
     const usuario = await User.findById(req.user._id);
+
     if (producto) {
-      res.render('producto', { product: producto, user : req.user, usuario});/* renderiza productos */
-    } else {/* si no la pagina de error */
+      // Paso 1: Obtener productos de la misma categoría y el mismo nombre
+      const productosCategoria = await Producto.find({
+        categoria: producto.categoria,
+        nombre: producto.nombre,
+      });
+
+      // Paso 2: Renderizar la vista con las variables necesarias
+      res.render('producto', { product: producto, user: req.user, usuario, productosCategoria });
+    } else {
       res.render('error404');
     }
   } catch (error) {
     console.error(error);
     res.render('error404');
   }
-}
+};
 
 
-module.exports={
-    shop_get,
-    mostrarCategoria,
-    mostrarProductosPorMarca,
-    mostrarProductosPorColor,
-    mostrarProductoPorID
-    
-}
+
+const obtenerProductosMinishop = async (req, res) => {
+  try {
+      const minishopProducts = await Producto.find({ minishop: true }).exec();
+      res.render('home', { user: req.user, products: minishopProducts });
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error al obtener los productos');
+  }
+};
+
+
+
+const mostrarProducto = async (req, res) => {
+  const productId = req.params.id;
+
+  try {
+    const product = await Producto.findById(productId);
+
+    // Paso 1: Obtener todos los productos de la misma categoría
+    const productosCategoria = await Producto.find({ categoria: product.categoria });
+
+    // Paso 2: Pasar los productos de la misma categoría al archivo EJS
+    res.render('producto', { product, productosCategoria });
+  } catch (error) {
+    console.error(error);
+    res.render('error404');
+  }
+};
+
+
+
+module.exports = {
+  shop_get,
+  mostrarCategoria,
+  mostrarProductosPorMarca,
+  mostrarProductosPorColor,
+  mostrarProductoPorID,
+  obtenerProductosMinishop,
+  mostrarProducto 
+};
+
+
