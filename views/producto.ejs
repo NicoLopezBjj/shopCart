@@ -46,7 +46,7 @@
       <% for (const productoCategoria of productosCategoria) { %>
         <% if (productoCategoria._id.toString() !== product._id.toString()) { %>
           <a href="/shop/producto/<%= productoCategoria._id %>">
-            <img src="<%= productoCategoria.imagen %>" alt="" class="bola"<%= productoCategoria.color.charAt(0).toUpperCase() %>>
+            <img src="<%= productoCategoria.imagen %>" alt="" class="bola"<%= productoCategoria.color %>>
           </a>
         <% } %>
       <% } %>
@@ -62,13 +62,14 @@
 <div class="produ-comprar">
 <div class="prod-add">
   <div class="agregar-prod">
-    <button onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
+    <button data-action="restar" data-id="<%= product._id %>" onclick="cambiarCantidad('<%= product._id %>', 'restar', 1)">-</button>
     <p id="cantidad-<%= product._id %>">
       <% const cartItem = usuario.cart.items.find(item => item.productId.toString() === product._id.toString()); %>
-      <%= cartItem ? cartItem.cantidad : 0 %>
+      <%= cartItem ? cartItem.cantidad : 1 %>
     </p>
-    <button onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
-    </div>
+    <button data-action="sumar" data-id="<%= product._id %>" onclick="cambiarCantidad('<%= product._id %>', 'sumar', 1)">+</button>
+    
+  </div>
     
 <div class="left-items">
   <p>Solo quedan <span class="texto-naranja">12 articulos</span> <br> No te lo pierdas</p>

@@ -99,7 +99,7 @@ const mostrarProducto = async (req, res) => {
     const productosCategoria = await Producto.find({ categoria: product.categoria });
 
     // Paso 2: Pasar los productos de la misma categoría al archivo EJS
-    res.render('nombre_de_tu_vista', { product, productosCategoria });
+    res.render('producto', { product, productosCategoria });
   } catch (error) {
     console.error(error);
     res.render('error404');
