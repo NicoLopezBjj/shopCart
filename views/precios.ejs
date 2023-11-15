@@ -1,0 +1,41 @@
+<%- include ('partials/head.ejs') -%>
+<%- include ('partials/header.ejs') -%>
+<!-- arranca todo -->
+
+<!-- los slides -->
+
+<%- include ('partials/slide.ejs') -%>
+
+
+<!-- FILTROS -->
+
+<%- include ('partials/filtros.ejs') -%>
+
+
+
+               <!-- CARDS -->
+               <h2 class="margin-all mt-5">Productos para ti</h2>
+
+    <section class="C-cards" id="cards">
+
+    
+    <!-- toda la card -->
+    <%- include ('partials/productoCARD.ejs') -%>
+    
+     </section>
+
+
+   
+     
+
+     <section class="produ-semanales-shop">
+        <h2>Productos populares de la semana</h2>
+        <%- include ('partials/card-carrusel.ejs') -%>
+
+     </section>
+
+     <script src="/joaki.js"></script>
+     <%- include ('partials/footer.ejs') -%>
+
+</body>
+</html>

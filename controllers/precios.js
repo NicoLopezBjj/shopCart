@@ -3,7 +3,7 @@ const Producto = require ('../models/Products')
 const mostrarProductosMenorPrecio = async (req, res) => {
     try {
       const products = await Producto.find({ precio: { $lte: 999 } }).sort({ precio: 1 });
-      res.render('shop', { user: req.user, products });
+      res.render('precios', { user: req.user, products });
     } catch (error) {
       console.error(error);
       res.render('error404');
@@ -13,7 +13,7 @@ const mostrarProductosMenorPrecio = async (req, res) => {
 const mostrarProductosMedioPrecio = async (req, res) => {
     try {
       const products = await Producto.find({ precio: { $gte: 1000, $lte: 25000 } }).sort({ precio: 1 });
-      res.render('shop', { user: req.user, products });
+      res.render('precios', { user: req.user, products });
     } catch (error) {
       console.error(error);
       res.render('error404');
@@ -23,7 +23,7 @@ const mostrarProductosMedioPrecio = async (req, res) => {
 const mostrarProductosMayorPrecio = async (req, res) => {
     try {
       const products = await Producto.find({ precio: { $gte: 25000 } }).sort({ precio: 1 });
-      res.render('shop', { user: req.user, products });
+      res.render('precios', { user: req.user, products });
     } catch (error) {
       console.error(error);
       res.render('error404');
@@ -33,7 +33,7 @@ const mostrarProductosMayorPrecio = async (req, res) => {
   const ordenarPorMenorPrecio = async (req, res) => {
     try {
       const products = await Producto.find().sort({ precio: 1 }); 
-      res.render('shop', { user: req.user, products });
+      res.render('precios', { user: req.user, products });
     } catch (error) {
       console.error(error);
       res.render('error404');
@@ -43,7 +43,7 @@ const mostrarProductosMayorPrecio = async (req, res) => {
   const ordenarPorMayorPrecio = async (req, res) => {
     try {
       const products = await Producto.find().sort({ precio: -1 });
-      res.render('shop', { user: req.user, products });
+      res.render('precios', { user: req.user, products });
     } catch (error) {
       console.error(error);
       res.render('error404');
