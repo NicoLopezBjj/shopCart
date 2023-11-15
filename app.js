@@ -13,7 +13,7 @@ const methodOverride = require('method-override')
 const busquedaRouter = require('./routes/busqueda')
 const Products = require('./models/Products')
 const obtenerProductosMinishop = require('./controllers/products')
-const error404 = require('./controllers/error404')
+const error404 = require('./middlewares/error404')
 const flash = require('connect-flash');
 
 const app = express()
@@ -63,7 +63,7 @@ connectDataBase()
 
 app.get('/', obtenerProductosMinishop.obtenerProductosMinishop)
 
-/* rutas secundarias */
+
 
 app.use(authRouter)
 app.use(productsRouter)
