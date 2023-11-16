@@ -350,7 +350,7 @@ cursor: pointer;
    }
    
    .C-imagenCard{
-
+max-height: 17em;
    width: 11em;
    transition:  0.4s ease; 
    max-width: 100%;
