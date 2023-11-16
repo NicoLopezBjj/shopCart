@@ -1,9 +1,8 @@
 /* SLIDES DEL SHOP */
-
 let slide = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
 let contador = 1;
-let width = 0; // Valor por defecto en caso de que no haya elementos
+let width = 0;  /* valor por defecto en caso de que no haya elementos */
 if (sliderIndividual.length > 0) {
   width = sliderIndividual[0].clientWidth;
 }
@@ -34,12 +33,12 @@ function slides(){
 }
 
 
-/* carrucel */
+/* carrusel */
 document.addEventListener("DOMContentLoaded", function () {
-  var swiperContainers = document.querySelectorAll('.swiper-container');
+  const swiperContainers = document.querySelectorAll('.swiper-container');
 
   swiperContainers.forEach(function (container) {
-    var swiper = new Swiper(container, {
+    const swiper = new Swiper(container, {
       slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
@@ -130,7 +129,7 @@ actualizarContadorCarrito();
 
 // minishop
 document.addEventListener("DOMContentLoaded", function() {
-  // Agregar jQuery desde CDN
+  
   const script = document.createElement('script');
   script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
   script.type = 'text/javascript';
@@ -138,31 +137,30 @@ document.addEventListener("DOMContentLoaded", function() {
   document.head.appendChild(script);
 
   script.onload = function() {
-    // Modo sin conflicto de jQuery
+    /* arrgelue el jquery */
     jQuery.noConflict();
     (function($) {
-      // Tu código jQuery aquí
-      console.log("joaki.js cargado correctamente");
+     
 
       $(".B-AddCart").text("Añadir al Carrito");
 
-      // Oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
+      // oculta todos los elementos con clase "contenido" excepto el de categoría "ropa"
       $(".contenido").not("#ropa").hide();
 
-      // Manejo de clic en botones de categoría
+      // manejo de clic en botones de categoría
       $("#categorias button").click(function() {
         const targetId = $(this).data("target");
 
-        // Oculta todos los elementos con clase "contenido"
+        // oculta todos los elementos con clase "contenido"
         $(".contenido").hide();
 
-        // Remueve la clase "selected" de todos los botones
+        // remueve la clase "selected" de todos los botones
         $("#categorias button").removeClass("selected");
 
-        // Muestra el elemento con el ID correspondiente
+        // muestra el elemento con el ID correspondiente
         $("#" + targetId).show();
 
-        // Agrega la clase "selected" al botón seleccionado
+        // agrega la clase "selected" al botón seleccionado (la categoria ropa que es la primera)
         $(this).addClass("selected");
         console.log(product.ropa)
       });
@@ -234,17 +232,17 @@ async function cambiarCantidad(productId, accion, cantidad) {
 
 /* check */
 function mostrarOpcion(opcion) {
-  // Oculta todas las opciones
+  //  oculta todos las opciones de los checks
   document.querySelectorAll('.opcion-check').forEach(function (opcionDiv) {
     opcionDiv.style.display = 'none';
   });
 
-  // Muestra la opción seleccionada
+  // muestra la opción seleccionada
   document.getElementById(opcion).style.display = 'block';
 
   // hace que desaparezca el div para popner datos de la tarjeta
-  var flexRadioDefault1 = document.getElementById('flexRadioDefault1');
-  var desapareceeDiv = document.querySelector('.desaparecee');
+  const flexRadioDefault1 = document.getElementById('flexRadioDefault1');
+  const desapareceeDiv = document.querySelector('.desaparecee');
 
   if (flexRadioDefault1.checked) {
     desapareceeDiv.style.display = 'none';
