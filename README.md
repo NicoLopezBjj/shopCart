@@ -9,7 +9,7 @@ Nos inspiramos para hacer nuestro ecommerce en [<strong>este </strong>](https://
 <ul><h4>Características Principales</h4>
 <li>Registro y autenticación de usuarios.</li>
 <li>Filtros de productos por color, marca, categoría y precio.</li>
-<li>Carrito de compras con funciones de agregar y eliminar productos.</li>
+<li>Carrito de compras con funciones de agregar y eliminar productos, de forma individual o todos juntos.</li>
 <li>Cambio de color y modificación de cantidad desde la vista del producto.</li>
 <li>Slide y carruseles para una experiencia visual atractiva.</li>
 <li>Búsqueda de productos por nombre.</li>
