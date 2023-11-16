@@ -124,6 +124,23 @@ function actualizarContadorCarrito() {
 
 actualizarContadorCarrito();
 
+// Logica para eliminar todos los productos juntos 
+function eliminarTodo() {
+
+  fetch('/carrito/eliminarTodos', {
+    method: 'DELETE'
+   
+  })
+  .then(response => {
+
+    window.location.href = '/carrito'; // Cambia la URL a la página del carrito
+  })
+  .catch(error => {
+    // Manejp de errores
+    console.log('Error al eliminar todos los productos del carrito:', error);
+  });
+}
+
 
 
 

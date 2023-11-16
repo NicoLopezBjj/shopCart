@@ -143,11 +143,32 @@ const actualizarContadorCarrito = async (req, res) => {
   };
   
 
+  const eliminarTodo = async (req,res)=>{
+    
+  // Código para limpiar el carrito
+  req.user.cart.items = [];
+  req.user.cart.precioTotal = 0;
+
+  // Guardar el usuario actualizado
+  req.user.save()
+    .then(() => {
+      // Enviar una respuesta al cliente
+      res.status(200).send('Se eliminaron todos los productos del carrito');
+    })
+    .catch(error => {
+      // Manejar cualquier error que ocurra al guardar los cambios en el usuario
+      console.error('Error al eliminar todos los productos del carrito:', error);
+      res.status(500).send('Error interno del servidor al eliminar productos del carrito');
+    });
+}
+  
+
 
 module.exports = {
     get_carrito,
     agregarAlCarrito,
     eliminarCarrito,
     cambiarCantidad,
-    actualizarContadorCarrito
+    actualizarContadorCarrito,
+    eliminarTodo
 }

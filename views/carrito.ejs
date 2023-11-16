@@ -4,7 +4,10 @@
 <section class="carrito-all">
 
   <div class="productos-carrito">
-    <h3>Revisa tus productos</h3>
+    <div class="d-flex justify-content-between">
+      <h3>Revisa tus productos</h3>
+      <a href="" onclick="eliminarTodo()">Eliminar Todos los Productos</a>
+    </div>
     
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
