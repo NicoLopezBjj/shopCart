@@ -4,7 +4,10 @@
 <section class="carrito-all">
 
   <div class="productos-carrito">
-    <h3>Revisa tus productos</h3>
+    <div class="d-flex justify-content-between">
+      <h3>Revisa tus productos</h3>
+      <a href="" onclick="eliminarTodo()">Eliminar Todos los Productos</a>
+    </div>
     
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
@@ -192,7 +195,7 @@
 <div class="modal" id="miModal" >
   <!-- Contenido del modal -->
   <div class="centrado">
-      <!-- Contenido de la imagen que quieres centrar -->
+      <!-- Contenido de la imagen centrado-->
       <div class="imagen-container">
           <img src="img/fondo-pagar-editado.jpg" alt>
       </div>
@@ -308,7 +311,7 @@
 
   // Función para redirigir a otra página
   function redirigir() {
-    // Puedes cambiar la URL a la que deseas redirigir
+    //  cambiar la URL de redireccion 
     window.location.href = '/';
   }
 </script>
