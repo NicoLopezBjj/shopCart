@@ -177,16 +177,34 @@
       <p>Total</p>
       <p id="precioTotal">$<%= precioTotal %></p>
     </div>
-         
-  <button  type="submit" class="btn-pagar-cart">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
+
+      <!-- EL BOTON PARA EL EVENTO -->
+  
+      <button type="button" class="btn-pagar-cart" id="mostrarModal">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
 
 </form>
 <!-- End FORMULARIO -->
 
-
-
 </div>
 
+<!-- Modal -->
+<div class="contenedor" onclick="return false;">
+<div class="modal" id="miModal" >
+  <!-- Contenido del modal -->
+  <div class="centrado">
+      <!-- Contenido de la imagen que quieres centrar -->
+      <div class="imagen-container">
+          <img src="img/fondo-pagar-editado.jpg" alt>
+      </div>
+      <!-- TEXTO - DIV - CENTRADO -->
+      <div class="texto-de-verificacion">
+          <h1>¡Compra realizada con éxito!</h1>
+          <p>ID de tu Compra: 8984294820</p>
+          <button onclick="redirigir()">Seguir Comprando</button>
+      </div>
+  </div>
+</div>
+</div>
 
 <script>
   function formatTarjeta() {
@@ -267,8 +285,31 @@
       cvcError.innerHTML = "";
     }
 
+    if (isValid) {
+      mostrarModal();
+    }
+
     // Devolver el resultado de la validación
     return isValid;
+  }
+
+
+
+  document.getElementById('mostrarModal').addEventListener('click', function() {
+    validarFormulario();
+  });
+
+  function mostrarModal() {
+
+    // Mostrar el modal
+    document.getElementById('miModal').style.display = 'block';
+  }
+
+
+  // Función para redirigir a otra página
+  function redirigir() {
+    // Puedes cambiar la URL a la que deseas redirigir
+    window.location.href = '/';
   }
 </script>
 
