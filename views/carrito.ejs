@@ -5,9 +5,13 @@
 
   <div class="productos-carrito">
     <div class="d-flex justify-content-between">
-      <h3>Revisa tus productos</h3>
-      <a href="" onclick="eliminarTodo()">Eliminar Todos los Productos</a>
+      <h3>Revisa tus productos</h3>   
+      <% if (productosEnCarrito.length > 0) { %>     
+      <a href="" class="p-1 mt-1 enlace-sacar hoverEnlace" onclick="eliminarTodo()">Eliminar todos los productos</a>
+      
+      <% } %>
     </div>
+    
     
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
