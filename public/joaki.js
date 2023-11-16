@@ -104,21 +104,26 @@ function eliminarCarrito(productId) {
 // Logica para contador del header en carrito 
 
 function actualizarContadorCarrito() {
-  fetch('/carrito/cantidad') // Endpoint para obtener la cantidad de productos en el carrito
-    .then(response => response.json())
-    .then(data => {
-      const contador = document.getElementById('contadorCarrito');
-      if (data && data.cantidad > 0) {
-        contador.innerText = data.cantidad;
-        contador.style.display = 'inline-block'; // Muestra el contador si hay productos en el carrito
-      } else {
-        contador.style.display = 'none'; // Oculta el contador si no hay productos en el carrito
-      }
-    })
-    .catch(error => console.error('Error:', error));
+  const contador = document.getElementById('contadorCarrito');
+  
+  // Verificar si el contador está presente en la página
+  if (contador) {
+    fetch('/carrito/cantidad') // Endpoint para obtener la cantidad de productos en el carrito
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.cantidad > 0) {
+          contador.innerText = data.cantidad;
+          contador.style.display = 'inline-block'; // Muestra el contador si hay productos en el carrito
+        } else {
+          contador.style.display = 'none'; // Oculta el contador si no hay productos en el carrito
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  }
 }
 
-actualizarContadorCarrito()
+actualizarContadorCarrito();
+
 
 
 
