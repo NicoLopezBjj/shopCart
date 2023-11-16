@@ -249,21 +249,16 @@ async function cambiarCantidad(productId, accion, cantidad) {
 
 /* check */
 function mostrarOpcion(opcion) {
-  //  oculta todos las opciones de los checks
+  // oculta todos las opciones de los checks
   document.querySelectorAll('.opcion-check').forEach(function (opcionDiv) {
     opcionDiv.style.display = 'none';
   });
 
-  // muestra la opción seleccionada
+  // muestra la opcion seleccionada
   document.getElementById(opcion).style.display = 'block';
 
-  // hace que desaparezca el div para popner datos de la tarjeta
-  const flexRadioDefault1 = document.getElementById('flexRadioDefault1');
-  const desapareceeDiv = document.querySelector('.desaparecee');
 
-  if (flexRadioDefault1.checked) {
-    desapareceeDiv.style.display = 'none';
-  } else {
-    desapareceeDiv.style.display = 'block';
-  }
 }
+
+
+
