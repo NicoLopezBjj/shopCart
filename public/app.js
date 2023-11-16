@@ -136,7 +136,7 @@ function eliminarTodo() {
     window.location.href = '/carrito'; // Cambia la URL a la página del carrito
   })
   .catch(error => {
-    // Manejp de errores
+    // Manejo de errores
     console.log('Error al eliminar todos los productos del carrito:', error);
   });
 }
@@ -221,7 +221,7 @@ async function cambiarCantidad(productId, accion, cantidad) {
     });
 
     const data = await response.json();
-    console.log(data);
+    
 
      // Actualiza la cantidad en la interfaz de usuario con la cantidad devuelta por el servidor
      const cantidadElement = document.querySelector(`#cantidad-${productId}`);
