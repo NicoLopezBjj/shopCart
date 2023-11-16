@@ -203,7 +203,7 @@
         <div class="texto-de-verificacion">
           <h1>¡Compra realizada con éxito!</h1>
           <p>ID de tu Compra: <%= user.id %></p>
-          <button onclick="redirigir()">Seguir Comprando</button>
+          <button onclick="redirigir()" >Seguir Comprando</button>
         </div>
       </div>
     </div>
@@ -292,6 +292,7 @@
 
     if (isValid) {
       mostrarModal();
+      
     }
 
     // Devolver el resultado de la validación
@@ -315,6 +316,7 @@
   function redirigir() {
     // Puedes cambiar la URL a la que deseas redirigir
     window.location.href = '/shop';
+    eliminarTodo();
   }
 </script>
 
