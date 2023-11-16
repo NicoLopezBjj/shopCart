@@ -2,17 +2,17 @@
 <%- include ('partials/header.ejs') -%>
 
 <section class="carrito-all">
-
+  <div id="productosEnCarrito" style="display: none;">
+    <% if (productosEnCarrito.length > 0) { %>
+      <%= JSON.stringify(productosEnCarrito) %>
+    <% } %>
+  </div>
   <div class="productos-carrito">
     <div class="d-flex justify-content-between">
-      <h3>Revisa tus productos</h3>   
-      <% if (productosEnCarrito.length > 0) { %>     
+      <h3>Revisa tus productos</h3>        
       <a href="" class="p-1 mt-1 enlace-sacar hoverEnlace" onclick="eliminarTodo()">Eliminar todos los productos</a>
-      
-      <% } %>
     </div>
     
-    <% if (productosEnCarrito.length > 0) { %>
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
         <div class="imagen-nombre">
@@ -54,12 +54,9 @@
         </div>
 
       
-        
+
       </div>
     <% }); %>
-    <% } else { %>
-      <h5>Tu carrito está vacío.</h5>
-    <% } %>
   </div>
 
 
@@ -88,12 +85,7 @@
  
   
   <div class="check-cart">
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="mostrarOpcion('opcion1')" >
-      <label class="form-check-label" for="flexRadioDefault1">
-        Pago al recibir el producto
-      </label>
-    </div>
+
     <div class="form-check">
       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="mostrarOpcion('opcion2')" >
       <label class="form-check-label" for="flexRadioDefault2">
@@ -125,9 +117,9 @@
       <img src="/img/tarjetas/6.png"  class="p-2 bord" alt="">
     </div>
     <div class="opcion-check" id="opcion4">
-      <img src="/Img/tarjetas/4Amazon.png" class="p-2 bord" alt="">
-      <img src="/Img/tarjetas/2visa.png" class="p-2 bord" alt="">
-      <img src="/Img/tarjetas/3.png" class="p-2 bord" alt="">
+      
+      <img src="/img/tarjetas/visa.jpg" class="p-2 bord" alt="">
+      <img src="/img/tarjetas/master.png" class="p-2 bord" alt="">
     </div>
   </div>
 
@@ -202,9 +194,8 @@
   <div class="modal" id="miModal">
     <!-- -->
     <div class="centrado">
-      <!-- Contenido del modal -->
       <div class="centrado-interno">
-      
+        <!-- Contenido del modal -->
         <div class="imagen-container">
           <img src="img/fondo-pagar-editado.jpg" alt>
         </div>
@@ -227,7 +218,7 @@
     //formato para cada 4 dígitos
     numeroTarjeta = numeroTarjeta.replace(/(\d{4})(?=\d)/g, '$1 ');
 
-    // Actualiza el valor de los input
+    // Actualizar el valor del input
     numeroTarjetaInput.value = numeroTarjeta;
   }
 
@@ -262,7 +253,7 @@
       nombreError.innerHTML = "Este campo es obligatorio.";
       isValid = false;
     } else if (nombre.length > 20) {
-      nombreError.innerHTML = "El nombre debe tener un máximo de 15 caracteres.";
+      nombreError.innerHTML = "El nombre debe tener un máximo de 20 caracteres.";
       isValid = false;
     } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
       nombreError.innerHTML = "Solo se permiten letras y espacios en el nombre.";
@@ -271,14 +262,13 @@
       nombreError.innerHTML = "";
     }
 
-    // Validar el numero de la tarjeta
-    if (!/^\d{16}$/.test(numeroTarjeta)) {
+   // Validar el numero de la tarjeta
+   if (!/^\d{16}$/.test(numeroTarjeta)) {
         numeroTarjetaError.innerHTML = "El número de tarjeta debe tener 16 dígitos.";
         isValid = false;
     } else {
         numeroTarjetaError.innerHTML = "";
     }
-    
 
     // Validar el vencimiento
     let vencimientoError = document.getElementById('vencimientoError');
@@ -298,12 +288,14 @@
       cvcError.innerHTML = "";
     }
 
+  
+  
     if (isValid) {
       mostrarModal();
       
     }
 
-
+    // Devolver el resultado de la validación
     return isValid;
   }
 
@@ -314,15 +306,26 @@
   });
 
   function mostrarModal() {
-
-    // Mostrar el modal
-    document.getElementById('miModal').style.display = 'block';
+  // verificar si hay productos en el carrito
+  let productosEnCarritoElement = document.getElementById('productosEnCarrito');
+  
+  if (!productosEnCarritoElement || productosEnCarritoElement.innerText.trim() === "") {
+    alert('No hay productos en el carrito. Agrega productos antes de pagar.');
+    return;
   }
 
+  // mostrar el modal solo si hay productos en el carrito
+  document.getElementById('miModal').style.display = 'block';
+}
+
+document.getElementById('mostrarModal').addEventListener('click', function() {
+  validarFormulario();
+});
 
 
+  // Función para redirigir a otra página
   function redirigir() {
-    
+    // Puedes cambiar la URL a la que deseas redirigir
     window.location.href = '/shop';
     eliminarTodo();
   }
