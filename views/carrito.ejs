@@ -174,7 +174,7 @@
       </div>
       
   </div>
- <!-- FORMULARIO -->
+
 
     <div class="sub-total">
       <p>Sub Total</p>
@@ -188,19 +188,19 @@
       <p id="precioTotal">$<%= precioTotal %></p>
     </div>
 
-      <!-- EL BOTON PARA EL EVENTO -->
-
+   
+   <!-- EL BOTON PARA EL EVENTO -->
       <button type="button" class="btn-pagar-cart" id="mostrarModal">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
 
 </form>
-<!-- End FORMULARIO -->
+<!-- FORMULARIO Fin -->
 
 </div>
 
 <!-- Modal -->
 <div class="contenedor" onclick="return false;">
   <div class="modal" id="miModal">
-    <!-- Nuevo contenedor interno para centrar el contenido del modal -->
+    <!-- -->
     <div class="centrado">
       <!-- Contenido del modal -->
       <div class="centrado-interno">
@@ -224,7 +224,7 @@
     let numeroTarjetaInput = document.getElementById('numeroTarjeta');
     let numeroTarjeta = numeroTarjetaInput.value.replace(/\s/g, '');
 
-    // Aplicar el formato cada 4 dígitos
+    //formato para cada 4 dígitos
     numeroTarjeta = numeroTarjeta.replace(/(\d{4})(?=\d)/g, '$1 ');
 
     // Actualiza el valor de los input
@@ -241,7 +241,7 @@
     let vencimiento = document.getElementById('vencimiento').value;
     let cvc = document.getElementById('cvc').value;
 
-    // Inicializo la variable isValid
+    // Inicializo la variable -isValid-
     let isValid = true;
 
     // Validar el campo de correo electrónico
