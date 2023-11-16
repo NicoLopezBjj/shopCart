@@ -12,7 +12,7 @@
       <% } %>
     </div>
     
-    
+    <% if (productosEnCarrito.length > 0) { %>
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
         <div class="imagen-nombre">
@@ -54,9 +54,12 @@
         </div>
 
       
-
+        
       </div>
     <% }); %>
+    <% } else { %>
+      <h5>Tu carrito está vacío.</h5>
+    <% } %>
   </div>
 
 
