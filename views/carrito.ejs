@@ -2,7 +2,11 @@
 <%- include ('partials/header.ejs') -%>
 
 <section class="carrito-all">
-
+  <div id="productosEnCarrito" style="display: none;">
+    <% if (productosEnCarrito.length > 0) { %>
+      <%= JSON.stringify(productosEnCarrito) %>
+    <% } %>
+  </div>
   <div class="productos-carrito">
     <div class="d-flex justify-content-between">
       <h3>Revisa tus productos</h3>        
@@ -284,6 +288,8 @@
       cvcError.innerHTML = "";
     }
 
+  
+  
     if (isValid) {
       mostrarModal();
       
@@ -300,10 +306,21 @@
   });
 
   function mostrarModal() {
-
-    // Mostrar el modal
-    document.getElementById('miModal').style.display = 'block';
+  // verificarsi hay productos en el carrito
+  let productosEnCarritoElement = document.getElementById('productosEnCarrito');
+  
+  if (!productosEnCarritoElement || productosEnCarritoElement.innerText.trim() === "") {
+    alert('No hay productos en el carrito. Agrega productos antes de pagar.');
+    return;
   }
+
+  // mostrar el modal solo si hay productos en el carrito
+  document.getElementById('miModal').style.display = 'block';
+}
+
+document.getElementById('mostrarModal').addEventListener('click', function() {
+  validarFormulario();
+});
 
 
   // Función para redirigir a otra página
