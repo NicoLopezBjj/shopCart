@@ -917,15 +917,23 @@ ul{
 
  
   .centrado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto; /* permite el desplazamiento si el contenido es demasiado grande */
+}
+
+.centrado-interno {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 2.5rem;
     width: 700px;
     height: 760px;
     background-color: white;
+    position: relative;
+  }
 
-    position: absolute;
-}
 
 /*IMAGEN VERIFICACION*/
 
@@ -940,8 +948,8 @@ ul{
     background-color: white;
     margin-top: 6rem;
     flex-direction: column;
-    width: 20rem;
-    margin-left: 12rem;
+    width: 32rem;
+    margin-left: 6rem;
 
     position: relative;
     bottom: 50%;
