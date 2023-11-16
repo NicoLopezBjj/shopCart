@@ -126,7 +126,7 @@ actualizarContadorCarrito()
 // minishop
 document.addEventListener("DOMContentLoaded", function() {
   // Agregar jQuery desde CDN
-  var script = document.createElement('script');
+  const script = document.createElement('script');
   script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
   script.type = 'text/javascript';
   script.async = true;
