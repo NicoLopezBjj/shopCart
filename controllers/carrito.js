@@ -103,9 +103,7 @@ const eliminarCarrito = async (req,res) => {
 const cambiarCantidad = async (req, res) => {
   const { productId, accion } = req.params;
   const { cantidad } = req.body; // toma  la cantidad desde el cliente
-  console.log('controlador info :',productId,accion,cantidad)
-  console.log('la accion del params :',accion)
-  console.log('la cantidad del body :',cantidad)
+  
   try {
     // Obtiene el usuario actual
     const user = await User.findById(req.user._id);

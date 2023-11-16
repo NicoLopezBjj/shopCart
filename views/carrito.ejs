@@ -5,10 +5,14 @@
 
   <div class="productos-carrito">
     <div class="d-flex justify-content-between">
-      <h3>Revisa tus productos</h3>        
+      <h3>Revisa tus productos</h3>   
+      <% if (productosEnCarrito.length > 0) { %>     
       <a href="" class="p-1 mt-1 enlace-sacar hoverEnlace" onclick="eliminarTodo()">Eliminar todos los productos</a>
+      
+      <% } %>
     </div>
     
+    <% if (productosEnCarrito.length > 0) { %>
     <% productosEnCarrito.forEach(item => { %>
       <div class="prod-carrito">
         <div class="imagen-nombre">
@@ -50,9 +54,12 @@
         </div>
 
       
-
+        
       </div>
     <% }); %>
+    <% } else { %>
+      <h5>Tu carrito está vacío.</h5>
+    <% } %>
   </div>
 
 
@@ -182,7 +189,7 @@
     </div>
 
       <!-- EL BOTON PARA EL EVENTO -->
-  
+
       <button type="button" class="btn-pagar-cart" id="mostrarModal">Pagar $<span id="precioTotalCarrito"><%= precioTotal %></span></button>
 
 </form>
@@ -195,8 +202,9 @@
   <div class="modal" id="miModal">
     <!-- Nuevo contenedor interno para centrar el contenido del modal -->
     <div class="centrado">
+      <!-- Contenido del modal -->
       <div class="centrado-interno">
-        <!-- Contenido del modal -->
+      
         <div class="imagen-container">
           <img src="img/fondo-pagar-editado.jpg" alt>
         </div>
@@ -219,7 +227,7 @@
     // Aplicar el formato cada 4 dígitos
     numeroTarjeta = numeroTarjeta.replace(/(\d{4})(?=\d)/g, '$1 ');
 
-    // Actualizar el valor del input
+    // Actualiza el valor de los input
     numeroTarjetaInput.value = numeroTarjeta;
   }
 
@@ -233,7 +241,7 @@
     let vencimiento = document.getElementById('vencimiento').value;
     let cvc = document.getElementById('cvc').value;
 
-    // Inicializar la variable isValid
+    // Inicializo la variable isValid
     let isValid = true;
 
     // Validar el campo de correo electrónico
@@ -253,7 +261,7 @@
     if (nombre === "") {
       nombreError.innerHTML = "Este campo es obligatorio.";
       isValid = false;
-    } else if (nombre.length > 15) {
+    } else if (nombre.length > 20) {
       nombreError.innerHTML = "El nombre debe tener un máximo de 15 caracteres.";
       isValid = false;
     } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
@@ -263,14 +271,14 @@
       nombreError.innerHTML = "";
     }
 
-    // Validar el número de la tarjeta
-    let numeroTarjetaError = document.getElementById('numeroTarjetaError');
-    if (!/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(numeroTarjeta)) {
-      numeroTarjetaError.innerHTML = "*";
-      isValid = false;
+    // Validar el numero de la tarjeta
+    if (!/^\d{16}$/.test(numeroTarjeta)) {
+        numeroTarjetaError.innerHTML = "El número de tarjeta debe tener 16 dígitos.";
+        isValid = false;
     } else {
-      numeroTarjetaError.innerHTML = "";
+        numeroTarjetaError.innerHTML = "";
     }
+    
 
     // Validar el vencimiento
     let vencimientoError = document.getElementById('vencimientoError');
@@ -295,7 +303,7 @@
       
     }
 
-    // Devolver el resultado de la validación
+
     return isValid;
   }
 
@@ -312,9 +320,9 @@
   }
 
 
-  // Función para redirigir a otra página
+
   function redirigir() {
-    // Puedes cambiar la URL a la que deseas redirigir
+    
     window.location.href = '/shop';
     eliminarTodo();
   }
