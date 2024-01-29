@@ -43,6 +43,8 @@ app.set('view engine','ejs')
 const DB_URL = process.env.DB_URL
 const PUERTO = process.env.PUERTO
 const connectDB=require('./db/conexion')
+console.log(PUERTO)
+console.log(DB_URL)
 
 const connectDataBase = async () => {
     try{
